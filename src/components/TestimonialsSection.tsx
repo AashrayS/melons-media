@@ -10,61 +10,75 @@ const TestimonialsSection = () => {
       company: 'TechStart Inc.',
       quote: 'Melons Media transformed our digital presence completely. Their attention to detail is unmatched.',
       result: '300% increase in user engagement',
-      avatar: '/placeholder.svg?height=60&width=60'
+      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b524?w=120&h=120&fit=crop&crop=face'
     },
     {
       name: 'Michael Chen',
       company: 'Growth Labs',
       quote: 'The team delivered beyond our expectations. Our new website is both beautiful and functional.',
       result: '250% boost in conversion rates',
-      avatar: '/placeholder.svg?height=60&width=60'
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face'
     },
     {
       name: 'Emily Rodriguez',
       company: 'Creative Studio',
       quote: 'Professional, creative, and results-driven. Melons Media is our go-to digital partner.',
       result: '400% growth in online presence',
-      avatar: '/placeholder.svg?height=60&width=60'
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face'
     },
     {
       name: 'David Park',
       company: 'Innovate Co.',
       quote: 'Their strategic approach and technical expertise helped us achieve our ambitious goals.',
       result: '200% increase in lead generation',
-      avatar: '/placeholder.svg?height=60&width=60'
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face'
+    },
+    {
+      name: 'Jessica Williams',
+      company: 'Future Brands',
+      quote: 'Working with Melons Media was a game-changer. They understood our vision perfectly.',
+      result: '500% ROI improvement',
+      avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=120&h=120&fit=crop&crop=face'
+    },
+    {
+      name: 'Alex Thompson',
+      company: 'Digital Ventures',
+      quote: 'No BS, just results. Exactly what we needed to scale our business rapidly.',
+      result: '350% revenue growth',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face'
     }
   ];
 
   return (
-    <section id="testimonials" className="py-20 px-6 bg-black text-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">What Our Clients Say</h2>
+    <section id="testimonials" className="py-32 px-8 lg:px-16 xl:px-24 bg-black text-white">
+      <div className="max-w-8xl mx-auto">
+        <div className="text-center mb-20 animate-on-scroll">
+          <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-8">What Our Clients Say</h2>
           <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-            Discover how we've helped businesses achieve remarkable results
+            Real results from real people who trusted us with their vision
           </p>
         </div>
 
         <div className="relative animate-on-scroll">
-          <Carousel className="w-full max-w-5xl mx-auto">
+          <Carousel className="w-full max-w-6xl mx-auto">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <Card className="glassmorphic-card border-white/10">
-                    <CardContent className="p-8">
-                      <div className="flex items-center mb-6">
+                  <Card className="glassmorphic-card border-white/10 h-full">
+                    <CardContent className="p-8 lg:p-10 flex flex-col h-full">
+                      <div className="flex items-center mb-8">
                         <img 
                           src={testimonial.avatar} 
                           alt={testimonial.name}
-                          className="w-12 h-12 rounded-full mr-4"
+                          className="w-16 h-16 rounded-full mr-4 object-cover border-2 border-orange-400/30"
                         />
                         <div>
-                          <h4 className="font-light tracking-tight">{testimonial.name}</h4>
+                          <h4 className="font-light tracking-tight text-lg">{testimonial.name}</h4>
                           <p className="text-white/70 text-sm">{testimonial.company}</p>
                         </div>
                       </div>
-                      <p className="text-white/80 font-light mb-6 leading-relaxed">"{testimonial.quote}"</p>
-                      <div className="bg-orange-400/20 rounded-lg p-4">
+                      <p className="text-white/80 font-light mb-8 leading-relaxed flex-grow text-lg">"{testimonial.quote}"</p>
+                      <div className="bg-gradient-to-r from-orange-400/20 to-purple-500/20 rounded-xl p-4 border border-orange-400/20">
                         <p className="text-orange-400 font-light text-sm">Result: {testimonial.result}</p>
                       </div>
                     </CardContent>
