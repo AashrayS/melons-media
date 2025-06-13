@@ -19,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			maxWidth: {
+				'8xl': '1440px'
+			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 			},

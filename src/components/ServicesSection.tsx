@@ -7,45 +7,51 @@ const ServicesSection = () => {
     {
       icon: Code,
       title: 'Web Development',
-      description: 'Full-stack web development with cutting-edge technologies for frontend and backend solutions.'
+      description: 'Full-stack web development with cutting-edge technologies for frontend and backend solutions that scale with your business needs.'
     },
     {
       icon: Smartphone,
       title: 'App Development',
-      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.'
+      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.'
     },
     {
       icon: Palette,
       title: 'UX/UI Design',
-      description: 'User-centered design that combines aesthetics with functionality for optimal user engagement.'
+      description: 'User-centered design that combines aesthetics with functionality for optimal user engagement and conversion.'
     },
     {
       icon: TrendingUp,
       title: 'Marketing Campaigns',
-      description: 'Strategic digital marketing campaigns that drive growth and build brand awareness.'
+      description: 'Strategic digital marketing campaigns that drive growth and build brand awareness in the digital landscape.'
     }
   ];
 
   return (
-    <section id="services" className="py-20 px-6 bg-black text-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">Our Services</h2>
-          <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-            We provide comprehensive digital solutions tailored to your business needs
-          </p>
+    <section id="services" className="py-32 px-8 lg:px-16 xl:px-24 bg-black text-white">
+      <div className="max-w-8xl mx-auto">
+        <div className="flex items-start justify-between mb-20 animate-on-scroll">
+          <div className="max-w-md">
+            <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-6">Our Services</h2>
+          </div>
+          <div className="hidden md:block">
+            <div className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 bg-orange-400 rounded-full"></div>
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {services.map((service, index) => (
             <div 
               key={service.title}
-              className="glassmorphic-card p-8 rounded-2xl text-center hover:scale-105 transition-transform duration-300 animate-on-scroll"
+              className="glassmorphic-card p-8 lg:p-12 rounded-3xl hover:scale-105 transition-transform duration-300 animate-on-scroll"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <service.icon className="w-12 h-12 text-orange-400 mx-auto mb-6" strokeWidth={1} />
-              <h3 className="text-xl font-light tracking-tight mb-4">{service.title}</h3>
-              <p className="text-white/70 font-light leading-relaxed">{service.description}</p>
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                <service.icon className="w-8 h-8 text-orange-400" strokeWidth={1} />
+              </div>
+              <h3 className="text-2xl font-light tracking-tight mb-6">{service.title}</h3>
+              <p className="text-white/70 font-light leading-relaxed text-lg">{service.description}</p>
             </div>
           ))}
         </div>
