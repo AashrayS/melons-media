@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,5 +101,134 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.025em;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.05em;
+  }
+}
+
+/* Custom styles for the design */
+.glassmorphic-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glassmorphic-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glassmorphic-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.neumorphic-button {
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.5),
+    -8px -8px 16px rgba(255, 255, 255, 0.02);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.neumorphic-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 165, 0, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.neumorphic-button:hover::before {
+  left: 100%;
+}
+
+.neumorphic-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.6),
+    -12px -12px 24px rgba(255, 255, 255, 0.03),
+    0 0 30px rgba(255, 165, 0, 0.3);
+}
+
+/* Animation classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpDelayed {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 1s ease-out;
+}
+
+.animate-fade-in-delayed {
+  animation: fadeInUpDelayed 1.2s ease-out 0.3s both;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(5px);
+  transition: all 0.8s ease;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 165, 0, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 165, 0, 0.5);
 }
