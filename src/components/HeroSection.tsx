@@ -17,19 +17,9 @@ const HeroSection = () => {
           Our design agency is dedicated to crafting bespoke, unforgettable visual experiences for brands that dare to stand out.
         </p>
         
-        <Button className="neumorphic-button text-lg px-8 py-6 mb-16">
+        <Button className="neumorphic-button text-lg px-8 py-6">
           Get Started
         </Button>
-      </div>
-
-      <div className="w-full max-w-6xl mx-auto mt-8 animate-fade-in-delayed">
-        <div className="glassmorphic-card p-8 rounded-2xl">
-          <img 
-            src="/lovable-uploads/59154fc4-d846-48b3-bb14-fb63b523d6f1.png"
-            alt="Product UI Mockup"
-            className="w-full h-auto rounded-xl"
-          />
-        </div>
       </div>
     </section>
   );
