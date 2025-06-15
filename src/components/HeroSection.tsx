@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {  return (
-    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 bg-black text-white relative overflow-hidden pt-20 md:pt-24">
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 bg-black text-white relative overflow-hidden pt-16 md:pt-24">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-purple-500/10" />
       
@@ -16,8 +16,7 @@ const HeroSection = () => {  return (
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }} />
-        <div className="max-w-5xl mx-auto text-center z-10 relative animate-fade-in px-4">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light tracking-tight mb-6 md:mb-8 leading-tight">
+        <div className="max-w-5xl mx-auto text-center z-10 relative animate-fade-in px-4">        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-6 md:mb-8 leading-tight">
           Brands grow faster when they go{' '}
           <span className="text-orange-400 relative">
             Melons
@@ -25,7 +24,7 @@ const HeroSection = () => {  return (
           </span>
         </h1>
         
-        <p className="text-lg sm:text-xl md:text-2xl text-white/70 mb-8 md:mb-12 font-light max-w-4xl mx-auto leading-relaxed px-2">
+        <p className="text-xl sm:text-2xl md:text-2xl text-white/70 mb-8 md:mb-12 font-light max-w-4xl mx-auto leading-relaxed px-2">
           We design juicy brands, build scroll-stopping sites, and launch digital experiences that don't just work — they slap.
         </p>
 
