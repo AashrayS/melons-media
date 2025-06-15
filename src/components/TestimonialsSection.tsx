@@ -6,34 +6,30 @@ const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  const testimonials = [
-    {
+  const testimonials = [    {
       name: 'Sarah Johnson',
       company: 'TechStart Inc.',
       quote: 'Melons Media transformed our digital presence completely. Their attention to detail is unmatched.',
       result: '300% increase in user engagement',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b524?w=120&h=120&fit=crop&crop=face'
-    },
-    {
+      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&h=120&fit=crop&crop=face'
+    },    {
       name: 'Michael Chen',
       company: 'Growth Labs',
       quote: 'The team delivered beyond our expectations. Our new website is both beautiful and functional.',
       result: '250% boost in conversion rates',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face'
-    },
-    {
+      avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop&crop=face'
+    },    {
       name: 'Emily Rodriguez',
       company: 'Creative Studio',
       quote: 'Professional, creative, and results-driven. Melons Media is our go-to digital partner.',
       result: '400% growth in online presence',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face'
-    },
-    {
+      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=face'
+    },    {
       name: 'David Park',
       company: 'Innovate Co.',
       quote: 'Their strategic approach and technical expertise helped us achieve our ambitious goals.',
       result: '200% increase in lead generation',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face'
+      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&h=120&fit=crop&crop=face'
     },
     {
       name: 'Jessica Williams',
