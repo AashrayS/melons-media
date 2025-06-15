@@ -1,66 +1,121 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
-    { name: 'Services', href: '#services' },
-    { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Testimonials', href: '/#testimonials' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
-  ];  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-8xl mx-auto px-8 lg:px-16 xl:px-24">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/Generated_Image_June_13__2025_-_7_11PM-removebg-preview (2).png" 
-              alt="Melons Media" 
-              className="h-14 w-auto filter brightness-110 contrast-110"
-              style={{
-                filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))'
-              }}
-            />
-          </div>          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+  ];
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
+      <div className="w-full px-6">
+        <div 
+          className={`flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
+            isScrolled ? 'scale-95' : 'scale-100'
+          }`}
+          style={{
+            backgroundColor: 'rgba(236, 223, 204, 0.25)',
+            border: '1px solid rgba(236, 223, 204, 0.3)',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+          }}
+        >
+          {/* Logo - Left */}
+          <div className="flex items-center relative z-10">
+            <a href="/" className="inline-block">
+              <img 
+                src="/lovable-uploads/Generated_Image_June_13__2025_-_7_11PM-removebg-preview (2).png" 
+                alt="Melons Media" 
+                className="h-16 w-auto hover:scale-105 transition-transform duration-200 cursor-pointer"
+                style={{
+                  filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 0 rgba(255, 255, 255, 0.1))',
+                  backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                  borderRadius: '12px',
+                  padding: '4px 8px'
+                }}
+              />
+            </a>
+          </div>
+
+          {/* Desktop Navigation - Center */}
+          <div className="hidden md:flex items-center space-x-12 relative z-10">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-white hover:text-orange-400 transition-colors duration-200 font-medium tracking-wide"
+                className="text-white/90 hover:text-orange-400 transition-colors duration-200 font-medium text-lg tracking-wide"
               >
                 {item.name}
               </a>
             ))}
           </div>
 
+          {/* CTA Button - Right */}
+          <div className="hidden md:flex relative z-10">
+            <button
+              onClick={() => window.location.href = '/booking'}
+              className="px-8 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 hover:border-white/50 transition-all duration-300 font-medium tracking-wide"
+            >
+              Let's Talk
+            </button>
+          </div>
+
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center relative z-10">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-orange-400 transition-colors"
+              className="text-white hover:text-orange-400 transition-colors p-2 rounded-lg hover:bg-white/10"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 bg-black/60 backdrop-blur-sm rounded-b-lg">
-            <div className="flex flex-col space-y-4">
+          <div 
+            className="md:hidden mt-6 py-6 backdrop-blur-md rounded-2xl border relative z-[100]"
+            style={{
+              backgroundColor: 'rgba(236, 223, 204, 0.98)',
+              borderColor: 'rgba(236, 223, 204, 0.4)',
+              boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+            }}
+          >
+            <div className="flex flex-col space-y-4 px-6 relative z-10">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-white hover:text-orange-400 transition-colors duration-200 font-medium tracking-wide px-4 py-2"
+                  className="text-gray-800 hover:text-orange-500 transition-colors duration-200 font-medium tracking-wide py-3 px-4 rounded-lg hover:bg-white/20 block text-center touch-manipulation"
+                  style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
+              <button
+                onClick={() => {
+                  window.location.href = '/booking';
+                  setIsOpen(false);
+                }}
+                className="mt-4 px-6 py-4 bg-orange-500 hover:bg-orange-600 border border-orange-500 text-white rounded-full transition-all duration-300 font-medium text-center touch-manipulation"
+                style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
+              >
+                Let's Talk
+              </button>
             </div>
           </div>
         )}
