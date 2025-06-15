@@ -1,70 +1,73 @@
 
-import React, { useState, useEffect } from 'react';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
-const TestimonialsSection = () => {  const testimonials = [
+const TestimonialsSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const testimonials = [
     {
-      name: 'Rohan Chaturbhuj',
+      name: 'Sarah Johnson',
       company: 'TechStart Inc.',
       quote: 'Melons Media transformed our digital presence completely. Their attention to detail is unmatched.',
-      result: '30% increase in user engagement',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face'
+      result: '300% increase in user engagement',
+      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b524?w=120&h=120&fit=crop&crop=face'
     },
     {
-      name: 'Raghav Sharma',
+      name: 'Michael Chen',
       company: 'Growth Labs',
       quote: 'The team delivered beyond our expectations. Our new website is both beautiful and functional.',
-      result: '25% boost in conversion rates',
-      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&h=120&fit=crop&crop=face'
+      result: '250% boost in conversion rates',
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face'
     },
     {
-      name: 'Rohit Verma',
+      name: 'Emily Rodriguez',
       company: 'Creative Studio',
       quote: 'Professional, creative, and results-driven. Melons Media is our go-to digital partner.',
-      result: '40% growth in online presence',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face'
+      result: '400% growth in online presence',
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face'
     },
     {
-      name: 'Sahil Gaikwad',
+      name: 'David Park',
       company: 'Innovate Co.',
       quote: 'Their strategic approach and technical expertise helped us achieve our ambitious goals.',
-      result: 'improvement in site accessibility',
-      avatar: 'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=120&h=120&fit=crop&crop=face'
+      result: '200% increase in lead generation',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face'
     },
     {
       name: 'Jessica Williams',
       company: 'Future Brands',
       quote: 'Working with Melons Media was a game-changer. They understood our vision perfectly.',
-      result: '100% ROI improvement',
+      result: '500% ROI improvement',
       avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=120&h=120&fit=crop&crop=face'
-    }
-  ];
+    },
+    {
+      name: 'Alex Thompson',
+      company: 'Digital Ventures',
+      quote: 'No BS, just results. Exactly what we needed to scale our business rapidly.',
+      result: '350% revenue growth',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face'
+    }  ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [carouselApi, setCarouselApi] = useState(null);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
+  // Auto-rotate carousel every 3 seconds
   useEffect(() => {
-    if (!carouselApi) return;
-
-    const handleSelect = () => {
-      setCurrentIndex(carouselApi.selectedScrollSnap());
-    };
-
-    carouselApi.on('select', handleSelect);
-    return () => carouselApi.off('select', handleSelect);
-  }, [carouselApi]);
-  // Auto-play functionality
-  useEffect(() => {
-    if (!carouselApi || !isAutoPlaying) return;
-
     const interval = setInterval(() => {
-      const nextIndex = (currentIndex + 1) % testimonials.length;
-      carouselApi.scrollTo(nextIndex);
-    }, 3000); // Change slide every 3 seconds
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 3000);
 
-    return () => clearInterval(interval);  }, [carouselApi, currentIndex, isAutoPlaying, testimonials.length]);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  // Get visible testimonials (3 at a time)
+  const getVisibleTestimonials = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % testimonials.length;
+      visible.push({ ...testimonials[index], originalIndex: index });
+    }
+    return visible;
+  };
 
   return (
     <section id="testimonials" className="py-32 px-8 lg:px-16 xl:px-24 bg-black text-white">
@@ -74,47 +77,55 @@ const TestimonialsSection = () => {  const testimonials = [
           <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
             Real results from real people who trusted us with their vision
           </p>
-        </div>        <div className="relative animate-on-scroll">
-          <Carousel 
-            className="w-full max-w-6xl mx-auto"
-            setApi={setCarouselApi}
-          >
-            <CarouselContent>
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <Card className="glassmorphic-card border-white/10 h-full">
-                    <CardContent className="p-8 lg:p-10 flex flex-col h-full">
-                      <div className="flex items-center mb-8">
-                        <img 
-                          src={testimonial.avatar} 
-                          alt={testimonial.name}
-                          className="w-16 h-16 rounded-full mr-4 object-cover border-2 border-orange-400/30"
-                        />
-                        <div>
-                          <h4 className="font-light tracking-tight text-lg text-white">{testimonial.name}</h4>
-                          <p className="text-white/70 text-sm">{testimonial.company}</p>
-                        </div>
+        </div>        <div className="relative animate-on-scroll" ref={carouselRef}>
+          <div className="flex justify-center items-center gap-6 max-w-6xl mx-auto">
+            {getVisibleTestimonials().map((testimonial, index) => (
+              <div 
+                key={`${testimonial.originalIndex}-${index}`}
+                className={`transition-all duration-500 ${
+                  index === 1 
+                    ? 'transform scale-110 z-10' // Middle card stands out
+                    : 'transform scale-95 opacity-75' // Side cards are smaller and less opaque
+                }`}
+                style={{ 
+                  width: index === 1 ? '380px' : '340px',
+                  flex: '0 0 auto'
+                }}
+              >
+                <Card className="glassmorphic-card border-white/10 h-full">
+                  <CardContent className="p-8 lg:p-10 flex flex-col h-full">
+                    <div className="flex items-center mb-8">
+                      <img 
+                        src={testimonial.avatar} 
+                        alt={testimonial.name}
+                        className="w-16 h-16 rounded-full mr-4 object-cover border-2 border-orange-400/30"
+                      />
+                      <div>
+                        <h4 className="font-light tracking-tight text-lg">{testimonial.name}</h4>
+                        <p className="text-white/70 text-sm">{testimonial.company}</p>
                       </div>
-                      <p className="text-white/80 font-light mb-8 leading-relaxed flex-grow text-lg">"{testimonial.quote}"</p>
-                      <div className="bg-gradient-to-r from-orange-400/20 to-purple-500/20 rounded-xl p-4 border border-orange-400/20">
-                        <p className="text-orange-400 font-light text-sm">Result: {testimonial.result}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}            </CarouselContent>
-          </Carousel>
+                    </div>
+                    <p className="text-white/80 font-light mb-8 leading-relaxed flex-grow text-lg">"{testimonial.quote}"</p>
+                    <div className="bg-gradient-to-r from-orange-400/20 to-purple-500/20 rounded-xl p-4 border border-orange-400/20">
+                      <p className="text-orange-400 font-light text-sm">Result: {testimonial.result}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
           
-          {/* Auto-play indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
+          {/* Indicators */}
+          <div className="flex justify-center mt-8 gap-2">
             {testimonials.map((_, index) => (
-              <div
+              <button
                 key={index}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-orange-400 w-8' 
+                  index === currentIndex
+                    ? 'bg-orange-400 w-8'
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
+                onClick={() => setCurrentIndex(index)}
               />
             ))}
           </div>
