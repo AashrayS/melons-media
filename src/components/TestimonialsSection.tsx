@@ -64,64 +64,61 @@ const TestimonialsSection = () => {
     }
     return visible;
   };
-
   return (
-    <section id="testimonials" className="py-32 px-8 lg:px-16 xl:px-24 bg-black text-white">
-      <div className="max-w-8xl mx-auto">
-        <div className="text-center mb-20 animate-on-scroll">
-          <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-8">What Our Clients Say</h2>
-          <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+    <section id="testimonials" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-black text-white">
+      <div className="max-w-full md:max-w-8xl mx-auto overflow-hidden">
+        <div className="text-center mb-12 md:mb-20 animate-on-scroll">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">What Our Clients Say</h2>
+          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4">
             Real results from real people who trusted us with their vision
           </p>
-        </div>        <div className="relative animate-on-scroll" ref={carouselRef}>
-          <div className="flex justify-center items-center gap-6 max-w-6xl mx-auto">
-            {getVisibleTestimonials().map((testimonial, index) => (
-              <div 
+        </div>
+
+        <div className="relative animate-on-scroll" ref={carouselRef}>
+          <div className="flex justify-center items-center gap-3 md:gap-6 max-w-full md:max-w-6xl mx-auto overflow-hidden px-2">
+            {getVisibleTestimonials().map((testimonial, index) => (              <div 
                 key={`${testimonial.originalIndex}-${index}`}
                 className={`transition-all duration-500 ${
                   index === 1 
-                    ? 'transform scale-110 z-10' // Middle card stands out
-                    : 'transform scale-95 opacity-75' // Side cards are smaller and less opaque
+                    ? 'transform md:scale-110 z-10' // Middle card stands out on desktop
+                    : 'transform md:scale-95 md:opacity-75' // Side cards are smaller on desktop
                 }`}
                 style={{ 
-                  width: index === 1 ? '380px' : '340px',
-                  flex: '0 0 auto'
+                  width: index === 1 ? 'min(380px, 90vw)' : 'min(340px, 85vw)',
+                  flex: '0 0 auto',
+                  maxWidth: '90vw'
                 }}
-              >
-                <Card className="glassmorphic-card border-white/10 h-full">
-                  <CardContent className="p-8 lg:p-10 flex flex-col h-full">
-                    <div className="flex items-center mb-8">
-                      <img 
+              >                <Card className="glassmorphic-card border-white/10 h-full">
+                  <CardContent className="p-4 md:p-8 lg:p-10 flex flex-col h-full">
+                    <div className="flex items-center mb-4 md:mb-8">                      <img 
                         src={testimonial.avatar} 
                         alt={testimonial.name}
-                        className="w-16 h-16 rounded-full mr-4 object-cover border-2 border-orange-400/30"
+                        className="w-12 md:w-16 h-12 md:h-16 rounded-full mr-3 md:mr-4 object-cover border-2 border-orange-400/30"
                       />
                       <div>
-                        <h4 className="font-light tracking-tight text-lg">{testimonial.name}</h4>
-                        <p className="text-white/70 text-sm">{testimonial.company}</p>
+                        <h4 className="font-light tracking-tight text-base md:text-lg">{testimonial.name}</h4>
+                        <p className="text-white/70 text-xs md:text-sm">{testimonial.company}</p>
                       </div>
                     </div>
-                    <p className="text-white/80 font-light mb-8 leading-relaxed flex-grow text-lg">"{testimonial.quote}"</p>
-                    <div className="bg-gradient-to-r from-orange-400/20 to-purple-500/20 rounded-xl p-4 border border-orange-400/20">
-                      <p className="text-orange-400 font-light text-sm">Result: {testimonial.result}</p>
+                    <p className="text-white/80 font-light mb-4 md:mb-8 leading-relaxed flex-grow text-sm md:text-lg">"{testimonial.quote}"</p>
+                    <div className="bg-gradient-to-r from-orange-400/20 to-purple-500/20 rounded-xl p-3 md:p-4 border border-orange-400/20">
+                      <p className="text-orange-400 font-light text-xs md:text-sm">Result: {testimonial.result}</p>
                     </div>
                   </CardContent>
                 </Card>
               </div>
             ))}
           </div>
-          
-          {/* Indicators */}
-          <div className="flex justify-center mt-8 gap-2">
+            {/* Indicators */}
+          <div className="flex justify-center mt-6 md:mt-8 gap-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 touch-manipulation ${
                   index === currentIndex
-                    ? 'bg-orange-400 w-8'
+                    ? 'bg-orange-400 w-6 md:w-8'
                     : 'bg-white/30 hover:bg-white/50'
-                }`}
-                onClick={() => setCurrentIndex(index)}
+                }`}                onClick={() => setCurrentIndex(index)}
               />
             ))}
           </div>

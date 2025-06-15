@@ -21,15 +21,13 @@ const Navigation = () => {
     { name: 'Testimonials', href: '/#testimonials' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
-  ];  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
-      <div className="w-full px-2 md:px-6">
+  ];  return (    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
+      <div className="w-full px-1 md:px-6 max-w-full overflow-hidden">
         <div 
-          className={`flex items-center justify-between px-3 md:px-6 py-2 md:py-4 rounded-lg md:rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
+          className={`flex items-center justify-between px-2 md:px-6 py-2 md:py-4 rounded-lg md:rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
             isScrolled ? 'md:scale-95' : 'md:scale-100'
-          }`}
-          style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.1)'
+          } max-w-full`}style={{
+            backgroundColor: 'rgba(236, 223, 204, 0.15)'
           }}
         >
           {/* Logo - Left */}
@@ -78,16 +76,15 @@ const Navigation = () => {
         </div>        {/* Mobile Navigation */}
         {isOpen && (
           <div 
-            className="md:hidden mt-4 py-4 backdrop-blur-md rounded-xl relative z-[100]"
-            style={{
-              backgroundColor: 'rgba(0, 0, 0, 0.9)'
+            className="md:hidden mt-4 py-4 backdrop-blur-md rounded-xl relative z-[100]"            style={{
+              backgroundColor: 'rgba(236, 223, 204, 0.95)'
             }}
           >
             <div className="flex flex-col space-y-3 px-4 relative z-10">
               {navItems.map((item) => (                <a
                   key={item.name}
                   href={item.href}
-                  className="text-white hover:text-orange-400 transition-colors duration-200 font-medium tracking-wide py-2 px-3 rounded-lg hover:bg-white/10 block text-center touch-manipulation"
+                  className="text-gray-800 hover:text-orange-500 transition-colors duration-200 font-medium tracking-wide py-2 px-3 rounded-lg hover:bg-white/20 block text-center touch-manipulation"
                   style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                   onClick={() => setIsOpen(false)}
                 >
