@@ -7,42 +7,42 @@ const TestimonialsSection = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const testimonials = [    {
-      name: 'Sarah Johnson',
+      name: 'Rohan Raghuvanshi',
       company: 'TechStart Inc.',
       quote: 'Melons Media transformed our digital presence completely. Their attention to detail is unmatched.',
       result: '300% increase in user engagement',
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&h=120&fit=crop&crop=face'
     },    {
-      name: 'Michael Chen',
+      name: 'Mayank Patil',
       company: 'Growth Labs',
       quote: 'The team delivered beyond our expectations. Our new website is both beautiful and functional.',
-      result: '250% boost in conversion rates',
+      result: '25% boost in conversion rates',
       avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop&crop=face'
     },    {
-      name: 'Emily Rodriguez',
+      name: 'Rahul Sharma',
       company: 'Creative Studio',
       quote: 'Professional, creative, and results-driven. Melons Media is our go-to digital partner.',
-      result: '400% growth in online presence',
+      result: '40% growth in online presence',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=face'
     },    {
-      name: 'David Park',
+      name: 'Priyansh Aggarwal',
       company: 'Innovate Co.',
       quote: 'Their strategic approach and technical expertise helped us achieve our ambitious goals.',
-      result: '200% increase in lead generation',
+      result: '100% increase in lead generation',
       avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&h=120&fit=crop&crop=face'
     },
     {
-      name: 'Jessica Williams',
+      name: 'Anugya Sharma',
       company: 'Future Brands',
       quote: 'Working with Melons Media was a game-changer. They understood our vision perfectly.',
-      result: '500% ROI improvement',
+      result: 'improved ROI',
       avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=120&h=120&fit=crop&crop=face'
     },
     {
       name: 'Alex Thompson',
       company: 'Digital Ventures',
       quote: 'No BS, just results. Exactly what we needed to scale our business rapidly.',
-      result: '350% revenue growth',
+      result: 'increase in revenue growth',
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face'
     }  ];
 

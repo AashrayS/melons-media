@@ -26,8 +26,7 @@ const Navigation = () => {
           className={`flex items-center justify-between px-2 md:px-6 py-2 md:py-4 rounded-lg md:rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
             isScrolled ? 'md:scale-95' : 'md:scale-100'
           } max-w-full`}          style={{
-            backgroundColor: 'rgba(236, 223, 204, 0.25)',
-            border: '1px solid rgba(236, 223, 204, 0.3)'
+            backgroundColor: 'rgba(236, 223, 204, 0.1)'
           }}
         >
           {/* Logo - Left */}
