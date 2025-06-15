@@ -1,8 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const TestimonialsSection = () => {  const testimonials = [
     {
@@ -56,7 +55,6 @@ const TestimonialsSection = () => {  const testimonials = [
     carouselApi.on('select', handleSelect);
     return () => carouselApi.off('select', handleSelect);
   }, [carouselApi]);
-
   // Auto-play functionality
   useEffect(() => {
     if (!carouselApi || !isAutoPlaying) return;
@@ -64,26 +62,9 @@ const TestimonialsSection = () => {  const testimonials = [
     const interval = setInterval(() => {
       const nextIndex = (currentIndex + 1) % testimonials.length;
       carouselApi.scrollTo(nextIndex);
-    }, 4000); // Change slide every 4 seconds
+    }, 3000); // Change slide every 3 seconds
 
-    return () => clearInterval(interval);
-  }, [carouselApi, currentIndex, isAutoPlaying, testimonials.length]);
-
-  const handlePrevious = () => {
-    if (!carouselApi) return;
-    setIsAutoPlaying(false);
-    carouselApi.scrollPrev();
-    // Resume auto-play after 8 seconds
-    setTimeout(() => setIsAutoPlaying(true), 8000);
-  };
-
-  const handleNext = () => {
-    if (!carouselApi) return;
-    setIsAutoPlaying(false);
-    carouselApi.scrollNext();
-    // Resume auto-play after 8 seconds
-    setTimeout(() => setIsAutoPlaying(true), 8000);
-  };
+    return () => clearInterval(interval);  }, [carouselApi, currentIndex, isAutoPlaying, testimonials.length]);
 
   return (
     <section id="testimonials" className="py-32 px-8 lg:px-16 xl:px-24 bg-black text-white">
@@ -121,25 +102,7 @@ const TestimonialsSection = () => {  const testimonials = [
                     </CardContent>
                   </Card>
                 </CarouselItem>
-              ))}
-            </CarouselContent>
-            
-            {/* Custom Navigation Buttons */}
-            <button
-              onClick={handlePrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 md:p-4 rounded-full glassmorphic-card border-white/20 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300 hover:scale-110 shadow-lg"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
-            </button>
-            
-            <button
-              onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 md:p-4 rounded-full glassmorphic-card border-white/20 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300 hover:scale-110 shadow-lg"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
-            </button>
+              ))}            </CarouselContent>
           </Carousel>
           
           {/* Auto-play indicator */}
