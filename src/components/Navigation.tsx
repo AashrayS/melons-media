@@ -58,13 +58,11 @@ const Navigation = () => {
             >
               Let's Talk
             </button>
-          </div>
-
-          {/* Mobile menu button */}
+          </div>          {/* Mobile menu button */}
           <div className="md:hidden flex items-center relative z-10">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-orange-300 transition-colors"
+              className="text-white hover:text-orange-400 transition-colors p-2 rounded-lg hover:bg-white/10"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -72,17 +70,18 @@ const Navigation = () => {
         </div>        {/* Mobile Navigation */}
         {isOpen && (
           <div 
-            className="md:hidden mt-6 py-6 backdrop-blur-md rounded-2xl border relative"
+            className="md:hidden mt-6 py-6 backdrop-blur-md rounded-2xl border relative z-50"
             style={{
-              backgroundColor: 'transparent',
-              borderColor: 'rgba(255, 255, 255, 0.1)'
+              backgroundColor: 'rgba(236, 223, 204, 0.95)',
+              borderColor: 'rgba(236, 223, 204, 0.3)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
             }}
           >
-            <div className="flex flex-col space-y-4 px-6 relative z-10">{navItems.map((item) => (
+            <div className="flex flex-col space-y-4 px-6 relative z-10">              {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-white/90 hover:text-orange-400 transition-colors duration-200 font-medium tracking-wide"
+                  className="text-gray-800 hover:text-orange-500 transition-colors duration-200 font-medium tracking-wide py-2 px-2 rounded-lg hover:bg-white/20"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -93,7 +92,7 @@ const Navigation = () => {
                   window.location.href = '/booking';
                   setIsOpen(false);
                 }}
-                className="mt-4 px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 transition-all duration-300 font-medium"
+                className="mt-4 px-6 py-3 bg-orange-500 hover:bg-orange-600 border border-orange-500 text-white rounded-full transition-all duration-300 font-medium"
               >
                 Let's Talk
               </button>
