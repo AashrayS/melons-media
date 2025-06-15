@@ -21,11 +21,11 @@ const Navigation = () => {
     { name: 'Testimonials', href: '/#testimonials' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
-  ];  return (    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
-      <div className="w-full px-1 md:px-6 max-w-full overflow-hidden">        <div 
-          className={`flex items-center justify-between px-2 md:px-6 py-2 md:py-4 rounded-lg md:rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
+  ];  return (    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'}`}>
+      <div className="w-full px-3 md:px-6 max-w-full overflow-hidden"><div 
+          className={`flex items-center justify-between px-3 md:px-6 py-4 md:py-4 rounded-lg md:rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
             isScrolled ? 'md:scale-95' : 'md:scale-100'
-          } max-w-full`}          style={{
+          } max-w-full`}style={{
             backgroundColor: 'rgba(236, 223, 204, 0.1)'
           }}
         >
@@ -33,7 +33,7 @@ const Navigation = () => {
           <div className="flex items-center relative z-10">            <a href="/" className="inline-block">              <img 
                 src="/lovable-uploads/Generated_Image_June_13__2025_-_7_11PM-removebg-preview (2).png" 
                 alt="Melons Media" 
-                className="h-10 md:h-16 w-auto hover:scale-105 transition-transform duration-200 cursor-pointer"
+                className="h-12 md:h-16 w-auto hover:scale-105 transition-transform duration-200 cursor-pointer"
                 style={{
                   filter: 'drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5)) brightness(1.1) contrast(1.1)'
                 }}
