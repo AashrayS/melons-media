@@ -1,16 +1,18 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const TestimonialsSection = () => {
-  const testimonials = [    {
+const TestimonialsSection = () => {  const testimonials = [
+    {
       name: 'Rohan Chaturbhuj',
       company: 'TechStart Inc.',
       quote: 'Melons Media transformed our digital presence completely. Their attention to detail is unmatched.',
       result: '30% increase in user engagement',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face'
-    },    {
+    },
+    {
       name: 'Raghav Sharma',
       company: 'Growth Labs',
       quote: 'The team delivered beyond our expectations. Our new website is both beautiful and functional.',
@@ -23,11 +25,12 @@ const TestimonialsSection = () => {
       quote: 'Professional, creative, and results-driven. Melons Media is our go-to digital partner.',
       result: '40% growth in online presence',
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face'
-    },    {
+    },
+    {
       name: 'Sahil Gaikwad',
       company: 'Innovate Co.',
       quote: 'Their strategic approach and technical expertise helped us achieve our ambitious goals.',
-      result: 'improvement in site acceessibility',
+      result: 'improvement in site accessibility',
       avatar: 'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=120&h=120&fit=crop&crop=face'
     },
     {
@@ -39,6 +42,49 @@ const TestimonialsSection = () => {
     }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [carouselApi, setCarouselApi] = useState(null);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    const handleSelect = () => {
+      setCurrentIndex(carouselApi.selectedScrollSnap());
+    };
+
+    carouselApi.on('select', handleSelect);
+    return () => carouselApi.off('select', handleSelect);
+  }, [carouselApi]);
+
+  // Auto-play functionality
+  useEffect(() => {
+    if (!carouselApi || !isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % testimonials.length;
+      carouselApi.scrollTo(nextIndex);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [carouselApi, currentIndex, isAutoPlaying, testimonials.length]);
+
+  const handlePrevious = () => {
+    if (!carouselApi) return;
+    setIsAutoPlaying(false);
+    carouselApi.scrollPrev();
+    // Resume auto-play after 8 seconds
+    setTimeout(() => setIsAutoPlaying(true), 8000);
+  };
+
+  const handleNext = () => {
+    if (!carouselApi) return;
+    setIsAutoPlaying(false);
+    carouselApi.scrollNext();
+    // Resume auto-play after 8 seconds
+    setTimeout(() => setIsAutoPlaying(true), 8000);
+  };
+
   return (
     <section id="testimonials" className="py-32 px-8 lg:px-16 xl:px-24 bg-black text-white">
       <div className="max-w-8xl mx-auto">
@@ -47,10 +93,11 @@ const TestimonialsSection = () => {
           <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
             Real results from real people who trusted us with their vision
           </p>
-        </div>
-
-        <div className="relative animate-on-scroll">
-          <Carousel className="w-full max-w-6xl mx-auto">
+        </div>        <div className="relative animate-on-scroll">
+          <Carousel 
+            className="w-full max-w-6xl mx-auto"
+            setApi={setCarouselApi}
+          >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
@@ -61,7 +108,8 @@ const TestimonialsSection = () => {
                           src={testimonial.avatar} 
                           alt={testimonial.name}
                           className="w-16 h-16 rounded-full mr-4 object-cover border-2 border-orange-400/30"
-                        />                        <div>
+                        />
+                        <div>
                           <h4 className="font-light tracking-tight text-lg text-white">{testimonial.name}</h4>
                           <p className="text-white/70 text-sm">{testimonial.company}</p>
                         </div>
@@ -75,9 +123,38 @@ const TestimonialsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="glassmorphic-card border-white/20 text-white hover:bg-white/10" />
-            <CarouselNext className="glassmorphic-card border-white/20 text-white hover:bg-white/10" />
+            
+            {/* Custom Navigation Buttons */}
+            <button
+              onClick={handlePrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 md:p-4 rounded-full glassmorphic-card border-white/20 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300 hover:scale-110 shadow-lg"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+            </button>
+            
+            <button
+              onClick={handleNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 md:p-4 rounded-full glassmorphic-card border-white/20 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300 hover:scale-110 shadow-lg"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+            </button>
           </Carousel>
+          
+          {/* Auto-play indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {testimonials.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'bg-orange-400 w-8' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -19,21 +19,26 @@ const Navigation = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
       <div className="w-full px-6">        <div 
           className={`flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
             isScrolled ? 'scale-95' : 'scale-100'
           }`}          style={{
-            backgroundColor: 'rgba(236, 223, 204, 0.15)',
-            border: 'rgba(236, 223, 204, 0.2)',
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
-          }}>
-          {/* Logo - Left */}
+            backgroundColor: 'rgba(236, 223, 204, 0.25)',
+            border: '1px solid rgba(236, 223, 204, 0.3)',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+          }}>          {/* Logo - Left */}
           <div className="flex items-center relative z-10">            <a href="/" className="inline-block">
               <img 
                 src="/lovable-uploads/Generated_Image_June_13__2025_-_7_11PM-removebg-preview (2).png" 
                 alt="Melons Media" 
                 className="h-16 w-auto hover:scale-105 transition-transform duration-200 cursor-pointer"
+                style={{
+                  filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 0 rgba(255, 255, 255, 0.1))',
+                  backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                  borderRadius: '12px',
+                  padding: '4px 8px'
+                }}
               />
             </a>
           </div>
@@ -72,9 +77,9 @@ const Navigation = () => {
           <div 
             className="md:hidden mt-6 py-6 backdrop-blur-md rounded-2xl border relative z-[100]"
             style={{
-              backgroundColor: 'rgba(236, 223, 204, 0.95)',
-              borderColor: 'rgba(236, 223, 204, 0.3)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
+              backgroundColor: 'rgba(236, 223, 204, 0.98)',
+              borderColor: 'rgba(236, 223, 204, 0.4)',
+              boxShadow: '0 12px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
             }}
           >
             <div className="flex flex-col space-y-4 px-6 relative z-10">              {navItems.map((item) => (

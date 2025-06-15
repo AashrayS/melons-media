@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
       <Navigation />
-      <div className="flex-1 pt-40 pb-16 px-6">
+      <div className="flex-1 pt-32 md:pt-28 pb-16 px-6">
         <div className="max-w-4xl mx-auto">          <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
               We're the <span className="bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text text-transparent relative">

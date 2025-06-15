@@ -16,7 +16,7 @@ const Booking = () => {
 
   return (    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col">
       <Navigation />
-      <div className="flex-1 pt-40 pb-16">
+      <div className="flex-1 pt-32 md:pt-28 pb-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-light mb-6">
