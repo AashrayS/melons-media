@@ -4,48 +4,38 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Card, CardContent } from '@/components/ui/card';
 
 const TestimonialsSection = () => {
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
+  const testimonials = [    {
+      name: 'Rohan Chaturbhuj',
       company: 'TechStart Inc.',
       quote: 'Melons Media transformed our digital presence completely. Their attention to detail is unmatched.',
-      result: '300% increase in user engagement',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b524?w=120&h=120&fit=crop&crop=face'
-    },
-    {
-      name: 'Michael Chen',
+      result: '30% increase in user engagement',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face'
+    },    {
+      name: 'Raghav Sharma',
       company: 'Growth Labs',
       quote: 'The team delivered beyond our expectations. Our new website is both beautiful and functional.',
-      result: '250% boost in conversion rates',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face'
+      result: '25% boost in conversion rates',
+      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&h=120&fit=crop&crop=face'
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Rohit Verma',
       company: 'Creative Studio',
       quote: 'Professional, creative, and results-driven. Melons Media is our go-to digital partner.',
-      result: '400% growth in online presence',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face'
-    },
-    {
-      name: 'David Park',
+      result: '40% growth in online presence',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face'
+    },    {
+      name: 'Sahil Gaikwad',
       company: 'Innovate Co.',
       quote: 'Their strategic approach and technical expertise helped us achieve our ambitious goals.',
-      result: '200% increase in lead generation',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face'
+      result: 'improvement in site acceessibility',
+      avatar: 'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=120&h=120&fit=crop&crop=face'
     },
     {
       name: 'Jessica Williams',
       company: 'Future Brands',
       quote: 'Working with Melons Media was a game-changer. They understood our vision perfectly.',
-      result: '500% ROI improvement',
+      result: '100% ROI improvement',
       avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=120&h=120&fit=crop&crop=face'
-    },
-    {
-      name: 'Alex Thompson',
-      company: 'Digital Ventures',
-      quote: 'No BS, just results. Exactly what we needed to scale our business rapidly.',
-      result: '350% revenue growth',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face'
     }
   ];
 
@@ -71,9 +61,8 @@ const TestimonialsSection = () => {
                           src={testimonial.avatar} 
                           alt={testimonial.name}
                           className="w-16 h-16 rounded-full mr-4 object-cover border-2 border-orange-400/30"
-                        />
-                        <div>
-                          <h4 className="font-light tracking-tight text-lg">{testimonial.name}</h4>
+                        />                        <div>
+                          <h4 className="font-light tracking-tight text-lg text-white">{testimonial.name}</h4>
                           <p className="text-white/70 text-sm">{testimonial.company}</p>
                         </div>
                       </div>

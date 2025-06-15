@@ -18,23 +18,22 @@ const HeroSection = () => {
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }} />
       
-      <div className="max-w-5xl mx-auto text-center z-10 animate-fade-in">
-        <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight">
-          Young, no-BS{' '}
+      <div className="max-w-5xl mx-auto text-center z-20 relative animate-fade-in">        <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight">
+          Brands grow faster when they go{' '}
           <span className="text-orange-400 relative">
-            creative
+            Melons
             <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 to-purple-500 rounded-full" />
           </span>
-          {' '}tech agency
         </h1>
         
         <p className="text-xl md:text-2xl text-white/70 mb-12 font-light max-w-4xl mx-auto leading-relaxed">
-          We create digital experiences that don't suck. No corporate BS, just results that make your competitors jealous and your customers obsessed.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button className="neumorphic-button text-lg px-10 py-6 text-white">
-            Let's Build Something Epic
+          We design juicy brands, build scroll-stopping sites, and launch digital experiences that don't just work — they slap.
+        </p>        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <Button 
+            onClick={() => window.location.href = '/booking'}
+            className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-10 py-6 rounded-lg hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/30 transition-all duration-300"
+          >
+            Let's Make Magic
           </Button>
           <div className="flex items-center gap-3 text-white/60">
             <div className="flex -space-x-2">
@@ -42,7 +41,7 @@ const HeroSection = () => {
               <div className="w-8 h-8 rounded-full bg-purple-500 border-2 border-black" />
               <div className="w-8 h-8 rounded-full bg-blue-500 border-2 border-black" />
             </div>
-            <span className="text-sm">Trusted by 50+ brands</span>
+            <span className="text-sm">Trusted by brands</span>
           </div>
         </div>
       </div>
