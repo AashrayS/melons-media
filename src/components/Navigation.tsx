@@ -19,7 +19,7 @@ const Navigation = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];  return (
-    <nav className={`fixed top-0 left-0 right-0 z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-6'}`}>
       <div className="w-full px-6">        <div 
           className={`flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
             isScrolled ? 'scale-95' : 'scale-100'
@@ -70,7 +70,7 @@ const Navigation = () => {
         </div>        {/* Mobile Navigation */}
         {isOpen && (
           <div 
-            className="md:hidden mt-6 py-6 backdrop-blur-md rounded-2xl border relative z-50"
+            className="md:hidden mt-6 py-6 backdrop-blur-md rounded-2xl border relative z-[100]"
             style={{
               backgroundColor: 'rgba(236, 223, 204, 0.95)',
               borderColor: 'rgba(236, 223, 204, 0.3)',
@@ -81,18 +81,19 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-800 hover:text-orange-500 transition-colors duration-200 font-medium tracking-wide py-2 px-2 rounded-lg hover:bg-white/20"
+                  className="text-gray-800 hover:text-orange-500 transition-colors duration-200 font-medium tracking-wide py-3 px-4 rounded-lg hover:bg-white/20 block text-center touch-manipulation"
+                  style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </a>
-              ))}
-              <button
+              ))}              <button
                 onClick={() => {
                   window.location.href = '/booking';
                   setIsOpen(false);
                 }}
-                className="mt-4 px-6 py-3 bg-orange-500 hover:bg-orange-600 border border-orange-500 text-white rounded-full transition-all duration-300 font-medium"
+                className="mt-4 px-6 py-4 bg-orange-500 hover:bg-orange-600 border border-orange-500 text-white rounded-full transition-all duration-300 font-medium text-center touch-manipulation"
+                style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
               >
                 Let's Talk
               </button>
