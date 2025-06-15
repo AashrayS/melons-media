@@ -94,7 +94,7 @@ const TestimonialsSection = () => {
                         className="w-12 md:w-16 h-12 md:h-16 rounded-full mr-3 md:mr-4 object-cover border-2 border-orange-400/30"
                       />
                       <div>
-                        <h4 className="font-light tracking-tight text-base md:text-lg">{testimonial.name}</h4>
+                        <h4 className="font-light tracking-tight text-base md:text-lg text-white">{testimonial.name}</h4>
                         <p className="text-white/70 text-xs md:text-sm">{testimonial.company}</p>
                       </div>
                     </div>

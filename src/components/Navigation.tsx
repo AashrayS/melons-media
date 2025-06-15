@@ -21,11 +21,12 @@ const Navigation = () => {
     { name: 'Testimonials', href: '/#testimonials' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
-  ];  return (    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'}`}>
-      <div className="w-full px-3 md:px-6 max-w-full overflow-hidden"><div 
-          className={`flex items-center justify-between px-3 md:px-6 py-4 md:py-4 rounded-lg md:rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
+  ];  return (    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-3' : 'py-4'}`}>
+      <div className="w-full px-3 md:px-6 max-w-full overflow-hidden">        <div 
+          className={`flex items-center justify-between px-4 md:px-6 py-5 md:py-4 rounded-lg md:rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
             isScrolled ? 'md:scale-95' : 'md:scale-100'
-          } max-w-full`}style={{
+          } max-w-full`}
+          style={{
             backgroundColor: 'rgba(236, 223, 204, 0.1)'
           }}
         >
