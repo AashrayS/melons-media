@@ -22,22 +22,25 @@ const Navigation = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
-      <div className="w-full px-6">        <div 
-          className={`flex items-center justify-between px-6 py-4 rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
+  return (    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-1' : 'py-3'}`}>
+      <div className="w-full px-4 md:px-6">
+        <div 
+          className={`flex items-center justify-between px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
             isScrolled ? 'scale-95' : 'scale-100'
           }`}
           style={{
-            backgroundColor: 'rgba(236, 223, 204, 0.15)'
+            backgroundColor: 'rgba(0, 0, 0, 0.1)'
           }}
         >
           {/* Logo - Left */}
-          <div className="flex items-center relative z-10">
-            <a href="/" className="inline-block">              <img 
+          <div className="flex items-center relative z-10">            <a href="/" className="inline-block">
+              <img 
                 src="/lovable-uploads/Generated_Image_June_13__2025_-_7_11PM-removebg-preview (2).png" 
                 alt="Melons Media" 
-                className="h-16 w-auto hover:scale-105 transition-transform duration-200 cursor-pointer"
+                className="h-12 md:h-16 w-auto hover:scale-105 transition-transform duration-200 cursor-pointer"
+                style={{
+                  filter: 'drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5)) brightness(1.1) contrast(1.1)'
+                }}
               />
             </a>
           </div>
@@ -78,14 +81,14 @@ const Navigation = () => {
         {isOpen && (          <div 
             className="md:hidden mt-6 py-6 backdrop-blur-md rounded-2xl relative z-[100]"
             style={{
-              backgroundColor: 'rgba(236, 223, 204, 0.95)'
+              backgroundColor: 'rgba(0, 0, 0, 0.9)'
             }}
           >
             <div className="flex flex-col space-y-4 px-6 relative z-10">
               {navItems.map((item) => (                <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-800 hover:text-orange-500 transition-colors duration-200 font-medium tracking-wide py-3 px-4 rounded-lg hover:bg-white/10 block text-center touch-manipulation"
+                  className="text-white hover:text-orange-400 transition-colors duration-200 font-medium tracking-wide py-3 px-4 rounded-lg hover:bg-white/10 block text-center touch-manipulation"
                   style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                   onClick={() => setIsOpen(false)}
                 >
