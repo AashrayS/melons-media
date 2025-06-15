@@ -22,12 +22,12 @@ const Navigation = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];  return (    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
-      <div className="w-full px-1 md:px-6 max-w-full overflow-hidden">
-        <div 
+      <div className="w-full px-1 md:px-6 max-w-full overflow-hidden">        <div 
           className={`flex items-center justify-between px-2 md:px-6 py-2 md:py-4 rounded-lg md:rounded-2xl backdrop-blur-md relative transition-all duration-300 ${
             isScrolled ? 'md:scale-95' : 'md:scale-100'
-          } max-w-full`}style={{
-            backgroundColor: 'rgba(236, 223, 204, 0.15)'
+          } max-w-full`}          style={{
+            backgroundColor: 'rgba(236, 223, 204, 0.25)',
+            border: '1px solid rgba(236, 223, 204, 0.3)'
           }}
         >
           {/* Logo - Left */}
