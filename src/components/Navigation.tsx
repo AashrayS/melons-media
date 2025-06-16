@@ -50,7 +50,7 @@ const Navigation = () => {
             isScrolled ? 'md:scale-95' : 'md:scale-100'
           } max-w-full`}
           style={{
-            backgroundColor: 'rgba(236, 223, 204, 0.1)'
+            backgroundColor: 'rgba(0, 0, 0, 0.9)'
           }}
         >
           {/* Logo - Left */}
