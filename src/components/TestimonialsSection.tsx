@@ -1,10 +1,12 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isUserScrolling, setIsUserScrolling] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const testimonials = [    {
       name: 'Rohan Raghuvanshi',
@@ -42,26 +44,55 @@ const TestimonialsSection = () => {
       quote: 'No BS, just results. Exactly what we needed to scale our business rapidly.',
       result: 'increase in revenue growth',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face'
-    }];
+    }  ];
 
-  // Auto-rotate carousel every 3 seconds
+  // Auto-rotate carousel every 4 seconds (pauses when user is scrolling)
   useEffect(() => {
+    if (isUserScrolling) return;
+
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 3000);
+      setCurrentIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % testimonials.length;
+        
+        // Auto-scroll to the next testimonial
+        if (carouselRef.current) {
+          const cardWidth = 380 + 24; // card width + gap
+          carouselRef.current.scrollTo({
+            left: newIndex * cardWidth,
+            behavior: 'smooth'
+          });
+        }
+        
+        return newIndex;
+      });
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, [testimonials.length, isUserScrolling]);
 
-  // Get visible testimonials (3 at a time)
-  const getVisibleTestimonials = () => {
-    const visible = [];
-    for (let i = 0; i < 3; i++) {
-      const index = (currentIndex + i) % testimonials.length;
-      visible.push({ ...testimonials[index], originalIndex: index });
+  // Handle manual scroll detection
+  const handleScroll = () => {
+    setIsUserScrolling(true);
+    
+    // Clear existing timeout
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
     }
-    return visible;
+    
+    // Resume auto-rotation after 3 seconds of no scrolling
+    scrollTimeoutRef.current = setTimeout(() => {
+      setIsUserScrolling(false);
+    }, 3000);
+
+    // Update current index based on scroll position
+    if (carouselRef.current) {
+      const scrollLeft = carouselRef.current.scrollLeft;
+      const cardWidth = 380 + 24; // card width + gap
+      const newIndex = Math.round(scrollLeft / cardWidth);
+      setCurrentIndex(newIndex);
+    }
   };
+
   return (
     <section id="testimonials" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-black text-white">
       <div className="max-w-full md:max-w-8xl mx-auto overflow-hidden">
@@ -70,23 +101,21 @@ const TestimonialsSection = () => {
           <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4">
             Real results from real people who trusted us with their vision
           </p>
-        </div>
-
-        <div className="relative animate-on-scroll" ref={carouselRef}>
-          <div className="flex justify-center items-center gap-3 md:gap-6 max-w-full md:max-w-6xl mx-auto overflow-hidden px-2">
-            {getVisibleTestimonials().map((testimonial, index) => (              <div 
-                key={`${testimonial.originalIndex}-${index}`}
-                className={`transition-all duration-500 ${
-                  index === 1 
-                    ? 'transform md:scale-110 z-10' // Middle card stands out on desktop
-                    : 'transform md:scale-95 md:opacity-75' // Side cards are smaller on desktop
-                }`}
+        </div>        <div className="relative animate-on-scroll" ref={carouselRef}>
+          <div 
+            className="flex gap-3 md:gap-6 max-w-full overflow-x-auto scrollbar-hide px-2 pb-4" 
+            style={{ scrollSnapType: 'x mandatory' }}
+            onScroll={handleScroll}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={index}
+                className="transition-all duration-300 flex-shrink-0"
                 style={{ 
-                  width: index === 1 ? 'min(380px, 90vw)' : 'min(340px, 85vw)',
-                  flex: '0 0 auto',
-                  maxWidth: '90vw'
+                  width: 'min(380px, 90vw)',
+                  scrollSnapAlign: 'center'
                 }}
-              >                <Card className="glassmorphic-card border-white/10 h-full">
+              ><Card className="glassmorphic-card border-white/10 h-full">
                   <CardContent className="p-4 md:p-8 lg:p-10 flex flex-col h-full">
                     <div className="flex items-center mb-4 md:mb-8">                      <img 
                         src={testimonial.avatar} 
@@ -105,9 +134,9 @@ const TestimonialsSection = () => {
                   </CardContent>
                 </Card>
               </div>
-            ))}
-          </div>
-            {/* Indicators */}
+            ))}          </div>
+          
+          {/* Indicators */}
           <div className="flex justify-center mt-6 md:mt-8 gap-2">
             {testimonials.map((_, index) => (
               <button
@@ -116,7 +145,28 @@ const TestimonialsSection = () => {
                   index === currentIndex
                     ? 'bg-orange-400 w-6 md:w-8'
                     : 'bg-white/30 hover:bg-white/50'
-                }`}                onClick={() => setCurrentIndex(index)}
+                }`}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setIsUserScrolling(true);
+                  
+                  // Scroll to the clicked testimonial
+                  if (carouselRef.current) {
+                    const cardWidth = 380 + 24; // card width + gap
+                    carouselRef.current.scrollTo({
+                      left: index * cardWidth,
+                      behavior: 'smooth'
+                    });
+                  }
+                  
+                  // Resume auto-rotation after 3 seconds
+                  if (scrollTimeoutRef.current) {
+                    clearTimeout(scrollTimeoutRef.current);
+                  }
+                  scrollTimeoutRef.current = setTimeout(() => {
+                    setIsUserScrolling(false);
+                  }, 3000);
+                }}
               />
             ))}
           </div>
