@@ -47,7 +47,7 @@ const Services = () => {
 
   return (    <div className="min-h-screen bg-black text-white flex flex-col">
       <Navigation />
-      <div className="flex-1 pt-24 pb-16 px-6">
+      <div className="flex-1 pt-40 md:pt-36 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-8">Our Services</h1>
