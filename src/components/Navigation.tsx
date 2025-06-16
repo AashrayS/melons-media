@@ -55,7 +55,7 @@ const Navigation = () => {
         >
           {/* Logo - Left */}
           <div className="flex items-center relative z-10">            <Link to="/" className="inline-block">              <img 
-                src="/lovable-uploads/Generated_Image_June_13__2025_-_7_11PM-removebg-preview (2).png" 
+                src="/lovable-uploads/melon.png" 
                 alt="Melons Media" 
                 className="h-16 md:h-20 w-auto hover:scale-105 transition-transform duration-200 cursor-pointer"
                 style={{
