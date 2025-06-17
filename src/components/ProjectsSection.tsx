@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ProjectsSection = () => {  const featuredProjects = [
@@ -46,19 +46,14 @@ const ProjectsSection = () => {  const featuredProjects = [
         <div className="space-y-12">
           {featuredProjects.map((project, index) => (
             <div key={project.id} className="glassmorphic-card rounded-3xl overflow-hidden group hover:scale-[1.02] transition-all duration-500">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                {/* Project Image/Preview */}
-                <div className={`relative h-80 lg:h-96 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">                {/* Project Image/Preview */}
+                <div className="relative h-80 lg:h-96 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  
-                  {/* Project Visual */}
-                  <div className="relative z-10 text-center">
-                    <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">{project.title.charAt(0)}</span>
-                    </div>
-                    <h3 className="text-2xl font-light text-white mb-2">{project.title}</h3>
-                    <p className="text-white/80">{project.subtitle}</p>
-                  </div>
                   
                   {/* Category Badge */}
                   <div className="absolute top-6 left-6">
@@ -87,28 +82,7 @@ const ProjectsSection = () => {  const featuredProjects = [
                           {tech}
                         </span>
                       ))}
-                    </div>
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button 
-                      className="bg-orange-500 hover:bg-orange-600 text-white flex items-center gap-2"
-                      onClick={() => window.open('#', '_blank')}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      View Project
-                    </Button>
-                    <Link to="/projects">
-                      <Button 
-                        variant="outline" 
-                        className="border-white/30 text-white hover:bg-white/10 flex items-center gap-2 w-full"
-                      >
-                        <ArrowRight className="w-4 h-4" />
-                        More Details
-                      </Button>
-                    </Link>
-                  </div>
+                    </div>                  </div>
                 </div>
               </div>
             </div>

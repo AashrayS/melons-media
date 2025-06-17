@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ExternalLink, Github, Calendar, Tag } from 'lucide-react';
+import { Calendar, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Projects = () => {  const projects = [
@@ -93,29 +93,13 @@ const Projects = () => {  const projects = [
           <div className="space-y-20">
             {projects.map((project, index) => (
               <div key={project.id} className="glassmorphic-card rounded-3xl overflow-hidden">                {/* Project Image */}
-                <div className={`relative h-96 md:h-[500px] flex items-center justify-center ${
-                  index === 0 
-                    ? 'bg-gradient-to-br from-green-900/50 to-green-700/30' 
-                    : index === 1
-                    ? 'bg-gradient-to-br from-blue-900/50 to-purple-700/30'
-                    : 'bg-gradient-to-br from-pink-900/50 to-orange-700/30'
-                }`}>
+                <div className="relative h-96 md:h-[500px] overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  
-                  {/* Project Visual */}
-                  <div className="relative z-10 text-center">
-                    <div className={`w-24 h-24 rounded-2xl mx-auto mb-4 flex items-center justify-center ${
-                      index === 0 ? 'bg-green-600' : index === 1 ? 'bg-blue-600' : 'bg-pink-600'
-                    }`}>
-                      <span className="text-2xl font-bold text-white">{project.title.charAt(0)}</span>
-                    </div>
-                    <h3 className="text-3xl font-light text-white mb-2">
-                      {project.title.split(' - ')[0]}
-                    </h3>
-                    <p className={`${index === 0 ? 'text-green-200' : index === 1 ? 'text-blue-200' : 'text-pink-200'}`}>
-                      {project.title.includes(' - ') ? project.title.split(' - ')[1] : project.category}
-                    </p>
-                  </div>
                   
                   {/* Project Tags */}
                   <div className="absolute top-6 left-6 flex gap-2">
@@ -176,27 +160,7 @@ const Projects = () => {  const projects = [
                               {tech}
                             </span>
                           ))}
-                        </div>
-                      </div>
-
-                      {/* Action Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-4">
-                        <Button 
-                          className="bg-orange-500 hover:bg-orange-600 text-white flex items-center gap-2"
-                          onClick={() => window.open(project.liveUrl, '_blank')}
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          View Live Site
-                        </Button>
-                        <Button 
-                          variant="outline" 
-                          className="border-white/30 text-white hover:bg-white/10 flex items-center gap-2"
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                        >
-                          <Github className="w-4 h-4" />
-                          View Code
-                        </Button>
-                      </div>
+                        </div>                      </div>
                     </div>
 
                     {/* Right Column - Features */}
