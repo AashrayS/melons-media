@@ -37,10 +37,9 @@ const Navigation = () => {
       }
     }
     setIsOpen(false);
-  };
-
-  const navItems = [
+  };  const navItems = [
     { name: 'Services', sectionId: 'services', type: 'section' },
+    { name: 'Projects', sectionId: 'projects', type: 'section' },
     { name: 'Testimonials', sectionId: 'testimonials', type: 'section' },
     { name: 'About', href: '/about', type: 'page' },
     { name: 'Contact', href: '/contact', type: 'page' }

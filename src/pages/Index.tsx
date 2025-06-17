@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
+import ProjectsSection from '@/components/ProjectsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import MissionSection from '@/components/MissionSection';
 import Footer from '@/components/Footer';
@@ -31,12 +32,12 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
-  return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+  return (    <div className="min-h-screen bg-black text-white flex flex-col">
       <Navigation />
       <HeroSection />
       <ServicesSection />
       <HowItWorksSection />
+      <ProjectsSection />
       <TestimonialsSection />
       <MissionSection />
       <Footer />
