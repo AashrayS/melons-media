@@ -179,11 +179,15 @@ const Services = () => {
                 className="neumorphic-button px-8 py-3"
               >
                 Schedule Consultation
-              </Button>
-              <Button 
+              </Button>              <Button 
                 onClick={() => window.location.href = '/contact'}
                 variant="outline" 
-                className="glassmorphic-button px-8 py-3 border-white/20 text-white hover:bg-white/10"
+                className="glassmorphic-button px-8 py-3 border-white/50 text-white font-bold hover:bg-white/20 shadow-lg"
+                style={{
+                  textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)',
+                  color: 'white',
+                  fontWeight: '700'
+                }}
               >
                 Get in Touch
               </Button>

@@ -239,10 +239,14 @@ const Projects = () => {
                   onClick={() => window.location.href = '/booking'}
                 >
                   Start Your Project
-                </Button>
-                <Button 
+                </Button>                <Button 
                   variant="outline" 
-                  className="border-white/30 text-white hover:bg-white/10 hover:text-white font-semibold text-lg px-10 py-4 transition-all duration-300"
+                  className="border-white/50 text-white hover:bg-white/20 hover:text-white font-bold text-lg px-10 py-4 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  style={{ 
+                    textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)',
+                    color: 'white',
+                    fontWeight: '700'
+                  }}
                   onClick={() => window.location.href = '/contact'}
                 >
                   Get in Touch

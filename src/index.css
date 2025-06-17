@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-/* @tailwind base; */
-/* @tailwind components; */
-/* @tailwind utilities; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
@@ -185,11 +185,65 @@
 
 /* Ensure all buttons maintain text visibility */
 button {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
 }
 
 button:hover {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+  color: white !important;
+}
+
+/* Specific fixes for outline buttons */
+button[data-variant="outline"], 
+.border-white\/30,
+.border-white\/20 {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+button[data-variant="outline"]:hover,
+.border-white\/30:hover,
+.border-white\/20:hover {
+  color: white !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Glassmorphic button text visibility */
+.glassmorphic-button {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+.glassmorphic-button:hover {
+  color: white !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Neumorphic button text visibility */
+.neumorphic-button {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+.neumorphic-button:hover {
+  color: white !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Force all button text to be white with strong shadow */
+button * {
+  color: inherit !important;
+}
+
+/* Override any conflicting Tailwind styles */
+.text-white {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Animation classes */

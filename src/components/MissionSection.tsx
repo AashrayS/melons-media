@@ -22,10 +22,14 @@ const MissionSection = () => {
               onClick={() => window.location.href = '/booking'}
             >
               Schedule a Call
-            </Button>
-            <Button 
+            </Button>            <Button 
               variant="outline" 
-              className="glassmorphic-button px-10 py-4 text-lg border-white/20 text-white font-semibold hover:bg-white/10 hover:text-white"
+              className="glassmorphic-button px-10 py-4 text-lg border-white/50 text-white font-bold hover:bg-white/20 hover:text-white shadow-lg"
+              style={{
+                textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)',
+                color: 'white',
+                fontWeight: '700'
+              }}
               onClick={() => window.location.href = '/contact'}
             >
               Get in Touch
