@@ -361,3 +361,26 @@ footer a:hover {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;  /* Safari and Chrome */
 }
+
+/* Yellow button styling */
+.bg-yellow-400 {
+  background-color: #facc15 !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+.bg-yellow-400:hover {
+  background-color: #fde047 !important;
+  color: #000000 !important;
+}
+
+.hover\:bg-yellow-300:hover {
+  background-color: #fde047 !important;
+  color: #000000 !important;
+}
+
+/* Ensure yellow button text and icons are black */
+.bg-yellow-400 *,
+.bg-yellow-400:hover * {
+  color: #000000 !important;
+}

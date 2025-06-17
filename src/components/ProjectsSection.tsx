@@ -111,15 +111,13 @@ const ProjectsSection = () => {  const featuredProjects = [
           ))}
         </div>
 
-        {/* View All Projects CTA */}
-        <div className="text-center mt-16">
+        {/* View All Projects CTA */}        <div className="text-center mt-16">
           <Link to="/projects">
             <Button 
-              variant="outline" 
-              className="border-orange-400/30 text-orange-400 hover:bg-orange-400/10 text-lg px-8 py-4 group"
+              className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg px-8 py-4 group shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               View All Projects
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform text-black" />
             </Button>
           </Link>
         </div>
