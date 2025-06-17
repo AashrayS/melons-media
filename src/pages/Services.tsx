@@ -181,7 +181,13 @@ const Services = () => {
                 Schedule Consultation
               </Button>              <Button 
                 onClick={() => window.location.href = '/contact'}
-                className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                variant="outline" 
+                className="glassmorphic-button px-8 py-3 border-white/30 text-white font-bold hover:bg-white/20 shadow-lg backdrop-blur-md"
+                style={{
+                  textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)',
+                  color: 'white',
+                  fontWeight: '700'
+                }}
               >
                 Get in Touch
               </Button>

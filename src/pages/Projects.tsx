@@ -240,7 +240,13 @@ const Projects = () => {
                 >
                   Start Your Project
                 </Button>                <Button 
-                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg px-10 py-4 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                  variant="outline"
+                  className="glassmorphic-button border-white/30 text-white hover:bg-white/20 hover:text-white font-bold text-lg px-10 py-4 transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-md"
+                  style={{ 
+                    textShadow: '0 2px 4px rgba(0, 0, 0, 0.8)',
+                    color: 'white',
+                    fontWeight: '700'
+                  }}
                   onClick={() => window.location.href = '/contact'}
                 >
                   Get in Touch
