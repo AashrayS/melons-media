@@ -98,6 +98,21 @@ const Projects = () => {  const projects = [
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to gradient background if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.className = `relative h-96 md:h-[500px] flex items-center justify-center ${
+                          index === 0 
+                            ? 'bg-gradient-to-br from-green-900/50 to-green-700/30' 
+                            : index === 1
+                            ? 'bg-gradient-to-br from-blue-900/50 to-purple-700/30'
+                            : 'bg-gradient-to-br from-pink-900/50 to-orange-700/30'
+                        }`;
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   

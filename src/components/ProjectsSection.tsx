@@ -52,6 +52,28 @@ const ProjectsSection = () => {  const featuredProjects = [
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to gradient background if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.className = `relative h-80 lg:h-96 bg-gradient-to-br ${project.color} flex items-center justify-center`;
+                        parent.innerHTML = `
+                          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                          <div class="relative z-10 text-center">
+                            <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                              <span class="text-2xl font-bold text-white">${project.title.charAt(0)}</span>
+                            </div>
+                            <h3 class="text-2xl font-light text-white mb-2">${project.title}</h3>
+                            <p class="text-white/80">${project.subtitle}</p>
+                          </div>
+                          <div class="absolute top-6 left-6">
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-sm">${project.category}</span>
+                          </div>
+                        `;
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                   
