@@ -10,7 +10,7 @@ const Projects = () => {  const projects = [
       title: 'Furni - Modern Interior Design Studio',
       category: 'E-commerce Website',
       description: 'A sophisticated D2C furniture website featuring modern interior design solutions. Built with React and modern web technologies, showcasing elegant furniture collections with seamless user experience.',
-      image: '/lovable-uploads/furni-project.jpg',
+      image: '/lovable-uploads/furni-project.jpg.png',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'MongoDB'],
       features: [
         'Modern responsive design',
@@ -31,7 +31,7 @@ const Projects = () => {  const projects = [
       title: 'TravelWise - Multi-Platform Travel App',
       category: 'Travel & Tourism Platform',
       description: 'A comprehensive travel platform designed & developed for web & designed for iOS, and Android. Features seamless booking experience, destination discovery, and personalized travel recommendations with cross-platform synchronization.',
-      image: '/lovable-uploads/travel-project.jpg',
+      image: '/lovable-uploads/travel-project.jpg.png',
       technologies: ['React Native', 'React.js', 'Node.js', 'MongoDB', 'Firebase', 'TypeScript'],
       features: [
         'Cross-platform mobile apps (iOS & Android)',
@@ -53,7 +53,7 @@ const Projects = () => {  const projects = [
       title: 'FitMe - Personal Fitness & Wellness App',
       category: 'Health & Fitness Mobile App',
       description: 'A comprehensive fitness and wellness mobile application featuring personalized workout plans, activity tracking, nutrition guidance, and health analytics. Designed with modern UI/UX principles for optimal user engagement.',
-      image: '/lovable-uploads/fitme-project.jpg',
+      image: '/lovable-uploads/fitme-project.jpg.jpg',
       technologies: ['React Native', 'Expo', 'Firebase', 'Node.js', 'Redux', 'TypeScript'],
       features: [
         'Personalized workout plans',

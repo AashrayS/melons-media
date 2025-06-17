@@ -11,7 +11,7 @@ const ProjectsSection = () => {  const featuredProjects = [
       description: 'A sophisticated D2C furniture website featuring elegant design and seamless user experience.',
       category: 'E-commerce',
       technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-      image: '/lovable-uploads/furni-project.jpg',
+      image: '/lovable-uploads/furni-project.jpg.png',
       color: 'from-green-600 to-green-400'
     },
     {
@@ -21,7 +21,7 @@ const ProjectsSection = () => {  const featuredProjects = [
       description: 'Comprehensive travel platform for web, iOS, and Android with real-time booking and recommendations.',
       category: 'Travel App',
       technologies: ['React Native', 'React.js', 'Node.js'],
-      image: '/lovable-uploads/travel-project.jpg',
+      image: '/lovable-uploads/travel-project.jpg.png',
       color: 'from-blue-600 to-purple-500'
     }
   ];
