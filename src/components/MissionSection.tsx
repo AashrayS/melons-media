@@ -16,19 +16,19 @@ const MissionSection = () => {
           <p className="text-lg text-white/70 font-light leading-relaxed mb-10">
             Ready to transform your brand and leave your competition in the dust? 
             Let's discuss how we can turn your vision into reality and achieve results that matter.
-          </p>            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          </p>          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
-              className="neumorphic-button px-10 py-4 text-lg"
+              className="neumorphic-button px-10 py-4 text-lg text-white font-semibold"
               onClick={() => window.location.href = '/booking'}
             >
               Schedule a Call
             </Button>
             <Button 
               variant="outline" 
-              className="glassmorphic-button px-10 py-4 text-lg border-white/20 text-white hover:bg-white/10"
+              className="glassmorphic-button px-10 py-4 text-lg border-white/20 text-white font-semibold hover:bg-white/10 hover:text-white"
               onClick={() => window.location.href = '/contact'}
             >
-              Send Message
+              Get in Touch
             </Button>
           </div>
         </div>

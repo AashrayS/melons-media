@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
@@ -95,11 +95,12 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     letter-spacing: -0.025em;
@@ -125,11 +126,13 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  color: white !important;
 }
 
 .glassmorphic-button:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
+  color: white !important;
 }
 
 .neumorphic-button {
@@ -165,6 +168,28 @@
     12px 12px 24px rgba(0, 0, 0, 0.6),
     -12px -12px 24px rgba(255, 255, 255, 0.03),
     0 0 30px rgba(255, 165, 0, 0.3);
+}
+
+/* Button text visibility improvements */
+.neumorphic-button {
+  color: white !important;
+}
+
+.glassmorphic-button {
+  color: white !important;
+}
+
+.glassmorphic-button:hover {
+  color: white !important;
+}
+
+/* Ensure all buttons maintain text visibility */
+button {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* Animation classes */

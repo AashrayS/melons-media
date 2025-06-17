@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Calendar, Tag } from 'lucide-react';
+import { Calendar, Tag, X, ZoomIn } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const Projects = () => {  const projects = [
+const Projects = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const projects = [
     {
       id: 1,
       title: 'Furni - Modern Interior Design Studio',
@@ -93,11 +96,11 @@ const Projects = () => {  const projects = [
           <div className="space-y-20">
             {projects.map((project, index) => (
               <div key={project.id} className="glassmorphic-card rounded-3xl overflow-hidden">                {/* Project Image */}
-                <div className="relative h-96 md:h-[500px] overflow-hidden">
+                <div className="relative h-96 md:h-[500px] overflow-hidden group cursor-pointer" onClick={() => setSelectedImage(project.image)}>
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     onError={(e) => {
                       // Fallback to gradient background if image fails to load
                       const target = e.target as HTMLImageElement;
@@ -115,6 +118,13 @@ const Projects = () => {  const projects = [
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="bg-white/20 backdrop-blur-md rounded-full p-4">
+                      <ZoomIn className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
                   
                   {/* Project Tags */}
                   <div className="absolute top-6 left-6 flex gap-2">
@@ -223,17 +233,16 @@ const Projects = () => {  const projects = [
               </h3>
               <p className="text-xl text-white/70 font-light mb-8 max-w-2xl mx-auto">
                 Let's create something amazing together. Get in touch and let's discuss your next digital project.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </p>              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-10 py-4"
+                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-10 py-4 transition-all duration-300 hover:scale-105"
                   onClick={() => window.location.href = '/booking'}
                 >
                   Start Your Project
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="border-white/30 text-white hover:bg-white/10 text-lg px-10 py-4"
+                  className="border-white/30 text-white hover:bg-white/10 hover:text-white font-semibold text-lg px-10 py-4 transition-all duration-300"
                   onClick={() => window.location.href = '/contact'}
                 >
                   Get in Touch
@@ -241,9 +250,31 @@ const Projects = () => {  const projects = [
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div>      </div>
       <Footer />
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-6xl max-h-[90vh] w-full h-full flex items-center justify-center">
+            <img 
+              src={selectedImage} 
+              alt="Project Preview" 
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
