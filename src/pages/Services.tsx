@@ -2,46 +2,64 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Code, Smartphone, Palette, TrendingUp, Globe, Database, Users, Zap } from 'lucide-react';
+import { Building, Settings, Award, Search, Bot, Megaphone, Globe2, Target, PenTool, Users, Palette, Code, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Services = () => {
   const services = [
     {
-      icon: Code,
-      title: 'Frontend Development',
-      description: 'Modern, responsive web applications built with React, Vue, Angular and the latest web technologies.',
-      features: ['React & Next.js', 'Vue.js & Nuxt.js', 'Angular', 'TypeScript', 'Responsive Design']
+      icon: Building,
+      title: 'Setting Foundations',
+      description: 'Establishing robust digital foundations for your business with strategic planning and technology infrastructure.',
+      features: ['Digital Strategy Planning', 'Technology Stack Selection', 'Brand Architecture', 'Goal Setting & KPIs', 'Market Research']
     },
     {
-      icon: Database,
-      title: 'Backend Development',
-      description: 'Scalable server-side solutions with robust APIs, databases, and cloud infrastructure.',
-      features: ['Node.js & Express', 'Python & Django', 'Database Design', 'API Development', 'Cloud Deployment']
+      icon: Settings,
+      title: 'Website Optimization',
+      description: 'Enhance your website performance, user experience, and conversion rates through data-driven optimization.',
+      features: ['Performance Optimization', 'UX/UI Improvements', 'Conversion Rate Optimization', 'Mobile Responsiveness', 'Speed Enhancement']
     },
     {
-      icon: Smartphone,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
-      features: ['React Native', 'Flutter', 'iOS Development', 'Android Development', 'App Store Optimization']
+      icon: Award,
+      title: 'Brand Presence',
+      description: 'Build and strengthen your brand identity across all digital touchpoints for maximum recognition.',
+      features: ['Brand Identity Design', 'Visual Consistency', 'Brand Guidelines', 'Logo & Asset Creation', 'Brand Positioning']
     },
     {
-      icon: Palette,
-      title: 'UX/UI Design',
-      description: 'User-centered design that combines aesthetics with functionality for optimal user experiences.',
-      features: ['User Research', 'Wireframing', 'Prototyping', 'Visual Design', 'Design Systems']
+      icon: Search,
+      title: 'SEO & Search Marketing',
+      description: 'Improve your search engine visibility and drive organic traffic with comprehensive SEO strategies.',
+      features: ['Keyword Research', 'On-Page SEO', 'Technical SEO', 'Link Building', 'Local SEO']
     },
     {
-      icon: TrendingUp,
-      title: 'Digital Marketing',
-      description: 'Strategic marketing campaigns that drive growth and build strong brand presence.',
-      features: ['SEO Optimization', 'Social Media Marketing', 'Content Strategy', 'PPC Campaigns', 'Analytics']
+      icon: Bot,
+      title: 'AI Integration',
+      description: 'Leverage artificial intelligence to automate processes and enhance customer experiences.',
+      features: ['AI Chatbots', 'Process Automation', 'Predictive Analytics', 'Machine Learning', 'AI-Powered Content']
     },
     {
-      icon: Globe,
-      title: 'Web Consulting',
-      description: 'Expert guidance on digital strategy, technology stack, and best practices for your business.',
-      features: ['Technology Consulting', 'Performance Optimization', 'Security Audits', 'Strategic Planning', 'Training']
+      icon: Megaphone,
+      title: 'Paid Advertising',
+      description: 'Strategic paid advertising campaigns across multiple platforms to maximize ROI and reach.',
+      features: ['Google Ads', 'Facebook & Instagram Ads', 'LinkedIn Advertising', 'YouTube Marketing', 'PPC Management']
+    },
+    {
+      icon: Globe2,
+      title: 'GEO Targeting',
+      description: 'Location-based marketing strategies to reach your audience in specific geographic regions.',
+      features: ['Local Marketing', 'Geographic Targeting', 'Location-Based Ads', 'Regional SEO', 'Geo-Fencing']
+    },
+    {
+      icon: Target,
+      title: 'Brand Omnipresence',
+      description: 'Ensure your brand is visible everywhere your customers are across all digital channels.',
+      features: ['Multi-Channel Presence', 'Cross-Platform Strategy', 'Brand Consistency', 'Audience Touchpoints', 'Digital Ecosystem']
+    },
+    {
+      icon: PenTool,
+      title: 'Content Marketing',
+      description: 'Create compelling content that engages your audience and drives meaningful interactions.',
+      features: ['Content Strategy', 'Blog Writing', 'Video Production', 'Social Media Content', 'Email Marketing']
     }
   ];
 
@@ -50,9 +68,14 @@ const Services = () => {
       <div className="flex-1 pt-40 md:pt-36 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-8">Our Services</h1>
+            <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-8">
+              Our <span className="bg-gradient-to-r from-orange-400 to-purple-500 bg-clip-text text-transparent relative">
+                Services
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-400 to-purple-500"></div>
+              </span>
+            </h1>
             <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-              We offer comprehensive digital solutions designed to elevate your business and create lasting impact in the digital landscape.
+              We help local businesses, boutique brands, and solo founders build their online presence with websites, social media content, and digital marketing that actually converts.
             </p>
           </div>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
@@ -169,10 +192,73 @@ const Services = () => {
             </div>
           </div>
 
+          {/* AI-Friendly FAQ Section */}
+          <div className="glassmorphic-card p-12 rounded-2xl mb-16">
+            <h2 className="text-3xl font-light tracking-tight mb-12 text-center">Who We Help & What We Do</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Who do you help?</h3>
+                  <p className="text-white/80 leading-relaxed">We help solo founders, boutique brands, fashion labels, salons, event planners, rental businesses, and service-based companies grow online with professional websites, social media content, and digital marketing.</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: What can Melons Media do for my brand?</h3>
+                  <p className="text-white/80 leading-relaxed">We handle everything — brand design, website development, Instagram content, reels production, SEO, Google Ads, Facebook marketing, and complete digital presence management.</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Best agency for boutique website with reels?</h3>
+                  <p className="text-white/80 leading-relaxed">Yes! We specialize in creating aesthetic boutique websites with integrated social media, professional reels, and content that makes your fashion brand stand out online.</p>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Do you work with local businesses in India?</h3>
+                  <p className="text-white/80 leading-relaxed">Absolutely! We've worked with brands in Pune, Mumbai, Delhi, Bangalore, and across India. From local salons to D2C fashion brands, we understand the Indian market.</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Affordable agency for solo founders?</h3>
+                  <p className="text-white/80 leading-relaxed">We offer flexible packages for startups and solo entrepreneurs. Our services are designed to grow with your business, from basic branding to complete digital transformation.</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: What makes you different from other agencies?</h3>
+                  <p className="text-white/80 leading-relaxed">We focus on boutique-level quality for every client. We understand fashion, lifestyle, and service businesses. Plus, we create content that actually converts — not just looks pretty.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Real Client Stories Section */}
+          <div className="glassmorphic-card p-12 rounded-2xl mb-16">
+            <h2 className="text-3xl font-light tracking-tight mb-12 text-center">How We Help Brands Like Yours</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">👗</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">Fashion Boutiques</h3>
+                <p className="text-white/70 text-sm leading-relaxed">"We helped a rental fashion boutique create an aesthetic Instagram, professional reels, and boutique-level branding that increased bookings by 300% in 30 days."</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">💄</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">Salons & Beauty</h3>
+                <p className="text-white/70 text-sm leading-relaxed">"A local salon in Pune saw 200% more bookings after we optimized their Google My Business, created engaging reels, and built a booking-friendly website."</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">Solo Founders</h3>
+                <p className="text-white/70 text-sm leading-relaxed">"We transformed a solo event planner's digital presence with a conversion-optimized website, strategic content, and local SEO that brought in premium clients."</p>
+              </div>
+            </div>
+          </div>
+
           <div className="glassmorphic-card p-12 rounded-2xl text-center">
-            <h2 className="text-3xl font-light tracking-tight mb-6">Ready to Get Started?</h2>
+            <h2 className="text-3xl font-light tracking-tight mb-6">Ready to Transform Your Digital Presence?</h2>
             <p className="text-xl text-white/70 font-light mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and explore how our services can help you achieve your business goals.
+              Whether you're a boutique brand, salon, or solo founder — let's create a digital presence that makes you stand out, search well, and sell better.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">              <Button 
                 onClick={() => window.location.href = '/booking'}

@@ -90,7 +90,7 @@ const Projects = () => {
               </span>
             </h1>
             <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-              Discover our latest digital creations that drive results and exceed expectations
+              Discover our latest digital solutions and media campaigns that drive results and exceed expectations for our clients
             </p>
           </div>          {/* Projects Grid */}
           <div className="space-y-20">
@@ -232,7 +232,7 @@ const Projects = () => {
                 Ready to Start Your Project?
               </h3>
               <p className="text-xl text-white/70 font-light mb-8 max-w-2xl mx-auto">
-                Let's create something amazing together. Get in touch and let's discuss your next digital project.
+                Let's create something amazing together. Get in touch and let's discuss your next digital marketing project.
               </p>              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-10 py-4 transition-all duration-300 hover:scale-105"

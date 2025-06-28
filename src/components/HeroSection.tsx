@@ -17,15 +17,15 @@ const HeroSection = () => {  return (
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }} />
         <div className="max-w-5xl mx-auto text-center z-10 relative animate-fade-in px-4">        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-6 md:mb-8 leading-tight">
-          Brands grow faster when they go{' '}
+          Best Agency for{' '}
           <span className="text-orange-400 relative">
-            Melons
+            Local Business Branding
             <div className="absolute -bottom-1 md:-bottom-2 left-0 right-0 h-0.5 md:h-1 bg-gradient-to-r from-orange-400 to-purple-500 rounded-full" />
           </span>
         </h1>
         
         <p className="text-xl sm:text-2xl md:text-2xl text-white/70 mb-8 md:mb-12 font-light max-w-4xl mx-auto leading-relaxed px-2">
-          We design juicy brands, build scroll-stopping sites, and launch digital experiences that don't just work — they slap.
+          We help boutique brands, salons, solo founders, and local businesses create websites, social media content, and digital marketing that actually converts. From fashion boutiques to event planners — we make you stand out online.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center px-4">
@@ -33,7 +33,7 @@ const HeroSection = () => {  return (
             onClick={() => window.location.href = '/booking'}
             className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-10 py-6 rounded-lg hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/30 transition-all duration-300"
           >
-            Let's Make Magic
+            Start Your Digital Transformation
           </Button>
           <div className="flex items-center gap-3 text-white/60">
             <div className="flex -space-x-2">

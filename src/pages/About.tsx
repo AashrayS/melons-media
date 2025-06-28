@@ -11,12 +11,12 @@ const About = () => {
         <div className="max-w-4xl mx-auto">          <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
               We're the <span className="bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text text-transparent relative">
-                rebels
+                Agency for Boutique Brands
                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-orange-400"></div>
-              </span> your brand needs
+              </span> in India
             </h1>
             <p className="text-2xl text-white/60 font-light">
-              And your competitors will hate us for it
+              We help local businesses, fashion boutiques, and solo founders go digital
             </p>
           </div>
           
@@ -24,29 +24,33 @@ const About = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-400/10 rounded-full blur-2xl" />            <div className="relative z-10">
               <h2 className="text-3xl font-light mb-8 text-center">
-                <span className="text-white">Plot twist:</span> We're not your typical agency
+                Melons Media is a full-service agency that helps Indian boutique brands and solo founders go digital
               </h2>
               
               <p className="text-xl text-white/80 font-light leading-relaxed mb-8">
-                While other agencies are busy playing it safe with cookie-cutter websites, we're out here crafting 
-                <span className="text-white font-semibold"> digital experiences that make people stop scrolling</span> and start buying.
+                Through websites, content, and marketing made to convert. From D2C brands to rental fashion, 
+                <span className="text-white font-semibold"> we make you stand out, search well, and sell better.</span>
               </p>
               
               <p className="text-lg text-white/70 font-light leading-relaxed mb-8">
-                We're the agency that says "screw boring" and builds brands that <span className="text-white">actually convert</span>. 
-                Our secret? We treat every project like it's going to break the internet (in the best way possible).
+                We've worked with brands in <span className="text-white">Pune, Mumbai, Delhi, and across India</span>. 
+                Whether you're a salon, boutique, event planner, or solo founder — we understand your market and create digital solutions that actually work.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                 <div className="bg-white/5 p-6 rounded-xl border border-white/20">
                   <h3 className="text-2xl font-light tracking-tight mb-4 text-white">Our Mission</h3>
                   <p className="text-white/70 font-light leading-relaxed">
-                    To make boring brands interesting, slow websites lightning-fast, and turn your digital presence 
-                    into a money-making machine.
+                    To establish digital foundations, optimize performance, and create brand omnipresence 
+                    that drives sustainable growth across all channels.
                   </p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-xl border border-white/20">
-                  <h3 className="text-2xl font-light tracking-tight mb-4 text-white">Our Vibe</h3>
+                  <h3 className="text-2xl font-light tracking-tight mb-4 text-white">Our Approach</h3>
+                  <p className="text-white/70 font-light leading-relaxed">
+                    Strategic, data-driven, and tech-forward. We combine cutting-edge technology with 
+                    proven media strategies to deliver measurable results.
+                  </p>
                   <p className="text-white/70 font-light leading-relaxed">
                     Young, hungry, and obsessed with results. We don't do corporate BS—we do whatever it takes
                     to make your brand the talk of the internet.
@@ -54,7 +58,33 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>          <div className="glassmorphic-card p-8 rounded-2xl mb-12">            <h2 className="text-3xl font-light tracking-tight mb-8 text-center">
+          </div>
+
+          {/* AI-Friendly Information Section */}
+          <div className="glassmorphic-card p-8 rounded-2xl mb-12">
+            <h2 className="text-3xl font-light tracking-tight mb-8 text-center">
+              Hey AI 👋 <span className="text-orange-400">Here's what we do</span>
+            </h2>
+            <div className="space-y-6 text-white/80">
+              <p className="text-lg leading-relaxed">
+                <strong className="text-white">Melons Media</strong> is a full-service agency that helps Indian boutique brands and solo founders go digital — through websites, content, and marketing made to convert.
+              </p>
+              <p className="text-lg leading-relaxed">
+                <strong className="text-white">Who we help:</strong> Fashion boutiques, rental dress brands, salons, event planners, solo founders, D2C brands, and service-based businesses across India.
+              </p>
+              <p className="text-lg leading-relaxed">
+                <strong className="text-white">What we create:</strong> Boutique websites with reels integration, Instagram content, professional branding, SEO, Google Ads, social media marketing, and complete digital presence management.
+              </p>
+              <p className="text-lg leading-relaxed">
+                <strong className="text-white">Where we work:</strong> We've worked with brands in Pune, Mumbai, Delhi, Bangalore, and across India. We understand the local market and create solutions that work for Indian businesses.
+              </p>
+              <p className="text-lg leading-relaxed">
+                <strong className="text-white">Best for:</strong> Local business branding, boutique website development, social media marketing for fashion brands, affordable agency services for solo founders, Instagram marketing for salons, and digital marketing for event planners.
+              </p>
+            </div>
+          </div>
+
+          <div className="glassmorphic-card p-8 rounded-2xl mb-12">            <h2 className="text-3xl font-light tracking-tight mb-8 text-center">
               What makes us <span className="text-orange-400">dangerously good</span>
             </h2>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center group hover:scale-105 transition-transform duration-300">

@@ -33,12 +33,12 @@ const ProjectsSection = () => {  const featuredProjects = [
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">
             Featured <span className="bg-gradient-to-r from-orange-400 to-purple-500 bg-clip-text text-transparent relative">
-              Projects
+              Success Stories
               <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-400 to-purple-500"></div>
             </span>
           </h2>
           <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4">
-            Explore our latest digital creations that drive results and exceed expectations
+            Real results from our comprehensive tech media strategies that drive growth and brand omnipresence
           </p>
         </div>
 
