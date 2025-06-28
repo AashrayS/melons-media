@@ -75,7 +75,7 @@ const Services = () => {
               </span>
             </h1>
             <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-              We help local businesses, boutique brands, and solo founders build their online presence with websites, social media content, and digital marketing that actually converts.
+              We help businesses build their online presence with websites, social media content, and digital marketing that actually converts. From startups to established brands — we create solutions that drive growth.
             </p>
           </div>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
@@ -199,7 +199,7 @@ const Services = () => {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Who do you help?</h3>
-                  <p className="text-white/80 leading-relaxed">We help solo founders, boutique brands, fashion labels, salons, event planners, rental businesses, and service-based companies grow online with professional websites, social media content, and digital marketing.</p>
+                  <p className="text-white/80 leading-relaxed">We help businesses of all sizes — from solo founders and boutique brands to established companies and enterprises. Whether you're in fashion, beauty, services, tech, or any other industry, we create digital solutions that drive growth.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: What can Melons Media do for my brand?</h3>
@@ -212,12 +212,12 @@ const Services = () => {
               </div>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Do you work with local businesses in India?</h3>
-                  <p className="text-white/80 leading-relaxed">Absolutely! We've worked with brands in Pune, Mumbai, Delhi, Bangalore, and across India. From local salons to D2C fashion brands, we understand the Indian market.</p>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Do you work with businesses in India?</h3>
+                  <p className="text-white/80 leading-relaxed">Yes! We work with businesses across India and globally. We've helped brands in Pune, Mumbai, Delhi, Bangalore, and internationally. We understand diverse markets and create solutions that work for various business types and sizes.</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Affordable agency for solo founders?</h3>
-                  <p className="text-white/80 leading-relaxed">We offer flexible packages for startups and solo entrepreneurs. Our services are designed to grow with your business, from basic branding to complete digital transformation.</p>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Do you work with enterprise clients?</h3>
+                  <p className="text-white/80 leading-relaxed">Absolutely! We offer scalable solutions for businesses of all sizes. Our services grow with your business — from startup branding to enterprise-level digital transformation and marketing campaigns.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: What makes you different from other agencies?</h3>
@@ -258,7 +258,7 @@ const Services = () => {
           <div className="glassmorphic-card p-12 rounded-2xl text-center">
             <h2 className="text-3xl font-light tracking-tight mb-6">Ready to Transform Your Digital Presence?</h2>
             <p className="text-xl text-white/70 font-light mb-8 max-w-2xl mx-auto">
-              Whether you're a boutique brand, salon, or solo founder — let's create a digital presence that makes you stand out, search well, and sell better.
+              Whether you're a startup, established business, or enterprise — let's create a digital presence that makes you stand out, search well, and sell better.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">              <Button 
                 onClick={() => window.location.href = '/booking'}
