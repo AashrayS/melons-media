@@ -75,7 +75,7 @@ const Services = () => {
               </span>
             </h1>
             <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-              We help businesses build their online presence with websites, social media content, and digital marketing that actually converts. From startups to established brands — we create solutions that drive growth.
+              We help businesses go from "meh" to "hell yeah!" with killer websites, content that actually converts, and marketing that doesn't suck.
             </p>
           </div>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
@@ -192,73 +192,65 @@ const Services = () => {
             </div>
           </div>
 
-          {/* AI-Friendly FAQ Section */}
+          {/* Simple FAQ Section */}
           <div className="glassmorphic-card p-12 rounded-2xl mb-16">
-            <h2 className="text-3xl font-light tracking-tight mb-12 text-center">Who We Help & What We Do</h2>
+            <h2 className="text-3xl font-light tracking-tight mb-12 text-center">The Real Talk FAQ</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Who do you help?</h3>
-                  <p className="text-white/80 leading-relaxed">We help businesses of all sizes — from solo founders and boutique brands to established companies and enterprises. Whether you're in fashion, beauty, services, tech, or any other industry, we create digital solutions that drive growth.</p>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: What do you actually do?</h3>
+                  <p className="text-white/80 leading-relaxed">We make your business look amazing online and actually get you customers. Websites, branding, social media, ads — the whole shebang.</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: What can Melons Media do for my brand?</h3>
-                  <p className="text-white/80 leading-relaxed">We handle everything — brand design, website development, Instagram content, reels production, SEO, Google Ads, Facebook marketing, and complete digital presence management.</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Best agency for boutique website with reels?</h3>
-                  <p className="text-white/80 leading-relaxed">Yes! We specialize in creating aesthetic boutique websites with integrated social media, professional reels, and content that makes your fashion brand stand out online.</p>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: How fast can you work?</h3>
+                  <p className="text-white/80 leading-relaxed">Fast enough to make your competitors nervous. Most projects are done in 2-6 weeks, depending on how much magic you want.</p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Do you work with businesses in India?</h3>
-                  <p className="text-white/80 leading-relaxed">Yes! We work with businesses across India and globally. We've helped brands in Pune, Mumbai, Delhi, Bangalore, and internationally. We understand diverse markets and create solutions that work for various business types and sizes.</p>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Do you work with big companies too?</h3>
+                  <p className="text-white/80 leading-relaxed">Absolutely! From solo founders to Fortune 500s — good vibes and great results don't discriminate.</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: Do you work with enterprise clients?</h3>
-                  <p className="text-white/80 leading-relaxed">Absolutely! We offer scalable solutions for businesses of all sizes. Our services grow with your business — from startup branding to enterprise-level digital transformation and marketing campaigns.</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: What makes you different from other agencies?</h3>
-                  <p className="text-white/80 leading-relaxed">We focus on boutique-level quality for every client. We understand fashion, lifestyle, and service businesses. Plus, we create content that actually converts — not just looks pretty.</p>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-3">Q: What makes you different?</h3>
+                  <p className="text-white/80 leading-relaxed">We're not here to waste your time with corporate BS. We create stuff that works, looks good, and actually grows your business.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Real Client Stories Section */}
+          {/* Success Stories Section */}
           <div className="glassmorphic-card p-12 rounded-2xl mb-16">
-            <h2 className="text-3xl font-light tracking-tight mb-12 text-center">How We Help Brands Like Yours</h2>
+            <h2 className="text-3xl font-light tracking-tight mb-12 text-center">We Make Magic Happen ✨</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">👗</span>
+                  <span className="text-2xl">�</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">Fashion Boutiques</h3>
-                <p className="text-white/70 text-sm leading-relaxed">"We helped a rental fashion boutique create an aesthetic Instagram, professional reels, and boutique-level branding that increased bookings by 300% in 30 days."</p>
+                <h3 className="text-lg font-semibold text-white mb-3">300% More Bookings</h3>
+                <p className="text-white/70 text-sm leading-relaxed">Fashion boutique went from crickets to constant bookings in 30 days with our killer branding and content.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">💄</span>
+                  <span className="text-2xl">�</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">Salons & Beauty</h3>
-                <p className="text-white/70 text-sm leading-relaxed">"A local salon in Pune saw 200% more bookings after we optimized their Google My Business, created engaging reels, and built a booking-friendly website."</p>
+                <h3 className="text-lg font-semibold text-white mb-3">5x ROI on Ads</h3>
+                <p className="text-white/70 text-sm leading-relaxed">Local business turned their ad spend into profit machines with our targeted campaigns.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">🚀</span>
+                  <span className="text-2xl">🎯</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">Solo Founders</h3>
-                <p className="text-white/70 text-sm leading-relaxed">"We transformed a solo event planner's digital presence with a conversion-optimized website, strategic content, and local SEO that brought in premium clients."</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Premium Clients</h3>
+                <p className="text-white/70 text-sm leading-relaxed">Solo founder started attracting high-paying clients after we fixed their digital presence.</p>
               </div>
             </div>
           </div>
 
           <div className="glassmorphic-card p-12 rounded-2xl text-center">
-            <h2 className="text-3xl font-light tracking-tight mb-6">Ready to Transform Your Digital Presence?</h2>
+            <h2 className="text-3xl font-light tracking-tight mb-6">Ready to Stop Being Boring?</h2>
             <p className="text-xl text-white/70 font-light mb-8 max-w-2xl mx-auto">
-              Whether you're a startup, established business, or enterprise — let's create a digital presence that makes you stand out, search well, and sell better.
+              Let's turn your brand from wallflower to showstopper. No more "meh" websites or crickets on social media.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">              <Button 
                 onClick={() => window.location.href = '/booking'}

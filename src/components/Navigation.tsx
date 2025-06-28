@@ -19,6 +19,11 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Scroll to top when navigating to different pages
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const handleSectionNavigation = (sectionId: string) => {
     if (location.pathname !== '/') {
       // If not on homepage, navigate to homepage first, then scroll

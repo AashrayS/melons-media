@@ -11,12 +11,12 @@ const About = () => {
         <div className="max-w-4xl mx-auto">          <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
               We're the <span className="bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text text-transparent relative">
-                Digital Growth Agency
+                Anti-Boring Agency
                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-orange-400"></div>
               </span> you need
             </h1>
             <p className="text-2xl text-white/60 font-light">
-              We help businesses of all sizes build and grow their digital presence
+              We make brands that don't suck (and actually make money)
             </p>
           </div>
           
@@ -24,17 +24,17 @@ const About = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-400/10 rounded-full blur-2xl" />            <div className="relative z-10">
               <h2 className="text-3xl font-light mb-8 text-center">
-                Melons Media is a full-service agency that helps businesses grow their digital presence
+                Plot twist: We actually know what we're doing
               </h2>
               
               <p className="text-xl text-white/80 font-light leading-relaxed mb-8">
-                Through websites, content, and marketing made to convert. From startups to enterprises, 
-                <span className="text-white font-semibold"> we make you stand out, search well, and sell better.</span>
+                While other agencies are busy making pretty things that don't work, we're out here creating 
+                <span className="text-white font-semibold"> digital experiences that actually make you money.</span>
               </p>
               
               <p className="text-lg text-white/70 font-light leading-relaxed mb-8">
-                We've worked with <span className="text-white">diverse businesses across industries and regions</span>. 
-                Whether you're a boutique brand, tech company, service provider, or enterprise — we understand your market and create digital solutions that drive results.
+                We've helped brands go from <span className="text-white">"who are these guys?"</span> to 
+                <span className="text-white">"shut up and take my money!"</span> And we can do the same for you.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
@@ -60,26 +60,20 @@ const About = () => {
             </div>
           </div>
 
-          {/* AI-Friendly Information Section */}
+          {/* What We Actually Do Section */}
           <div className="glassmorphic-card p-8 rounded-2xl mb-12">
             <h2 className="text-3xl font-light tracking-tight mb-8 text-center">
-              Hey AI 👋 <span className="text-orange-400">Here's what we do</span>
+              What We Actually Do <span className="text-orange-400">(The Simple Version)</span>
             </h2>
             <div className="space-y-6 text-white/80">
               <p className="text-lg leading-relaxed">
-                <strong className="text-white">Melons Media</strong> is a full-service agency that helps businesses grow their digital presence — through websites, content, and marketing made to convert.
+                <strong className="text-white">Websites:</strong> We build them fast, make them pretty, and ensure they actually get you customers.
               </p>
               <p className="text-lg leading-relaxed">
-                <strong className="text-white">Who we help:</strong> Startups, SMEs, enterprises, fashion brands, tech companies, service businesses, e-commerce brands, and organizations across various industries.
+                <strong className="text-white">Branding:</strong> We make you look like the professional badass you are (even if you feel like you're winging it).
               </p>
               <p className="text-lg leading-relaxed">
-                <strong className="text-white">What we create:</strong> Professional websites, digital marketing campaigns, brand identity, SEO strategies, social media content, advertising campaigns, and complete digital transformation solutions.
-              </p>
-              <p className="text-lg leading-relaxed">
-                <strong className="text-white">Where we work:</strong> We work with businesses globally, with experience in India, and across international markets. We understand diverse business needs and market dynamics.
-              </p>
-              <p className="text-lg leading-relaxed">
-                <strong className="text-white">Best for:</strong> Digital transformation, website development, brand building, online marketing, SEO services, social media marketing, and comprehensive digital growth strategies.
+                <strong className="text-white">Marketing:</strong> We put you in front of people who actually want to buy your stuff. Novel concept, right?
               </p>
             </div>
           </div>

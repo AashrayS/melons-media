@@ -84,13 +84,16 @@ const Projects = () => {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
-              Our <span className="bg-gradient-to-r from-orange-400 to-purple-500 bg-clip-text text-transparent relative">
-                Projects
+              Stuff we've <span className="bg-gradient-to-r from-orange-400 to-purple-500 bg-clip-text text-transparent relative">
+                built
                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-400 to-purple-500"></div>
               </span>
             </h1>
-            <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-              Discover our latest digital solutions and media campaigns that drive results and exceed expectations for our clients
+            <p className="text-2xl text-white/60 font-light mb-4">
+              Projects that actually work (and look good doing it)
+            </p>
+            <p className="text-lg text-white/50 max-w-3xl mx-auto">
+              Here's proof we don't just talk a big game. These are real projects for real clients who got real results.
             </p>
           </div>          {/* Projects Grid */}
           <div className="space-y-20">
@@ -229,16 +232,16 @@ const Projects = () => {
           <div className="text-center mt-20">
             <div className="glassmorphic-card p-12 rounded-3xl">
               <h3 className="text-3xl md:text-4xl font-light tracking-tight mb-6">
-                Ready to Start Your Project?
+                Want something this good?
               </h3>
               <p className="text-xl text-white/70 font-light mb-8 max-w-2xl mx-auto">
-                Let's create something amazing together. Get in touch and let's discuss your next digital marketing project.
+                Stop drooling over our work and let's build something amazing for you. Your competitors won't know what hit them.
               </p>              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-10 py-4 transition-all duration-300 hover:scale-105"
                   onClick={() => window.location.href = '/booking'}
                 >
-                  Start Your Project
+                  Let's Build Something Epic
                 </Button>                <Button 
                   variant="outline"
                   className="glassmorphic-button border-white/30 text-white hover:bg-white/20 hover:text-white font-bold text-lg px-10 py-4 transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-md"
@@ -249,7 +252,7 @@ const Projects = () => {
                   }}
                   onClick={() => window.location.href = '/contact'}
                 >
-                  Get in Touch
+                  Just Ask Us Stuff
                 </Button>
               </div>
             </div>
