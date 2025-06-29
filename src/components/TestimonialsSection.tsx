@@ -6,43 +6,44 @@ const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  const testimonials = [    {
+  const testimonials = [
+    {
       name: 'Rohan Raghuvanshi',
       company: 'TechStart Inc.',
       quote: 'Melons Media transformed our digital presence completely. Their attention to detail is unmatched.',
-      result: '300% increase in user engagement',
-      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&h=120&fit=crop&crop=face'
-    },    {
+      result: '300% increase in user engagement'
+    },
+    {
       name: 'Mayank Patil',
       company: 'Growth Labs',
       quote: 'The team delivered beyond our expectations. Our new website is both beautiful and functional.',
-      result: '25% boost in conversion rates',
-      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&h=120&fit=crop&crop=face'
-    },    {
+      result: '25% boost in conversion rates'
+    },
+    {
       name: 'Rahul Sharma',
       company: 'Creative Studio',
       quote: 'Professional, creative, and results-driven. Melons Media is our go-to digital partner.',
-      result: '40% growth in online presence',
-      avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop&crop=face'
-    },    {
+      result: '40% growth in online presence'
+    },
+    {
       name: 'Priyansh Aggarwal',
       company: 'Innovate Co.',
       quote: 'Their strategic approach and technical expertise helped us achieve our ambitious goals.',
-      result: '100% increase in lead generation',
-      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&h=120&fit=crop&crop=face'
-    },    {
+      result: '100% increase in lead generation'
+    },
+    {
       name: 'Anugya Sharma',
       company: 'Future Brands',
       quote: 'Working with Melons Media was a game-changer. They understood our vision perfectly.',
-      result: 'improved ROI',
-      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=face'
-    },    {
+      result: 'improved ROI'
+    },
+    {
       name: 'Arjun Kapoor',
       company: 'Digital Ventures',
       quote: 'No BS, just results. Exactly what we needed to scale our business rapidly.',
-      result: 'increase in revenue growth',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face'
-    }  ];  // Auto-rotate carousel every 3 seconds
+      result: 'increase in revenue growth'
+    }
+  ];  // Auto-rotate carousel every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -83,17 +84,11 @@ const TestimonialsSection = () => {
                   width: index === 1 ? 'min(400px, 90vw)' : 'min(340px, 85vw)',
                   scrollSnapAlign: 'center'
                 }}
-              ><Card className="glassmorphic-card border-white/10 h-full">
+              >                <Card className="glassmorphic-card border-white/10 h-full">
                   <CardContent className="p-4 md:p-8 lg:p-10 flex flex-col h-full">
-                    <div className="flex items-center mb-4 md:mb-8">                      <img 
-                        src={testimonial.avatar} 
-                        alt={testimonial.name}
-                        className="w-12 md:w-16 h-12 md:h-16 rounded-full mr-3 md:mr-4 object-cover border-2 border-orange-400/30"
-                      />
-                      <div>
-                        <h4 className="font-light tracking-tight text-base md:text-lg text-white">{testimonial.name}</h4>
-                        <p className="text-white/70 text-xs md:text-sm">{testimonial.company}</p>
-                      </div>
+                    <div className="mb-4 md:mb-8">
+                      <h4 className="font-light tracking-tight text-base md:text-lg text-white">{testimonial.name}</h4>
+                      <p className="text-white/70 text-xs md:text-sm">{testimonial.company}</p>
                     </div>
                     <p className="text-white/80 font-light mb-4 md:mb-8 leading-relaxed flex-grow text-sm md:text-lg">"{testimonial.quote}"</p>
                     <div className="bg-gradient-to-r from-orange-400/20 to-purple-500/20 rounded-xl p-3 md:p-4 border border-orange-400/20">
