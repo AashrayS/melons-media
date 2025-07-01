@@ -19,6 +19,15 @@ const Booking = () => {
       <div className="flex-1 pt-40 md:pt-36 pb-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            {/* Mascot */}
+            <div className="mb-8">
+              <img 
+                src="/lovable-uploads/melons-mascot.png" 
+                alt="Melons Media Mascot" 
+                className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 hover:animate-pulse transition-all duration-300"
+              />
+            </div>
+            
             <h1 className="text-4xl md:text-6xl font-light mb-6">
               Let's <span className="text-orange-400">Talk Business</span>
             </h1>

@@ -248,6 +248,15 @@ const Services = () => {
           </div>
 
           <div className="glassmorphic-card p-12 rounded-2xl text-center">
+            {/* Mascot */}
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/melons-mascot.png" 
+                alt="Melons Media Mascot" 
+                className="w-16 h-16 md:w-20 md:h-20 mx-auto hover:scale-110 hover:rotate-6 transition-all duration-300"
+              />
+            </div>
+            
             <h2 className="text-3xl font-light tracking-tight mb-6">Ready to Stop Being Boring?</h2>
             <p className="text-xl text-white/70 font-light mb-8 max-w-2xl mx-auto">
               Let's turn your brand from wallflower to showstopper. No more "meh" websites or crickets on social media.

@@ -64,6 +64,15 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-black text-white">
       <div className="max-w-full md:max-w-8xl mx-auto overflow-hidden">
         <div className="text-center mb-12 md:mb-20 animate-on-scroll">
+          {/* Mascot */}
+          <div className="mb-6">
+            <img 
+              src="/lovable-uploads/melons-mascot.png" 
+              alt="Melons Media Mascot" 
+              className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 hover:animate-spin transition-all duration-300"
+            />
+          </div>
+          
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">What Our Clients Say</h2>
           <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4">
             Real results from real people who trusted us with their vision

@@ -83,6 +83,15 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-16">
+            {/* Mascot */}
+            <div className="mb-8">
+              <img 
+                src="/lovable-uploads/melons-mascot.png" 
+                alt="Melons Media Mascot" 
+                className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 hover:scale-110 hover:-rotate-12 transition-all duration-300"
+              />
+            </div>
+            
             <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
               Stuff we've <span className="bg-gradient-to-r from-orange-400 to-purple-500 bg-clip-text text-transparent relative">
                 built

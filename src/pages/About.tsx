@@ -9,6 +9,15 @@ const About = () => {
       <Navigation />
       <div className="flex-1 pt-40 md:pt-36 pb-16 px-6">
         <div className="max-w-4xl mx-auto">          <div className="text-center mb-16">
+            {/* Mascot */}
+            <div className="mb-8">
+              <img 
+                src="/lovable-uploads/melons-mascot.png" 
+                alt="Melons Media Mascot" 
+                className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 hover:rotate-12 hover:scale-110 transition-all duration-300"
+              />
+            </div>
+            
             <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
               We're the <span className="bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text text-transparent relative">
                 Anti-Boring Agency
