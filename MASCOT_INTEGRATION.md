@@ -1,7 +1,7 @@
 # Melons Media Mascot Integration
 
 ## Mascot Image Location
-The mascot should be saved as: `/public/lovable-uploads/melons-mascot.jpeg`
+The mascot should be saved as: `/public/lovable-uploads/melons-mascot.png` (Note: Hero section mascot has been removed)
 
 ## Mascot Integration Points
 The mascot has been strategically integrated into the following locations:
@@ -63,4 +63,6 @@ The mascot is also integrated into:
 
 The mascot serves as a consistent brand element that reinforces the company's bold, fun, and professional personality across all pages while maintaining visual hierarchy and user experience.
 
-**Image Reference:** `/public/lovable-uploads/melons-mascot.jpeg`
+**Image Reference:** `/public/lovable-uploads/melons-mascot.png`
+
+**Note:** Mascot has been removed from the Hero section as requested.

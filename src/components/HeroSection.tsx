@@ -17,15 +17,6 @@ const HeroSection = () => {  return (
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }} />
         <div className="max-w-5xl mx-auto text-center z-10 relative animate-fade-in px-4">
-        {/* Mascot */}
-        <div className="mb-8 md:mb-12">
-          <img 
-            src="/lovable-uploads/melons-mascot.jpeg" 
-            alt="Melons Media Mascot" 
-            className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 animate-bounce hover:animate-pulse transition-all duration-300"
-          />
-        </div>
-        
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-6 md:mb-8 leading-tight">
           Brands grow faster when they go{' '}
           <span className="text-orange-400 relative">

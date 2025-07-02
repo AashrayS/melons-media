@@ -14,7 +14,8 @@ const Booking = () => {
     }
   }, []);
 
-  return (    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col">
       <Navigation />
       <div className="flex-1 pt-40 md:pt-36 pb-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +23,7 @@ const Booking = () => {
             {/* Mascot */}
             <div className="mb-8">
               <img 
-                src="/lovable-uploads/melons-mascot.jpeg" 
+                src="/lovable-uploads/melons-mascot.png" 
                 alt="Melons Media Mascot" 
                 className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 hover:animate-pulse transition-all duration-300"
               />
@@ -34,7 +35,9 @@ const Booking = () => {
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Ready to turn your "someday" into "right now"? Book a free call and let's figure out how to make your competitors nervous.
             </p>
-          </div>          {/* Calendly inline widget */}
+          </div>
+          
+          {/* Calendly inline widget */}
           <div className="calendly-inline-widget" data-url="https://calendly.com/water-melonsmedia" style={{minWidth: '320px', height: '700px'}}></div>
 
           {/* Contact Us Instead Button */}
@@ -46,7 +49,9 @@ const Booking = () => {
             >
               Prefer to Type? Contact Us
             </Button>
-          </div>          {/* Additional Info */}
+          </div>
+          
+          {/* Additional Info */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="glassmorphic-card p-6 rounded-xl">
               <div className="text-orange-400 text-2xl mb-4">⚡</div>
@@ -160,7 +165,8 @@ const Booking = () => {
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
                     <span className="text-white/70 text-sm">Any weird technical requirements</span>
                   </div>
-                </div>              </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

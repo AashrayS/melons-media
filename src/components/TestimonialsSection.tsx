@@ -67,7 +67,7 @@ const TestimonialsSection = () => {
           {/* Mascot */}
           <div className="mb-6">
             <img 
-              src="/lovable-uploads/melons-mascot.jpeg" 
+              src="/lovable-uploads/melons-mascot.png" 
               alt="Melons Media Mascot" 
               className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 hover:animate-spin transition-all duration-300"
             />
