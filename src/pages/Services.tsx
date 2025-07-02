@@ -251,7 +251,7 @@ const Services = () => {
             {/* Mascot */}
             <div className="mb-6">
               <img 
-                src="/lovable-uploads/melons-mascot.png" 
+                src="/lovable-uploads/meons-mascot.jpeg" 
                 alt="Melons Media Mascot" 
                 className="w-16 h-16 md:w-20 md:h-20 mx-auto hover:scale-110 hover:rotate-6 transition-all duration-300"
               />

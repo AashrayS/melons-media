@@ -65,10 +65,9 @@ const TestimonialsSection = () => {
       <div className="max-w-full md:max-w-8xl mx-auto overflow-hidden">
         <div className="text-center mb-12 md:mb-20 animate-on-scroll">
           {/* Mascot */}
-          <div className="mb-6">
-            <img 
-              src="/lovable-uploads/melons-mascot.png" 
-              alt="Melons Media Mascot" 
+          <div className="mb-6">              <img 
+              src="/lovable-uploads/meons-mascot.jpeg" 
+              alt="Melons Media Mascot"
               className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 hover:animate-spin transition-all duration-300"
             />
           </div>
