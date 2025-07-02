@@ -22,7 +22,7 @@ const Booking = () => {
             {/* Mascot */}
             <div className="mb-8">
               <img 
-                src="/lovable-uploads/melons-mascot.png" 
+                src="/lovable-uploads/melons-mascot.jpeg" 
                 alt="Melons Media Mascot" 
                 className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 hover:animate-pulse transition-all duration-300"
               />

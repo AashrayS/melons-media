@@ -20,7 +20,7 @@ const HeroSection = () => {  return (
         {/* Mascot */}
         <div className="mb-8 md:mb-12">
           <img 
-            src="/lovable-uploads/melons-mascot.png" 
+            src="/lovable-uploads/melons-mascot.jpeg" 
             alt="Melons Media Mascot" 
             className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 animate-bounce hover:animate-pulse transition-all duration-300"
           />
