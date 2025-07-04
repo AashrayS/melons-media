@@ -77,7 +77,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-green-900 text-white flex flex-col relative overflow-hidden">
+    <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-400/15 via-transparent to-yellow-300/10" />
       <div className="absolute top-1/4 left-10 w-40 h-40 bg-gradient-to-br from-orange-400/25 to-yellow-300/20 rounded-full blur-2xl animate-pulse" />

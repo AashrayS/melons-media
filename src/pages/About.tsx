@@ -5,29 +5,18 @@ import { Zap, Palette, Target, TrendingUp } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-green-900 text-white flex flex-col relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-400/15 via-transparent to-yellow-300/10" />
-      <div className="absolute top-1/4 left-20 w-40 h-40 bg-gradient-to-br from-orange-400/25 to-yellow-300/20 rounded-full blur-2xl animate-pulse" />
-      <div className="absolute bottom-1/3 right-20 w-56 h-56 bg-gradient-to-br from-yellow-300/20 to-orange-500/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }} />
+    <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
+      {/* Subtle background accent */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-orange-400/5" />
       <Navigation />
       <div className="flex-1 pt-40 md:pt-36 pb-16 px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            {/* Mascot */}
-            <div className="mb-8">
-              <img 
-                src="/lovable-uploads/meons-mascot.jpeg" 
-                alt="Melons Media Mascot" 
-                className="w-24 h-24 md:w-28 md:h-28 mx-auto mb-4 hover:rotate-12 hover:scale-110 transition-all duration-300 bounce-gentle drop-shadow-2xl"
-              />
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-              We're the <span className="melon-text relative wiggle inline-block">
+            <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
+              We're the <span className="text-orange-400 relative">
                 Anti-Boring Agency
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500"></div>
-              </span> you need! 🎯
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-orange-500"></div>
+              </span> you need
             </h1>
             <p className="text-2xl text-orange-100/80 font-medium">
               We make brands that don't suck (and actually make <span className="melon-text font-bold">money! 💰</span>)

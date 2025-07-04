@@ -25,16 +25,15 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-32 px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-green-900 via-black to-green-900 text-white relative overflow-hidden">
-      {/* Background orbs */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-orange-400/20 to-yellow-400/15 rounded-full blur-2xl animate-pulse" />
-      <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-yellow-300/15 to-orange-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
+    <section id="how-it-works" className="py-32 px-8 lg:px-16 xl:px-24 bg-black text-white relative overflow-hidden">
+      {/* Subtle background accent */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/3 via-transparent to-orange-400/3" />
       
       <div className="max-w-8xl mx-auto relative z-10">
         <div className="text-center mb-20 animate-on-scroll">
-          <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-8 melon-text">How It Works 🚀</h2>
-          <p className="text-xl text-orange-100/80 font-medium max-w-3xl mx-auto">
-            Our streamlined process ensures <span className="text-yellow-300 font-semibold">exceptional results</span> every time! 💪
+          <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-8">How It Works</h2>
+          <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+            Our streamlined process ensures exceptional results every time
           </p>
         </div>
 
@@ -42,7 +41,7 @@ const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <div 
               key={step.title}
-              className="glassmorphic-card p-8 lg:p-10 rounded-3xl animate-on-scroll group hover:scale-105 hover:shadow-2xl hover:shadow-orange-400/20 transition-all duration-300"
+              className="glassmorphic-card p-8 lg:p-10 rounded-3xl animate-on-scroll group hover:scale-105 transition-all duration-300"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="mb-8">
@@ -51,12 +50,12 @@ const HowItWorksSection = () => {
                   alt={step.title}
                   className="w-full h-48 object-cover rounded-2xl mb-8 group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400/30 to-yellow-400/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-orange-400/20 rounded-2xl flex items-center justify-center">
                   <step.icon className="w-8 h-8 text-orange-400" strokeWidth={1.5} />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold tracking-tight mb-6 text-orange-100">{step.title}</h3>
-              <p className="text-orange-100/70 font-medium leading-relaxed text-lg">{step.description}</p>
+              <h3 className="text-2xl font-light tracking-tight mb-6">{step.title}</h3>
+              <p className="text-white/70 font-light leading-relaxed text-lg">{step.description}</p>
             </div>
           ))}
         </div>
