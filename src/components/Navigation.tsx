@@ -74,7 +74,7 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => handleSectionNavigation(item.sectionId!)}
-                  className="text-white/90 hover:text-lime-400 transition-colors duration-200 font-medium text-lg tracking-wide cursor-pointer"
+                  className="text-orange-100/90 hover:text-yellow-300 transition-colors duration-200 font-medium text-lg tracking-wide cursor-pointer hover:scale-105"
                 >
                   {item.name}
                 </button>
@@ -82,7 +82,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.href!}
-                  className="text-white/90 hover:text-lime-400 transition-colors duration-200 font-medium text-lg tracking-wide"
+                  className="text-orange-100/90 hover:text-yellow-300 transition-colors duration-200 font-medium text-lg tracking-wide hover:scale-105"
                 >
                   {item.name}
                 </Link>
@@ -92,9 +92,9 @@ const Navigation = () => {
           <div className="hidden md:flex relative z-10">
             <Link
               to="/booking"
-              className="px-8 py-3 bg-green-800/30 backdrop-blur-sm border border-lime-400/40 text-lime-100 rounded-full hover:bg-lime-400/20 hover:border-lime-400/60 transition-all duration-300 font-medium tracking-wide"
+              className="px-8 py-3 bg-gradient-to-r from-orange-400 to-yellow-400 text-black font-bold rounded-full hover:from-orange-500 hover:to-yellow-500 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Let's Talk
+              Let's Talk! ✨
             </Link>
           </div>
 
