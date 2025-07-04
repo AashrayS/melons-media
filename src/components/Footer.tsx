@@ -4,12 +4,12 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {  return (    <footer 
       id="contact" 
-      className="w-full py-16 px-6 bg-gradient-to-br from-black via-green-950 to-black text-white border-t border-lime-400/20 relative z-10"
+      className="w-full py-16 px-6 bg-gradient-to-br from-green-900 via-green-800 to-green-900 text-white border-t border-orange-400/30 relative z-10"
       style={{ 
         minHeight: 'auto', 
         display: 'block',
-        backgroundColor: '#0A1B0D',
-        borderTop: '1px solid rgba(182, 226, 100, 0.2)'
+        backgroundColor: '#2D4A22',
+        borderTop: '1px solid rgba(255, 165, 76, 0.3)'
       }}
     >      <div className="max-w-7xl mx-auto" style={{ position: 'relative', zIndex: 1 }}>        <div className="grid grid-cols-1 md:grid-cols-3 gap-12" style={{ opacity: 1, visibility: 'visible' }}>
           <div style={{ opacity: 1, visibility: 'visible' }}>

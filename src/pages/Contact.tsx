@@ -60,7 +60,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-green-950 to-black text-white flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-green-900 text-white flex flex-col relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-400/15 via-transparent to-yellow-300/10" />
+      <div className="absolute top-1/4 left-10 w-40 h-40 bg-gradient-to-br from-orange-400/25 to-yellow-300/20 rounded-full blur-2xl animate-pulse" />
+      <div className="absolute bottom-1/3 right-10 w-56 h-56 bg-gradient-to-br from-yellow-300/20 to-orange-500/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }} />
       <Navigation />
       <div className="flex-1 pt-40 md:pt-36 pb-16 px-6">
         <div className="max-w-6xl mx-auto">          <div className="text-center mb-16">

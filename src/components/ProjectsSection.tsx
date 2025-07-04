@@ -27,18 +27,22 @@ const ProjectsSection = () => {  const featuredProjects = [
   ];
 
   return (
-    <section id="projects" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-black text-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="projects" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-green-900 via-black to-green-900 text-white relative overflow-hidden">
+      {/* Background orbs */}
+      <div className="absolute top-1/4 right-1/5 w-32 h-32 bg-gradient-to-br from-orange-400/20 to-yellow-400/15 rounded-full blur-2xl animate-pulse" />
+      <div className="absolute bottom-1/3 left-1/4 w-24 h-24 bg-gradient-to-br from-yellow-300/15 to-orange-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">
-            Featured <span className="bg-gradient-to-r from-orange-400 to-purple-500 bg-clip-text text-transparent relative">
-              Success Stories
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 md:mb-8">
+            Featured <span className="melon-text relative">
+              Success Stories 🏆
               <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-400 to-purple-500"></div>
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4">
-            Real results from our comprehensive tech media strategies that drive growth and brand omnipresence
+          <p className="text-lg md:text-xl text-orange-100/80 font-medium max-w-3xl mx-auto px-4">
+            Real results from our comprehensive tech media strategies that drive <span className="text-yellow-300 font-semibold">growth</span> and brand <span className="text-orange-300 font-semibold">omnipresence</span> 🚀
           </p>
         </div>
 

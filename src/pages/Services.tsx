@@ -63,16 +63,20 @@ const Services = () => {
     }
   ];
 
-  return (    <div className="min-h-screen bg-gradient-to-br from-black via-green-950 to-black text-white flex flex-col">
+  return (    <div className="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-green-900 text-white flex flex-col relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-400/15 via-transparent to-yellow-300/10" />
+      <div className="absolute top-1/4 left-10 w-40 h-40 bg-gradient-to-br from-orange-400/25 to-yellow-300/20 rounded-full blur-2xl animate-pulse" />
+      <div className="absolute bottom-1/3 right-10 w-56 h-56 bg-gradient-to-br from-yellow-300/20 to-orange-500/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }} />
       <Navigation />
-      <div className="flex-1 pt-40 md:pt-36 pb-16 px-6">
+      <div className="flex-1 pt-40 md:pt-36 pb-16 px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-8">
-              Our <span className="bg-gradient-to-r from-orange-400 to-purple-500 bg-clip-text text-transparent relative">
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-8">
+              Our <span className="melon-text relative wiggle inline-block">
                 Services
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-400 to-purple-500"></div>
-              </span>
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500"></div>
+              </span> 🚀
             </h1>
             <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
               We help businesses go from "meh" to "hell yeah!" with killer websites, content that actually converts, and marketing that doesn't suck.

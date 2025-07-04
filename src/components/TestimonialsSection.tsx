@@ -61,19 +61,28 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-black via-green-950 to-black text-white">
-      <div className="max-w-full md:max-w-8xl mx-auto overflow-hidden">
+    <section id="testimonials" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-green-900 via-green-800 to-green-900 text-white relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 via-transparent to-yellow-300/8" />
+      <div className="absolute top-1/4 left-20 w-32 h-32 bg-gradient-to-br from-orange-400/20 to-yellow-300/15 rounded-full blur-xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-20 w-48 h-48 bg-gradient-to-br from-yellow-300/15 to-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '3s' }} />
+      <div className="max-w-full md:max-w-8xl mx-auto overflow-hidden relative z-10">
         <div className="text-center mb-12 md:mb-20 animate-on-scroll">
           {/* Mascot */}
-          <div className="mb-6">              <img 
+          <div className="mb-6">
+            <img 
               src="/lovable-uploads/meons-mascot.jpeg" 
               alt="Melons Media Mascot"
-              className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 hover:animate-spin transition-all duration-300"
+              className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 hover:rotate-12 hover:scale-110 transition-all duration-300 bounce-gentle drop-shadow-2xl"
             />
           </div>
           
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">What Our Clients Say</h2>
-          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 md:mb-8">
+            What Our Clients Say <span className="wiggle inline-block">💬</span>
+          </h2>
+          <p className="text-lg md:text-xl text-orange-100/80 font-medium max-w-3xl mx-auto px-4">
+            Real results from real people who trusted us with their <span className="melon-text font-bold">dreams! ✨</span>
+          </p>
             Real results from real people who trusted us with their vision
           </p>
         </div>        <div className="relative animate-on-scroll" ref={carouselRef}>

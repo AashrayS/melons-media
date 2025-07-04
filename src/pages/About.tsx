@@ -5,64 +5,69 @@ import { Zap, Palette, Target, TrendingUp } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-green-950 to-black text-white flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-green-900 text-white flex flex-col relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-400/15 via-transparent to-yellow-300/10" />
+      <div className="absolute top-1/4 left-20 w-40 h-40 bg-gradient-to-br from-orange-400/25 to-yellow-300/20 rounded-full blur-2xl animate-pulse" />
+      <div className="absolute bottom-1/3 right-20 w-56 h-56 bg-gradient-to-br from-yellow-300/20 to-orange-500/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }} />
       <Navigation />
-      <div className="flex-1 pt-40 md:pt-36 pb-16 px-6">
-        <div className="max-w-4xl mx-auto">          <div className="text-center mb-16">
+      <div className="flex-1 pt-40 md:pt-36 pb-16 px-6 relative z-10">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
             {/* Mascot */}
             <div className="mb-8">
               <img 
                 src="/lovable-uploads/meons-mascot.jpeg" 
                 alt="Melons Media Mascot" 
-                className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 hover:rotate-12 hover:scale-110 transition-all duration-300"
+                className="w-24 h-24 md:w-28 md:h-28 mx-auto mb-4 hover:rotate-12 hover:scale-110 transition-all duration-300 bounce-gentle drop-shadow-2xl"
               />
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
-              We're the <span className="bg-gradient-to-r from-lime-400 to-orange-400 bg-clip-text text-transparent relative">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+              We're the <span className="melon-text relative wiggle inline-block">
                 Anti-Boring Agency
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-lime-400 to-orange-400"></div>
-              </span> you need
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500"></div>
+              </span> you need! 🎯
             </h1>
-            <p className="text-2xl text-green-100/60 font-light">
-              We make brands that don't suck (and actually make money)
+            <p className="text-2xl text-orange-100/80 font-medium">
+              We make brands that don't suck (and actually make <span className="melon-text font-bold">money! 💰</span>)
             </p>
           </div>
           
           <div className="glassmorphic-card p-8 rounded-2xl mb-12 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-400/10 rounded-full blur-2xl" />            <div className="relative z-10">
-              <h2 className="text-3xl font-light mb-8 text-center">
-                Plot twist: We actually know what we're doing
+              <h2 className="text-3xl font-bold mb-8 text-center text-yellow-200">
+                Plot twist: We actually know what we're doing! 🎭
               </h2>
               
-              <p className="text-xl text-white/80 font-light leading-relaxed mb-8">
+              <p className="text-xl text-orange-100/90 font-medium leading-relaxed mb-8">
                 While other agencies are busy making pretty things that don't work, we're out here creating 
-                <span className="text-white font-semibold"> digital experiences that actually make you money.</span>
+                <span className="melon-text font-bold"> digital experiences that actually make you money! 💰</span>
               </p>
               
-              <p className="text-lg text-white/70 font-light leading-relaxed mb-8">
-                We've helped brands go from <span className="text-white">"who are these guys?"</span> to 
-                <span className="text-white">"shut up and take my money!"</span> And we can do the same for you.
+              <p className="text-lg text-orange-100/80 font-medium leading-relaxed mb-8">
+                We've helped brands go from <span className="text-yellow-300 font-bold">"who are these guys?"</span> to 
+                <span className="text-yellow-300 font-bold">"shut up and take my money!"</span> And we can do the same for you. <span className="wiggle inline-block">✨</span>
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <div className="bg-white/5 p-6 rounded-xl border border-white/20">
-                  <h3 className="text-2xl font-light tracking-tight mb-4 text-white">Our Mission</h3>
-                  <p className="text-white/70 font-light leading-relaxed">
+                <div className="glassmorphic-card p-8 rounded-xl hover:scale-105 transition-all duration-300">
+                  <h3 className="text-2xl font-bold tracking-tight mb-4 text-yellow-200">Our Mission 🎯</h3>
+                  <p className="text-orange-100/80 font-medium leading-relaxed">
                     To establish digital foundations, optimize performance, and create brand omnipresence 
-                    that drives sustainable growth across all channels.
+                    that drives <span className="melon-text font-bold">sustainable growth</span> across all channels! 🚀
                   </p>
                 </div>
-                <div className="bg-white/5 p-6 rounded-xl border border-white/20">
-                  <h3 className="text-2xl font-light tracking-tight mb-4 text-white">Our Approach</h3>
-                  <p className="text-white/70 font-light leading-relaxed">
+                <div className="glassmorphic-card p-8 rounded-xl hover:scale-105 transition-all duration-300">
+                  <h3 className="text-2xl font-bold tracking-tight mb-4 text-yellow-200">Our Approach 💪</h3>
+                  <p className="text-orange-100/80 font-medium leading-relaxed mb-4">
                     Strategic, data-driven, and tech-forward. We combine cutting-edge technology with 
-                    proven media strategies to deliver measurable results.
+                    proven media strategies to deliver <span className="melon-text font-bold">measurable results! 📊</span>
                   </p>
-                  <p className="text-white/70 font-light leading-relaxed">
+                  <p className="text-orange-100/80 font-medium leading-relaxed">
                     Young, hungry, and obsessed with results. We don't do corporate BS—we do whatever it takes
-                    to make your brand the talk of the internet.
+                    to make your brand the <span className="text-yellow-300 font-bold">talk of the internet! 🌟</span>
                   </p>
                 </div>
               </div>
