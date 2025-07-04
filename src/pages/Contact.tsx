@@ -60,7 +60,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-black via-green-950 to-black text-white flex flex-col">
       <Navigation />
       <div className="flex-1 pt-40 md:pt-36 pb-16 px-6">
         <div className="max-w-6xl mx-auto">          <div className="text-center mb-16">

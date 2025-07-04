@@ -5,7 +5,7 @@ import { Zap, Palette, Target, TrendingUp } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-black via-green-950 to-black text-white flex flex-col">
       <Navigation />
       <div className="flex-1 pt-40 md:pt-36 pb-16 px-6">
         <div className="max-w-4xl mx-auto">          <div className="text-center mb-16">
@@ -19,12 +19,12 @@ const About = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
-              We're the <span className="bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text text-transparent relative">
+              We're the <span className="bg-gradient-to-r from-lime-400 to-orange-400 bg-clip-text text-transparent relative">
                 Anti-Boring Agency
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-orange-400"></div>
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-lime-400 to-orange-400"></div>
               </span> you need
             </h1>
-            <p className="text-2xl text-white/60 font-light">
+            <p className="text-2xl text-green-100/60 font-light">
               We make brands that don't suck (and actually make money)
             </p>
           </div>

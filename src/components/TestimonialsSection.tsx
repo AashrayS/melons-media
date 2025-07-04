@@ -61,7 +61,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-black text-white">
+    <section id="testimonials" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-black via-green-950 to-black text-white">
       <div className="max-w-full md:max-w-8xl mx-auto overflow-hidden">
         <div className="text-center mb-12 md:mb-20 animate-on-scroll">
           {/* Mascot */}

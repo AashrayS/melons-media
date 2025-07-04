@@ -74,7 +74,7 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => handleSectionNavigation(item.sectionId!)}
-                  className="text-white/90 hover:text-orange-400 transition-colors duration-200 font-medium text-lg tracking-wide cursor-pointer"
+                  className="text-white/90 hover:text-lime-400 transition-colors duration-200 font-medium text-lg tracking-wide cursor-pointer"
                 >
                   {item.name}
                 </button>
@@ -82,7 +82,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.href!}
-                  className="text-white/90 hover:text-orange-400 transition-colors duration-200 font-medium text-lg tracking-wide"
+                  className="text-white/90 hover:text-lime-400 transition-colors duration-200 font-medium text-lg tracking-wide"
                 >
                   {item.name}
                 </Link>
@@ -92,7 +92,7 @@ const Navigation = () => {
           <div className="hidden md:flex relative z-10">
             <Link
               to="/booking"
-              className="px-8 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/30 hover:border-white/50 transition-all duration-300 font-medium tracking-wide"
+              className="px-8 py-3 bg-green-800/30 backdrop-blur-sm border border-lime-400/40 text-lime-100 rounded-full hover:bg-lime-400/20 hover:border-lime-400/60 transition-all duration-300 font-medium tracking-wide"
             >
               Let's Talk
             </Link>
@@ -101,7 +101,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center relative z-10">            <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-orange-400 transition-colors p-1 rounded-lg hover:bg-white/10"
+              className="text-white hover:text-lime-400 transition-colors p-1 rounded-lg hover:bg-green-800/20"
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -110,7 +110,7 @@ const Navigation = () => {
         {isOpen && (
           <div 
             className="md:hidden mt-4 py-4 backdrop-blur-md rounded-xl relative z-[100]"            style={{
-              backgroundColor: 'rgba(236, 223, 204, 0.95)'
+              backgroundColor: 'rgba(45, 113, 48, 0.95)'
             }}
           >            <div className="flex flex-col space-y-3 px-4 relative z-10">
               {navItems.map((item) => (
@@ -118,7 +118,7 @@ const Navigation = () => {
                   <button
                     key={item.name}
                     onClick={() => handleSectionNavigation(item.sectionId!)}
-                    className="text-gray-800 hover:text-orange-500 transition-colors duration-200 font-medium tracking-wide py-2 px-3 rounded-lg hover:bg-white/20 block text-center touch-manipulation w-full"
+                    className="text-green-100 hover:text-lime-400 transition-colors duration-200 font-medium tracking-wide py-2 px-3 rounded-lg hover:bg-green-800/30 block text-center touch-manipulation w-full"
                     style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                   >
                     {item.name}
@@ -127,7 +127,7 @@ const Navigation = () => {
                   <Link
                     key={item.name}
                     to={item.href!}
-                    className="text-gray-800 hover:text-orange-500 transition-colors duration-200 font-medium tracking-wide py-2 px-3 rounded-lg hover:bg-white/20 block text-center touch-manipulation"
+                    className="text-green-100 hover:text-lime-400 transition-colors duration-200 font-medium tracking-wide py-2 px-3 rounded-lg hover:bg-green-800/30 block text-center touch-manipulation"
                     style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                     onClick={() => setIsOpen(false)}
                   >
@@ -136,7 +136,7 @@ const Navigation = () => {
                 )
               ))}<Link
                 to="/booking"
-                className="mt-3 px-4 py-3 bg-orange-500 hover:bg-orange-600 border border-orange-500 text-white rounded-full transition-all duration-300 font-medium text-center touch-manipulation"
+                className="mt-3 px-4 py-3 bg-orange-400 hover:bg-orange-500 border border-orange-400 text-black rounded-full transition-all duration-300 font-medium text-center touch-manipulation"
                 style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                 onClick={() => setIsOpen(false)}
               >

@@ -63,7 +63,7 @@ const Services = () => {
     }
   ];
 
-  return (    <div className="min-h-screen bg-black text-white flex flex-col">
+  return (    <div className="min-h-screen bg-gradient-to-br from-black via-green-950 to-black text-white flex flex-col">
       <Navigation />
       <div className="flex-1 pt-40 md:pt-36 pb-16 px-6">
         <div className="max-w-7xl mx-auto">

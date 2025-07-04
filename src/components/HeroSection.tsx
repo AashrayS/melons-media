@@ -5,12 +5,12 @@ import { Button } from '@/components/ui/button';
 const HeroSection = () => {  return (
     <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 bg-black text-white relative overflow-hidden pt-16 md:pt-24">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-purple-500/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-green-600/10" />
       
       {/* Floating geometric shapes */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-orange-400/20 to-transparent rounded-full blur-xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-orange-300/15 to-transparent rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-to-br from-green-500/20 to-transparent rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-lime-300/15 to-transparent rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }} />
       
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
@@ -21,7 +21,7 @@ const HeroSection = () => {  return (
           Brands grow faster when they go{' '}
           <span className="text-orange-400 relative">
             Melons
-            <div className="absolute -bottom-1 md:-bottom-2 left-0 right-0 h-0.5 md:h-1 bg-gradient-to-r from-orange-400 to-purple-500 rounded-full" />
+            <div className="absolute -bottom-1 md:-bottom-2 left-0 right-0 h-0.5 md:h-1 bg-gradient-to-r from-orange-400 to-lime-400 rounded-full" />
           </span>
         </h1>
         
@@ -32,15 +32,15 @@ const HeroSection = () => {  return (
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center px-4">
           <Button 
             onClick={() => window.location.href = '/booking'}
-            className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-10 py-6 rounded-lg hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/30 transition-all duration-300"
+            className="bg-orange-400 hover:bg-orange-500 text-black font-semibold text-lg px-10 py-6 rounded-lg hover:scale-105 hover:shadow-2xl hover:shadow-orange-400/30 transition-all duration-300"
           >
             Let's Make Magic
           </Button>
           <div className="flex items-center gap-3 text-white/60">
             <div className="flex -space-x-2">
               <div className="w-8 h-8 rounded-full bg-orange-400 border-2 border-black" />
-              <div className="w-8 h-8 rounded-full bg-purple-500 border-2 border-black" />
-              <div className="w-8 h-8 rounded-full bg-blue-500 border-2 border-black" />
+              <div className="w-8 h-8 rounded-full bg-lime-400 border-2 border-black" />
+              <div className="w-8 h-8 rounded-full bg-green-500 border-2 border-black" />
             </div>
             <span className="text-sm">Trusted by brands</span>
           </div>

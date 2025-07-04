@@ -15,7 +15,7 @@ const Booking = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-black via-green-950 to-black text-white flex flex-col">
       <Navigation />
       <div className="flex-1 pt-40 md:pt-36 pb-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +32,7 @@ const Booking = () => {
             <h1 className="text-4xl md:text-6xl font-light mb-6">
               Let's <span className="text-orange-400">Talk Business</span>
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-xl text-green-100/80 max-w-3xl mx-auto">
               Ready to turn your "someday" into "right now"? Book a free call and let's figure out how to make your competitors nervous.
             </p>
           </div>
@@ -55,20 +55,20 @@ const Booking = () => {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="glassmorphic-card p-6 rounded-xl">
               <div className="text-orange-400 text-2xl mb-4">⚡</div>
-              <h3 className="text-lg font-light mb-2">No BS, Just Results</h3>
-              <p className="text-white/70 text-sm">Pick a time, show up, get insights. We don't do lengthy sales pitches.</p>
+              <h3 className="text-lg font-light mb-2 text-green-100">No BS, Just Results</h3>
+              <p className="text-green-200/70 text-sm">Pick a time, show up, get insights. We don't do lengthy sales pitches.</p>
             </div>
             
             <div className="glassmorphic-card p-6 rounded-xl">
               <div className="text-orange-400 text-2xl mb-4">💬</div>
-              <h3 className="text-lg font-light mb-2">Actually Free</h3>
-              <p className="text-white/70 text-sm">No hidden costs, no surprise charges. Just good advice from people who know their stuff.</p>
+              <h3 className="text-lg font-light mb-2 text-green-100">Actually Free</h3>
+              <p className="text-green-200/70 text-sm">No hidden costs, no surprise charges. Just good advice from people who know their stuff.</p>
             </div>
             
             <div className="glassmorphic-card p-6 rounded-xl">
               <div className="text-orange-400 text-2xl mb-4">🎯</div>
-              <h3 className="text-lg font-light mb-2">Custom Solutions</h3>
-              <p className="text-white/70 text-sm">We'll talk about YOUR project, not some cookie-cutter template.</p>
+              <h3 className="text-lg font-light mb-2 text-green-100">Custom Solutions</h3>
+              <p className="text-green-200/70 text-sm">We'll talk about YOUR project, not some cookie-cutter template.</p>
             </div>
           </div>
 
