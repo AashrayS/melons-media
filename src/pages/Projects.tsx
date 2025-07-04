@@ -77,7 +77,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-green-800 via-black to-green-900 text-white flex flex-col relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-400/15 via-transparent to-yellow-300/10" />
       <div className="absolute top-1/4 left-10 w-40 h-40 bg-gradient-to-br from-orange-400/25 to-yellow-300/20 rounded-full blur-2xl animate-pulse" />
@@ -148,8 +148,8 @@ const Projects = () => {
                       index === 0 
                         ? 'bg-green-500/20 text-green-300' 
                         : index === 1
-                        ? 'bg-blue-500/20 text-blue-300'
-                        : 'bg-pink-500/20 text-pink-300'
+                        ? 'bg-green-600/20 text-green-300'
+                        : 'bg-green-700/20 text-green-300'
                     }`}>
                       {project.category.includes('E-commerce') ? 'E-commerce' : 
                        project.category.includes('Travel') ? 'Travel App' : 'Fitness App'}
@@ -158,7 +158,7 @@ const Projects = () => {
                       index === 0 
                         ? 'bg-orange-500/20 text-orange-300' 
                         : index === 1
-                        ? 'bg-purple-500/20 text-purple-300'
+                        ? 'bg-orange-600/20 text-orange-300'
                         : 'bg-orange-500/20 text-orange-300'
                     }`}>
                       {project.technologies[0]}
@@ -230,7 +230,7 @@ const Projects = () => {
                           </div>
                           <div className="flex justify-between">
                             <span className="text-white/70">Mobile Responsive</span>
-                            <span className="text-blue-400">100%</span>
+                            <span className="text-orange-400">100%</span>
                           </div>
                         </div>
                       </div>

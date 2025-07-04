@@ -32,7 +32,7 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
-  return (    <div className="min-h-screen bg-black text-white flex flex-col">
+  return (    <div className="min-h-screen bg-gradient-to-br from-green-900 via-black to-green-800 text-white flex flex-col">
       <Navigation />
       <HeroSection />
       <ServicesSection />

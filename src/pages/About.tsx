@@ -5,9 +5,9 @@ import { Zap, Palette, Target, TrendingUp } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-green-900 via-black to-green-800 text-white flex flex-col relative overflow-hidden">
       {/* Subtle background accent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-orange-400/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-orange-400/6" />
       <Navigation />
       <div className="flex-1 pt-40 md:pt-36 pb-16 px-6 relative z-10">
         <div className="max-w-4xl mx-auto">

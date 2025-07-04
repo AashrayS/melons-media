@@ -27,9 +27,9 @@ const ProjectsSection = () => {  const featuredProjects = [
   ];
 
   return (
-    <section id="projects" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-black text-white relative overflow-hidden">
+    <section id="projects" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-green-800 via-black to-green-900 text-white relative overflow-hidden">
       {/* Subtle background accent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/3 via-transparent to-orange-400/3" />
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/6 via-transparent to-orange-400/5" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
