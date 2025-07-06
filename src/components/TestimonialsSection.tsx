@@ -100,7 +100,7 @@ const TestimonialsSection = () => {
                       <p className="text-white/70 text-xs md:text-sm">{testimonial.company}</p>
                     </div>
                     <p className="text-white/80 font-light mb-4 md:mb-8 leading-relaxed flex-grow text-sm md:text-lg">"{testimonial.quote}"</p>
-                    <div className="bg-gradient-to-r from-orange-400/20 to-purple-500/20 rounded-xl p-3 md:p-4 border border-orange-400/20">
+                    <div className="bg-gradient-to-r from-orange-400/20 to-yellow-400/20 rounded-xl p-3 md:p-4 border border-orange-400/20">
                       <p className="text-orange-400 font-light text-xs md:text-sm">Result: {testimonial.result}</p>
                     </div>
                   </CardContent>
