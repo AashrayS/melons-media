@@ -102,7 +102,7 @@ const ProjectsSection = () => {
 
         {/* Projects Grid - Two Column Layout */}
         <div className="space-y-24 md:space-y-32">
-          {allProjects.map((project, index) => (
+          {allProjects.slice(0, 3).map((project, index) => (
             <div 
               key={project.id}
               className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
