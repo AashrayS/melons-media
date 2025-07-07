@@ -15,7 +15,7 @@ const ProjectsSection = () => {
       image: '/lovable-uploads/furni-project.jpg.png',
       technologies: ['React', 'TypeScript', 'SEO', 'Google Analytics'],
       marketingResults: [
-        '180% increase in organic traffic',
+        '85% increase in organic traffic',
         '35% conversion rate improvement',
         'Page 1 Google rankings for 12 keywords'
       ],
@@ -23,17 +23,17 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: 'TravelWise - Travel Platform',
-      category: 'Travel Platform + Digital Marketing',
-      description: 'Multi-platform travel app with geo-targeted marketing and booking optimization.',
-      image: '/lovable-uploads/travel-project.jpg.png',
-      technologies: ['React Native', 'React.js', 'Google Ads', 'Facebook Ads'],
+      title: "Rejul's Fashion - Rental Business",
+      category: 'Retail Marketing + Content Creation',
+      description: 'Complete digital transformation for clothing rental business in Bhopal with content creation and Instagram growth.',
+      image: '/lovable-uploads/image (6).png',
+      technologies: ['Instagram Marketing', 'Content Creation', 'Local SEO', 'Google Ads'],
       marketingResults: [
-        '250% increase in app downloads',
-        '60% higher booking conversion',
-        'Reduced customer acquisition cost by 40%'
+        '300% increase in rental bookings',
+        'Built Instagram presence from 0 to 8K followers',
+        '85% of new customers from digital channels'
       ],
-      services: ['App Development', 'Google Ads Management', 'App Store Optimization']
+      services: ['Content Creation', 'Instagram Marketing', 'Local SEO']
     },
     {
       id: 3,
@@ -51,17 +51,17 @@ const ProjectsSection = () => {
     },
     {
       id: 4,
-      title: "Rejul's Fashion - Rental Business",
-      category: 'Retail Marketing + Content Creation',
-      description: 'Complete digital transformation for clothing rental business in Bhopal with content creation and Instagram growth.',
-      image: '/lovable-upmelons-media-genesis-web/public/lovable-uploads/image (6).pngloads/melon.png',
-      technologies: ['Instagram Marketing', 'Content Creation', 'Local SEO', 'Google Ads'],
+      title: 'TravelWise - Travel Platform',
+      category: 'Travel Platform + Digital Marketing',
+      description: 'Multi-platform travel app with geo-targeted marketing and booking optimization.',
+      image: '/lovable-uploads/travel-project.jpg.png',
+      technologies: ['React Native', 'React.js', 'Google Ads', 'Facebook Ads'],
       marketingResults: [
-        'Increase in rental bookings',
-        'Building Instagram presence',
-        'Increase in new customers from digital channels'
+        '45% increase in app traffic',
+        '22% optimization for higher booking conversion',
+        'Reduced customer acquisition cost by 28%'
       ],
-      services: ['Content Creation', 'Instagram Marketing', 'Local SEO']
+      services: ['App Development', 'Google Ads Management', 'App Store Optimization']
     },
     {
       id: 5,
