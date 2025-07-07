@@ -91,16 +91,20 @@ const ProjectsSection = () => {
       const viewportHeight = window.innerHeight;
       
       // Calculate how much of the folder section is visible
-      if (rect.top < viewportHeight && rect.bottom > 0) {
-        const scrollProgress = Math.max(0, Math.min(1, (viewportHeight - rect.top) / (viewportHeight + rect.height)));
+      if (rect.top < viewportHeight * 0.8 && rect.bottom > viewportHeight * 0.2) {
+        const scrollProgress = Math.max(0, Math.min(1, (viewportHeight * 0.8 - rect.top) / (viewportHeight * 0.6)));
         setScrollPosition(scrollProgress);
         
-        // Update current project based on scroll progress
-        const newIndex = Math.min(
-          allProjects.length - 1,
-          Math.floor(scrollProgress * allProjects.length * 1.5)
-        );
-        setCurrentProjectIndex(newIndex);
+        // Show one project at a time based on scroll progress
+        const newIndex = Math.floor(scrollProgress * allProjects.length);
+        const clampedIndex = Math.max(0, Math.min(allProjects.length - 1, newIndex));
+        setCurrentProjectIndex(clampedIndex);
+      } else if (rect.top >= viewportHeight * 0.8) {
+        // Before the section is in view
+        setCurrentProjectIndex(-1);
+      } else if (rect.bottom <= viewportHeight * 0.2) {
+        // After the section has passed
+        setCurrentProjectIndex(allProjects.length - 1);
       }
     };
 
@@ -132,117 +136,132 @@ const ProjectsSection = () => {
         {/* Folder Container */}
         <div 
           ref={folderRef}
-          className="relative min-h-[800px] flex items-center justify-center"
+          className="relative min-h-[900px] flex items-center justify-center px-4"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Folder Base */}
           <div className="relative">
             {/* Folder Back */}
-            <div className="w-80 h-96 bg-gradient-to-br from-[#fd8d1b]/20 to-[#fd8e1b]/10 rounded-lg border-2 border-[#fd8d1b]/30 transform rotate-2 absolute -z-10" />
+            <div className="w-72 md:w-80 h-80 md:h-96 bg-gradient-to-br from-[#fd8d1b]/20 to-[#fd8e1b]/10 rounded-lg border-2 border-[#fd8d1b]/30 transform rotate-2 absolute -z-10" />
             
             {/* Main Folder */}
-            <div className="w-80 h-96 bg-gradient-to-br from-[#fd8d1b]/25 to-[#fd8e1b]/15 rounded-lg border-2 border-[#fd8d1b]/40 relative overflow-hidden backdrop-blur-sm">
+            <div className="w-72 md:w-80 h-80 md:h-96 bg-gradient-to-br from-[#010100]/90 via-[#000000]/80 to-[#010000]/90 rounded-lg border-2 border-[#fd8d1b]/40 relative overflow-hidden backdrop-blur-sm shadow-2xl">
               {/* Folder Tab */}
-              <div className="absolute -top-4 left-8 w-24 h-8 bg-gradient-to-br from-[#fd8d1b]/30 to-[#fd8e1b]/20 rounded-t-lg border-2 border-[#fd8d1b]/40 border-b-0 flex items-center justify-center">
-                <Folder className="w-4 h-4 text-[#fd8d1b]" />
+              <div className="absolute -top-4 left-6 md:left-8 w-20 md:w-24 h-6 md:h-8 bg-gradient-to-br from-[#fd8d1b] to-[#fd8e1b] rounded-t-lg border-2 border-[#fd8d1b] border-b-0 flex items-center justify-center shadow-lg">
+                <Folder className="w-3 md:w-4 h-3 md:h-4 text-[#010100]" />
               </div>
               
               {/* Folder Label */}
               <div className="absolute top-4 left-4 right-4">
-                <h3 className="text-lg font-medium text-[#fd8d1b] text-center">
-                  Projects Portfolio
+                <h3 className="text-base md:text-lg font-bold text-[#fd8d1b] text-center">
+                  📁 Success Stories
                 </h3>
-                <div className="w-full h-px bg-[#fd8d1b]/30 mt-2" />
+                <div className="w-full h-px bg-[#fd8d1b]/50 mt-2" />
               </div>
 
               {/* File Stack Indicator */}
-              <div className="absolute bottom-4 right-4 flex items-center space-x-1">
-                <span className="text-xs text-[#fd8d1b]/70">
-                  {currentProjectIndex + 1} / {allProjects.length}
-                </span>
-                <div className="flex space-x-1">
-                  {allProjects.map((_, index) => (
-                    <div
-                      key={index}
-                      className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                        index <= currentProjectIndex ? 'bg-[#fd8d1b]' : 'bg-[#fd8d1b]/20'
-                      }`}
-                    />
-                  ))}
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="text-center">
+                  <span className="text-xs text-[#fd8d1b]/90 font-medium">
+                    Project {currentProjectIndex + 1} of {allProjects.length}
+                  </span>
+                  <div className="flex justify-center space-x-1 mt-2">
+                    {allProjects.map((_, index) => (
+                      <div
+                        key={index}
+                        className={`w-2 h-2 rounded-full transition-all duration-500 ${
+                          index <= currentProjectIndex ? 'bg-[#fd8d1b] scale-110' : 'bg-[#fd8d1b]/30'
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
+
+              {/* Folder Opening Animation */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#010100]/50 to-transparent pointer-events-none" />
             </div>
 
-            {/* Project Cards Coming Out */}
+            {/* Project Cards Coming Out Upward */}
             {allProjects.map((project, index) => {
-              const isVisible = index <= currentProjectIndex;
-              const offset = index * 8;
-              const slideOut = isVisible ? Math.min(400, index * 80 + scrollPosition * 200) : 0;
+              const isCurrentCard = index === currentProjectIndex;
+              const hasBeenShown = index <= currentProjectIndex;
+              const verticalOffset = isCurrentCard ? -120 : hasBeenShown ? -60 : 0; // Current card goes higher
+              const horizontalOffset = isCurrentCard ? 0 : hasBeenShown ? (index % 2 === 0 ? -10 : 10) : 0;
+              const rotation = isCurrentCard ? 0 : hasBeenShown ? (index % 2 === 0 ? -2 : 2) : 0;
+              const scale = isCurrentCard ? 1 : hasBeenShown ? 0.95 : 0.9;
+              const opacity = isCurrentCard ? 1 : hasBeenShown ? 0.3 : 0;
               
               return (
                 <div
                   key={project.id}
-                  className={`absolute top-0 left-0 w-96 transition-all duration-700 ease-out ${
-                    isVisible ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`absolute top-0 left-1/2 transform -translate-x-1/2 transition-all duration-1000 ease-out`}
                   style={{
-                    transform: `translateX(${slideOut}px) translateY(${offset}px) rotate(${index * 2}deg)`,
-                    zIndex: 10 + index,
-                    transitionDelay: `${index * 100}ms`
+                    transform: `translate(-50%, ${verticalOffset}px) translateX(${horizontalOffset}px) rotate(${rotation}deg) scale(${scale})`,
+                    opacity: opacity,
+                    zIndex: isCurrentCard ? 30 : 20 + index,
+                    transitionDelay: isCurrentCard ? '0ms' : `${index * 100}ms`
                   }}
                 >
                   {/* Project Card */}
-                  <div className="glassmorphic-card rounded-2xl overflow-hidden border border-[#fd8d1b]/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md hover:scale-105 transition-transform duration-300">
+                  <div className="w-80 md:w-96 glassmorphic-card rounded-2xl overflow-hidden border-2 border-[#fd8d1b]/30 bg-gradient-to-br from-[#010100]/95 via-[#000000]/90 to-[#010000]/95 backdrop-blur-lg hover:scale-105 transition-transform duration-300 shadow-2xl">
                     {/* Project Image */}
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-40 md:h-48 overflow-hidden">
                       <img 
                         src={project.image} 
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.style.display = 'none';
                           const parent = target.parentElement;
                           if (parent) {
-                            parent.className = `relative h-48 bg-gradient-to-br from-[#fd8d1b] to-[#378c35] flex items-center justify-center`;
+                            parent.className = `relative h-40 md:h-48 bg-gradient-to-br from-[#fd8d1b] to-[#378c35] flex items-center justify-center`;
                             parent.innerHTML = `
                               <div class="text-center">
-                                <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl mx-auto mb-3 flex items-center justify-center">
-                                  <span class="text-xl font-bold text-white">${project.title.charAt(0)}</span>
+                                <div class="w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur-md rounded-xl mx-auto mb-3 flex items-center justify-center">
+                                  <span class="text-lg md:text-xl font-bold text-white">${project.title.charAt(0)}</span>
                                 </div>
-                                <h3 class="text-lg font-light text-white">${project.title.split(' ')[0]}</h3>
+                                <h3 class="text-sm md:text-lg font-light text-white">${project.title.split(' ')[0]}</h3>
                               </div>
                             `;
                           }
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#010100]/70 to-transparent" />
                       
                       {/* Category Badge */}
                       <div className="absolute top-3 left-3">
-                        <span className="px-2 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs">
+                        <span className="px-2 py-1 bg-[#fd8d1b] text-[#010100] rounded-full text-xs font-medium">
                           {project.category}
                         </span>
+                      </div>
+
+                      {/* Project Number */}
+                      <div className="absolute top-3 right-3">
+                        <div className="w-8 h-8 bg-[#378c35] text-white rounded-full flex items-center justify-center font-bold text-sm">
+                          {project.id}
+                        </div>
                       </div>
                     </div>
 
                     {/* Project Content */}
-                    <div className="p-6">
-                      <h4 className="text-xl font-medium text-white mb-2 line-clamp-1">{project.title}</h4>
-                      <p className="text-white/70 text-sm mb-4 leading-relaxed line-clamp-2">{project.description}</p>
+                    <div className="p-4 md:p-6">
+                      <h4 className="text-lg md:text-xl font-bold text-white mb-2 line-clamp-1">{project.title}</h4>
+                      <p className="text-white/80 text-xs md:text-sm mb-4 leading-relaxed line-clamp-2">{project.description}</p>
 
                       {/* Marketing Results */}
                       <div className="mb-4">
-                        <h5 className="text-[#fd8d1b] font-medium mb-2 flex items-center text-sm">
+                        <h5 className="text-[#fd8d1b] font-bold mb-2 flex items-center text-sm">
                           <Award className="w-4 h-4 mr-1" />
                           Key Results
                         </h5>
                         <div className="space-y-1">
                           {project.marketingResults.slice(0, 2).map((result, resultIndex) => (
-                            <div key={resultIndex} className="text-white/80 flex items-center text-xs">
-                              <div className="w-1.5 h-1.5 bg-[#fd8d1b] rounded-full mr-2 flex-shrink-0" />
-                              <span className="line-clamp-1">{result}</span>
+                            <div key={resultIndex} className="text-white/90 flex items-center text-xs">
+                              <div className="w-2 h-2 bg-[#fd8d1b] rounded-full mr-2 flex-shrink-0" />
+                              <span className="line-clamp-1 font-medium">{result}</span>
                             </div>
                           ))}
                         </div>
@@ -250,15 +269,15 @@ const ProjectsSection = () => {
 
                       {/* Services */}
                       <div className="mb-4">
-                        <h5 className="text-[#378c35] font-medium mb-2 flex items-center text-sm">
+                        <h5 className="text-[#378c35] font-bold mb-2 flex items-center text-sm">
                           <Target className="w-4 h-4 mr-1" />
-                          Services
+                          Our Services
                         </h5>
                         <div className="flex flex-wrap gap-1">
                           {project.services.slice(0, 2).map((service, serviceIndex) => (
                             <span
                               key={serviceIndex}
-                              className="px-2 py-1 bg-[#378c35]/20 text-[#378c35] rounded-full text-xs border border-[#378c35]/30"
+                              className="px-2 py-1 bg-[#378c35]/30 text-[#378c35] rounded-full text-xs border border-[#378c35]/50 font-medium"
                             >
                               {service}
                             </span>
@@ -281,15 +300,25 @@ const ProjectsSection = () => {
                       {/* View More Button */}
                       <Button 
                         size="sm"
-                        className="w-full bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] text-[#010100] hover:from-[#fd8e1b] hover:to-[#fd8d1a] font-medium text-sm"
+                        className="w-full bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] text-[#010100] hover:from-[#fd8e1b] hover:to-[#fd8d1a] font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300"
                       >
-                        View Case Study
+                        View Full Case Study →
                       </Button>
                     </div>
                   </div>
                 </div>
               );
             })}
+          </div>
+
+          {/* Scroll Instruction */}
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+            <div className="animate-bounce">
+              <div className="w-6 h-10 border-2 border-[#fd8d1b]/50 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-[#fd8d1b] rounded-full mt-2 animate-pulse"></div>
+              </div>
+            </div>
+            <p className="text-xs text-white/60 mt-2">Scroll to reveal projects</p>
           </div>
         </div>
 

@@ -1,28 +1,32 @@
 
 import React from 'react';
-import { Code, Smartphone, Palette, TrendingUp } from 'lucide-react';
+import { Globe, Instagram, TrendingUp, Search } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Code,
-      title: 'Web Development',
-      description: 'Full-stack web development with cutting-edge technologies for frontend and backend solutions that scale with your business needs.'
+      icon: Globe,
+      title: 'Website Optimization',
+      description: 'Complete website development and optimization for conversions, speed, and user experience that drives business growth.',
+      features: ['Conversion Optimization', 'Performance Enhancement', 'User Experience Design']
     },
     {
-      icon: Smartphone,
-      title: 'App Development',
-      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.'
+      icon: Search,
+      title: 'SEO & Local SEO',
+      description: 'Strategic search engine optimization to get you found on Google with local and organic search visibility.',
+      features: ['Google Rankings', 'Local Business SEO', 'Content Strategy']
     },
     {
-      icon: Palette,
-      title: 'UX/UI Design',
-      description: 'User-centered design that combines aesthetics with functionality for optimal user engagement and conversion.'
+      icon: Instagram,
+      title: 'Instagram Growth',
+      description: 'Organic Instagram growth strategies, content creation, and personal branding for creators and businesses.',
+      features: ['Content Creation', 'Follower Growth', 'Brand Building']
     },
     {
       icon: TrendingUp,
-      title: 'Marketing Campaigns',
-      description: 'Strategic digital marketing campaigns that drive growth and build brand awareness in the digital landscape.'
+      title: 'Paid Advertising',
+      description: 'Google Ads and Facebook Ads management with focus on user acquisition and brand omnipresence.',
+      features: ['Google Ads', 'Facebook Ads', 'User Acquisition']
     }
   ];
 
@@ -32,31 +36,50 @@ const ServicesSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/8 via-transparent to-[#fd8e1b]/6" />
       
       <div className="max-w-8xl mx-auto relative z-10">
-        <div className="flex items-start justify-between mb-20 animate-on-scroll">
-          <div className="max-w-md">
-            <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-6">Our Services</h2>
-          </div>
-          <div className="hidden md:block">
-            <div className="w-16 h-16 border border-orange-400/40 rounded-full flex items-center justify-center">
-              <div className="w-8 h-8 bg-orange-400 rounded-full"></div>
-            </div>
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-light tracking-tight mb-6">
+            Our <span className="text-[#fd8d1b]">Core Services</span>
+          </h2>
+          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto">
+            From website optimization to brand omnipresence - we handle everything so you can focus on what you do best
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div 
               key={service.title}
-              className="glassmorphic-card p-8 lg:p-12 rounded-3xl hover:scale-105 transition-all duration-300 animate-on-scroll group"
+              className="glassmorphic-card p-6 lg:p-8 rounded-2xl hover:scale-105 transition-all duration-300 animate-on-scroll group border border-[#fd8d1b]/20"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 bg-orange-400/20 rounded-2xl flex items-center justify-center mb-8">
-                <service.icon className="w-8 h-8 text-orange-400" strokeWidth={1.5} />
+              <div className="w-14 h-14 bg-gradient-to-br from-[#fd8d1b] to-[#fd8e1b] rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <service.icon className="w-7 h-7 text-[#010100]" strokeWidth={2} />
               </div>
-              <h3 className="text-2xl font-light tracking-tight mb-6">{service.title}</h3>
-              <p className="text-white/70 font-light leading-relaxed text-lg">{service.description}</p>
+              <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-4 text-white">{service.title}</h3>
+              <p className="text-white/80 font-light leading-relaxed mb-6">{service.description}</p>
+              
+              {/* Service Features */}
+              <div className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="flex items-center text-sm">
+                    <div className="w-2 h-2 bg-[#378c35] rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-[#378c35] font-medium">{feature}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <p className="text-white/60 mb-4">Ready to grow your digital presence?</p>
+          <div className="inline-flex items-center space-x-4">
+            <div className="w-12 h-12 bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] rounded-full flex items-center justify-center">
+              <span className="text-[#010100] font-bold">💬</span>
+            </div>
+            <span className="text-white/80">Let's discuss your project</span>
+          </div>
         </div>
       </div>
     </section>
