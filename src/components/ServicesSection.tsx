@@ -25,8 +25,8 @@ const ServicesSection = () => {
     {
       icon: TrendingUp,
       title: 'Paid Advertising',
-      description: 'Google Ads and Facebook Ads management with focus on user acquisition and brand omnipresence.',
-      features: ['Google Ads', 'Facebook Ads', 'User Acquisition']
+      description: 'Complete Google Ads and Facebook Ads management including creating and writing high-converting ads for user acquisition and brand omnipresence.',
+      features: ['Creating & Writing Ads', 'Google & Facebook Ads', 'User Acquisition']
     }
   ];
 

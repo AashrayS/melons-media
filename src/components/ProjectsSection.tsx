@@ -130,11 +130,11 @@ const ProjectsSection = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 sticky top-20 z-50 bg-gradient-to-b from-[#378c35]/90 to-transparent backdrop-blur-sm py-8">
+        <div className="text-center mb-8 sticky top-20 z-50 bg-gradient-to-b from-[#378c35]/90 to-transparent backdrop-blur-sm py-6">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">
             Our <span className="text-[#fd8d1b]">Growth</span> Portfolio
           </h2>
-          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4 mb-8">
+          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4 mb-6">
             Real results from our comprehensive tech media strategies that drive growth and brand presence
           </p>
           <p className="text-sm text-[#fd8d1b]/80 font-light">
@@ -152,22 +152,22 @@ const ProjectsSection = () => {
           {/* Folder Base */}
           <div className="relative">
             {/* Folder Back Shadow */}
-            <div className="w-96 md:w-[480px] h-96 md:h-[520px] bg-gradient-to-br from-[#fd8d1b]/15 to-[#fd8e1b]/8 rounded-2xl border-2 border-[#fd8d1b]/20 transform rotate-1 absolute -z-20 translate-x-2 translate-y-2" />
+            <div className="w-[28rem] md:w-[36rem] lg:w-[42rem] h-80 md:h-[450px] lg:h-[500px] bg-gradient-to-br from-[#fd8d1b]/15 to-[#fd8e1b]/8 rounded-2xl border-2 border-[#fd8d1b]/20 transform rotate-1 absolute -z-20 translate-x-2 translate-y-2" />
             
             {/* Folder Middle Shadow */}
-            <div className="w-94 md:w-[470px] h-94 md:h-[510px] bg-gradient-to-br from-[#fd8d1b]/20 to-[#fd8e1b]/10 rounded-2xl border-2 border-[#fd8d1b]/25 transform rotate-0.5 absolute -z-10 translate-x-1 translate-y-1" />
+            <div className="w-[27rem] md:w-[35rem] lg:w-[41rem] h-78 md:h-[440px] lg:h-[490px] bg-gradient-to-br from-[#fd8d1b]/20 to-[#fd8e1b]/10 rounded-2xl border-2 border-[#fd8d1b]/25 transform rotate-0.5 absolute -z-10 translate-x-1 translate-y-1" />
             
             {/* Main Folder */}
-            <div className="w-92 md:w-[460px] h-92 md:h-[500px] bg-gradient-to-br from-[#010100]/95 via-[#000000]/90 to-[#010000]/95 rounded-2xl border-3 border-[#fd8d1b]/60 relative overflow-hidden backdrop-blur-lg shadow-2xl">
+            <div className="w-[26rem] md:w-[34rem] lg:w-[40rem] h-76 md:h-[430px] lg:h-[480px] bg-gradient-to-br from-[#010100]/95 via-[#000000]/90 to-[#010000]/95 rounded-2xl border-3 border-[#fd8d1b]/60 relative overflow-hidden backdrop-blur-lg shadow-2xl">
               {/* Folder Tab */}
-              <div className="absolute -top-6 left-8 md:left-12 w-28 md:w-36 h-8 md:h-10 bg-gradient-to-br from-[#fd8d1b] to-[#fd8e1b] rounded-t-2xl border-3 border-[#fd8d1b] border-b-0 flex items-center justify-center shadow-lg">
+              <div className="absolute -top-6 left-8 md:left-12 w-36 md:w-44 lg:w-48 h-8 md:h-10 bg-gradient-to-br from-[#fd8d1b] to-[#fd8e1b] rounded-t-2xl border-3 border-[#fd8d1b] border-b-0 flex items-center justify-center shadow-lg">
                 <Folder className="w-4 md:w-5 h-4 md:h-5 text-[#010100] mr-2" />
                 <span className="text-xs md:text-sm font-bold text-[#010100]">Portfolio</span>
               </div>
               
               {/* Folder Label */}
               <div className="absolute top-6 left-6 right-6">
-                <h3 className="text-lg md:text-2xl font-bold text-[#fd8d1b] text-center">
+                <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#fd8d1b] text-center">
                   📁 Success Stories Collection
                 </h3>
                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#fd8d1b]/70 to-transparent mt-3" />
@@ -177,7 +177,7 @@ const ProjectsSection = () => {
               <div className="absolute top-20 left-6 right-6 bottom-20 border border-[#fd8d1b]/30 rounded-xl bg-gradient-to-b from-[#010100]/50 to-[#000000]/30">
                 {/* File Icons in Folder */}
                 <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-                  {allProjects.slice(0, 3).map((_, index) => (
+                  {allProjects.slice(0, 5).map((_, index) => (
                     <div key={index} className={`w-8 h-10 bg-gradient-to-b from-[#fd8d1b]/40 to-[#fd8e1b]/30 rounded-sm border border-[#fd8d1b]/50 ${index <= currentProjectIndex ? 'opacity-30' : 'opacity-70'} transition-opacity duration-500`}>
                       <div className="w-full h-2 bg-[#fd8d1b]/60 rounded-t-sm"></div>
                     </div>
