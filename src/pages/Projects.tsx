@@ -20,7 +20,7 @@ const Projects = () => {
         'Reduced bounce rate by 45%',
         '₹15L+ monthly revenue increase'
       ],
-      services: ['Website Development', 'SEO Optimization', 'Marketing Funnels', 'Analytics Setup', 'Content Strategy'],
+      services: ['Website Development', 'SEO Optimization', 'Conversion Funnels', 'Google Analytics Setup', 'Content Strategy'],
       challenge: 'Furni needed a complete digital transformation to compete in the modern furniture market.',
       solution: 'We built a conversion-optimized D2C website with integrated SEO and marketing automation.',
       icon: Globe
@@ -39,7 +39,7 @@ const Projects = () => {
         'Achieved 4.8★ app store rating',
         'Expanded to 15+ cities'
       ],
-      services: ['App Development', 'Paid Advertising', 'ASO', 'Conversion Optimization', 'User Acquisition'],
+      services: ['App Development', 'Google Ads Management', 'Facebook Ads', 'App Store Optimization', 'User Acquisition'],
       challenge: 'TravelWise struggled with high customer acquisition costs and low conversion rates.',
       solution: 'We developed a comprehensive multi-platform strategy with optimized ad campaigns and ASO.',
       icon: Globe
@@ -58,7 +58,7 @@ const Projects = () => {
         'Generated ₹2.5L+ monthly revenue',
         'Built sustainable personal brand'
       ],
-      services: ['Content Strategy', 'Instagram Growth', 'Brand Partnerships', 'Revenue Optimization', 'Personal Branding'],
+      services: ['Instagram Growth Strategy', 'Content Creation', 'Brand Partnerships', 'Personal Branding', 'Influencer Marketing'],
       challenge: 'Anugya wanted to build a sustainable income stream through content creation.',
       solution: 'We developed a comprehensive personal branding strategy with focus on authentic engagement.',
       icon: Instagram
@@ -96,7 +96,7 @@ const Projects = () => {
         'Generated ₹50L+ revenue',
         '4.7★ average rating'
       ],
-      services: ['App Development', 'ASO', 'User Acquisition', 'Retention Marketing', 'Analytics'],
+      services: ['App Development', 'App Store Optimization', 'User Acquisition', 'Retention Marketing', 'Google Analytics'],
       challenge: 'FitMe needed to stand out in the crowded fitness app market.',
       solution: 'We built a comprehensive user acquisition strategy with focus on retention and monetization.',
       icon: Target
@@ -107,9 +107,9 @@ const Projects = () => {
     <div className="min-h-screen text-white flex flex-col">
       <Navigation />
       
-      {/* Hero Section - Green */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-green-900 via-black to-green-800 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-400/15 via-transparent to-yellow-300/10" />
+      {/* Hero Section - Melon Green */}
+      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-[#378c35] via-[#010100] to-[#2c8433] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/20 via-transparent to-[#fd8e1b]/10" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
             Detailed <span className="melon-text">Case Studies</span>
@@ -130,12 +130,12 @@ const Projects = () => {
             key={project.id} 
             className={`py-16 md:py-24 px-6 relative overflow-hidden ${
               isEven 
-                ? 'bg-gradient-to-br from-black via-gray-900 to-black' 
-                : 'bg-gradient-to-br from-green-800 via-black to-green-900'
+                ? 'bg-gradient-to-br from-[#010100] via-[#000000] to-[#010000]' 
+                : 'bg-gradient-to-br from-[#2c8433] via-[#010100] to-[#378c35]'
             }`}
           >
             {/* Background accent */}
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/6 via-transparent to-orange-400/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/8 via-transparent to-[#fd8e1b]/6" />
             
             <div className="max-w-7xl mx-auto relative z-10">
               <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
@@ -153,7 +153,7 @@ const Projects = () => {
                         target.style.display = 'none';
                         const parent = target.parentElement;
                         if (parent) {
-                          parent.className = `relative h-80 lg:h-96 bg-gradient-to-br from-orange-500 to-green-600 flex items-center justify-center rounded-2xl`;
+                          parent.className = `relative h-80 lg:h-96 bg-gradient-to-br from-[#fd8d1b] to-[#378c35] flex items-center justify-center rounded-2xl`;
                           parent.innerHTML = `
                             <div class="text-center">
                               <div class="w-24 h-24 bg-white/20 backdrop-blur-md rounded-2xl mx-auto mb-4 flex items-center justify-center">
@@ -176,8 +176,8 @@ const Projects = () => {
                     
                     {/* Icon */}
                     <div className="absolute top-6 right-6">
-                      <div className="w-12 h-12 bg-orange-400/20 backdrop-blur-md rounded-xl flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-orange-300" />
+                      <div className="w-12 h-12 bg-[#fd8d1b]/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                        <IconComponent className="w-6 h-6 text-[#fd8e1b]" />
                       </div>
                     </div>
                   </div>
@@ -191,25 +191,25 @@ const Projects = () => {
                   {/* Challenge & Solution */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <div>
-                      <h4 className="text-orange-400 font-medium mb-2">Challenge</h4>
+                      <h4 className="text-[#fd8d1b] font-medium mb-2">Challenge</h4>
                       <p className="text-white/70 text-sm leading-relaxed">{project.challenge}</p>
                     </div>
                     <div>
-                      <h4 className="text-green-400 font-medium mb-2">Solution</h4>
+                      <h4 className="text-[#378c35] font-medium mb-2">Solution</h4>
                       <p className="text-white/70 text-sm leading-relaxed">{project.solution}</p>
                     </div>
                   </div>
 
                   {/* Marketing Results */}
                   <div className="mb-8">
-                    <h4 className="text-orange-400 font-medium mb-4 flex items-center">
+                    <h4 className="text-[#fd8d1b] font-medium mb-4 flex items-center">
                       <Award className="w-5 h-5 mr-2" />
                       Marketing Results
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {project.marketingResults.map((result, resultIndex) => (
                         <div key={resultIndex} className="text-white/80 flex items-center">
-                          <div className="w-2 h-2 bg-orange-400 rounded-full mr-3 flex-shrink-0" />
+                          <div className="w-2 h-2 bg-[#fd8d1b] rounded-full mr-3 flex-shrink-0" />
                           <span className="text-sm">{result}</span>
                         </div>
                       ))}
@@ -219,7 +219,7 @@ const Projects = () => {
                   {/* Services & Technologies */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <div>
-                      <h4 className="text-green-400 font-medium mb-3 flex items-center">
+                      <h4 className="text-[#378c35] font-medium mb-3 flex items-center">
                         <Target className="w-5 h-5 mr-2" />
                         Services Provided
                       </h4>
@@ -227,7 +227,7 @@ const Projects = () => {
                         {project.services.map((service, serviceIndex) => (
                           <span
                             key={serviceIndex}
-                            className="px-3 py-1 bg-green-400/20 text-green-300 rounded-full text-sm border border-green-400/30"
+                            className="px-3 py-1 bg-[#378c35]/20 text-[#378c35] rounded-full text-sm border border-[#378c35]/30"
                           >
                             {service}
                           </span>
@@ -252,7 +252,7 @@ const Projects = () => {
 
                   {/* CTA Button */}
                   <Button 
-                    className="bg-gradient-to-r from-orange-400 to-yellow-400 text-black hover:from-orange-500 hover:to-yellow-500 font-bold px-8 py-3 rounded-xl hover:scale-105 transition-all duration-300"
+                    className="bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] text-[#010100] hover:from-[#fd8e1b] hover:to-[#fd8d1a] font-bold px-8 py-3 rounded-xl hover:scale-105 transition-all duration-300"
                     onClick={() => window.location.href = '/booking'}
                   >
                     Start Similar Project
@@ -265,8 +265,8 @@ const Projects = () => {
       })}
 
       {/* Call to Action Section - Green */}
-      <section className="py-24 px-6 bg-gradient-to-br from-green-800 via-black to-green-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-400/15 via-transparent to-yellow-300/10" />
+      <section className="py-24 px-6 bg-gradient-to-br from-[#2c8433] via-[#010100] to-[#378c35] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/15 via-transparent to-[#fd8e1b]/10" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-light mb-6">
             Ready to <span className="melon-text">join our success stories</span>?
@@ -275,7 +275,7 @@ const Projects = () => {
             From setting foundations and SEO to running ads and creating omnipresence - we handle everything so you can focus on what you do best.
           </p>
           <Button 
-            className="bg-gradient-to-r from-orange-400 to-yellow-400 text-black hover:from-orange-500 hover:to-yellow-500 font-bold px-10 py-4 rounded-xl hover:scale-105 transition-all duration-300 text-lg"
+            className="bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] text-[#010100] hover:from-[#fd8e1b] hover:to-[#fd8d1a] font-bold px-10 py-4 rounded-xl hover:scale-105 transition-all duration-300 text-lg"
             onClick={() => window.location.href = '/booking'}
           >
             Start Your Growth Journey ✨

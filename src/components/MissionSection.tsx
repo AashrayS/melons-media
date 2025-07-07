@@ -4,9 +4,9 @@ import { Button } from '@/components/ui/button';
 
 const MissionSection = () => {
   return (
-    <section id="mission" className="py-32 px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-green-800 via-black to-green-900 text-white relative overflow-hidden">
+    <section id="mission" className="py-32 px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-[#2c8433] via-[#010100] to-[#378c35] text-white relative overflow-hidden">
       {/* Subtle background accent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/6 via-transparent to-orange-400/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/8 via-transparent to-[#fd8e1b]/6" />
       
       <div className="max-w-5xl mx-auto text-center animate-on-scroll relative z-10">
         <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-12">Our Mission</h2>

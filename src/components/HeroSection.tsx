@@ -3,9 +3,9 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {  return (
-    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 bg-gradient-to-br from-green-900 via-green-800 to-green-900 text-white relative overflow-hidden pt-16 md:pt-24">
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 bg-gradient-to-br from-[#378c35] via-[#2c8433] to-[#378c35] text-white relative overflow-hidden pt-16 md:pt-24">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-transparent to-yellow-300/15" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/20 via-transparent to-[#fd8e1b]/15" />
       
       {/* Floating geometric shapes - more vibrant */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-orange-400/40 to-yellow-300/30 rounded-full blur-xl animate-pulse" />

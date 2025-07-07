@@ -27,9 +27,9 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-32 px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-green-900 via-black to-green-800 text-white relative overflow-hidden">
+    <section id="services" className="py-32 px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-[#378c35] via-[#010100] to-[#2c8433] text-white relative overflow-hidden">
       {/* Subtle background accent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/6 via-transparent to-orange-400/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/8 via-transparent to-[#fd8e1b]/6" />
       
       <div className="max-w-8xl mx-auto relative z-10">
         <div className="flex items-start justify-between mb-20 animate-on-scroll">

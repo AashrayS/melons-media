@@ -23,7 +23,7 @@ const ProjectsSection = () => {
         '35% conversion rate improvement',
         'Page 1 Google rankings for 12 keywords'
       ],
-      services: ['Website Development', 'SEO Optimization', 'Marketing Funnels']
+      services: ['Website Optimization', 'SEO Optimization', 'Conversion Funnels']
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
         '60% higher booking conversion',
         'Reduced customer acquisition cost by 40%'
       ],
-      services: ['App Development', 'Paid Advertising', 'ASO']
+      services: ['App Development', 'Google Ads Management', 'App Store Optimization']
     },
     {
       id: 3,
@@ -51,7 +51,7 @@ const ProjectsSection = () => {
         '400% increase in engagement rate',
         'Secured 15+ brand partnerships'
       ],
-      services: ['Content Strategy', 'Instagram Growth', 'Brand Partnerships']
+      services: ['Instagram Growth Strategy', 'Content Creation', 'Brand Omnipresence']
     },
     {
       id: 4,
@@ -79,7 +79,7 @@ const ProjectsSection = () => {
         '65% user retention rate',
         'Featured in App Store'
       ],
-      services: ['App Development', 'ASO', 'User Acquisition']
+      services: ['App Development', 'User Acquisition', 'Paid Advertising']
     }
   ];
 
@@ -111,20 +111,20 @@ const ProjectsSection = () => {
   }, [allProjects.length]);
 
   return (
-    <section id="projects" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-green-800 via-black to-green-900 text-white relative overflow-hidden">
+    <section id="projects" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-[#378c35] via-[#010100] to-[#2c8433] text-white relative overflow-hidden">
       {/* Subtle background accent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/6 via-transparent to-orange-400/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/8 via-transparent to-[#fd8e1b]/6" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">
-            Our <span className="text-orange-400">Growth</span> Portfolio
+            Our <span className="text-[#fd8d1b]">Growth</span> Portfolio
           </h2>
           <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4 mb-8">
             Real results from our comprehensive tech media strategies that drive growth and brand presence
           </p>
-          <p className="text-sm text-orange-300/80 font-light">
+          <p className="text-sm text-[#fd8d1b]/80 font-light">
             Scroll down to explore our projects as they emerge from the folder
           </p>
         </div>
@@ -139,26 +139,26 @@ const ProjectsSection = () => {
           {/* Folder Base */}
           <div className="relative">
             {/* Folder Back */}
-            <div className="w-80 h-96 bg-gradient-to-br from-orange-300/20 to-orange-500/10 rounded-lg border-2 border-orange-400/30 transform rotate-2 absolute -z-10" />
+            <div className="w-80 h-96 bg-gradient-to-br from-[#fd8d1b]/20 to-[#fd8e1b]/10 rounded-lg border-2 border-[#fd8d1b]/30 transform rotate-2 absolute -z-10" />
             
             {/* Main Folder */}
-            <div className="w-80 h-96 bg-gradient-to-br from-orange-400/25 to-orange-600/15 rounded-lg border-2 border-orange-400/40 relative overflow-hidden backdrop-blur-sm">
+            <div className="w-80 h-96 bg-gradient-to-br from-[#fd8d1b]/25 to-[#fd8e1b]/15 rounded-lg border-2 border-[#fd8d1b]/40 relative overflow-hidden backdrop-blur-sm">
               {/* Folder Tab */}
-              <div className="absolute -top-4 left-8 w-24 h-8 bg-gradient-to-br from-orange-400/30 to-orange-500/20 rounded-t-lg border-2 border-orange-400/40 border-b-0 flex items-center justify-center">
-                <Folder className="w-4 h-4 text-orange-300" />
+              <div className="absolute -top-4 left-8 w-24 h-8 bg-gradient-to-br from-[#fd8d1b]/30 to-[#fd8e1b]/20 rounded-t-lg border-2 border-[#fd8d1b]/40 border-b-0 flex items-center justify-center">
+                <Folder className="w-4 h-4 text-[#fd8d1b]" />
               </div>
               
               {/* Folder Label */}
               <div className="absolute top-4 left-4 right-4">
-                <h3 className="text-lg font-medium text-orange-200 text-center">
+                <h3 className="text-lg font-medium text-[#fd8d1b] text-center">
                   Projects Portfolio
                 </h3>
-                <div className="w-full h-px bg-orange-400/30 mt-2" />
+                <div className="w-full h-px bg-[#fd8d1b]/30 mt-2" />
               </div>
 
               {/* File Stack Indicator */}
               <div className="absolute bottom-4 right-4 flex items-center space-x-1">
-                <span className="text-xs text-orange-300/70">
+                <span className="text-xs text-[#fd8d1b]/70">
                   {currentProjectIndex + 1} / {allProjects.length}
                 </span>
                 <div className="flex space-x-1">
@@ -166,7 +166,7 @@ const ProjectsSection = () => {
                     <div
                       key={index}
                       className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                        index <= currentProjectIndex ? 'bg-orange-400' : 'bg-orange-400/20'
+                        index <= currentProjectIndex ? 'bg-[#fd8d1b]' : 'bg-[#fd8d1b]/20'
                       }`}
                     />
                   ))}
@@ -193,7 +193,7 @@ const ProjectsSection = () => {
                   }}
                 >
                   {/* Project Card */}
-                  <div className="glassmorphic-card rounded-2xl overflow-hidden border border-orange-400/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md hover:scale-105 transition-transform duration-300">
+                  <div className="glassmorphic-card rounded-2xl overflow-hidden border border-[#fd8d1b]/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md hover:scale-105 transition-transform duration-300">
                     {/* Project Image */}
                     <div className="relative h-48 overflow-hidden">
                       <img 
@@ -205,7 +205,7 @@ const ProjectsSection = () => {
                           target.style.display = 'none';
                           const parent = target.parentElement;
                           if (parent) {
-                            parent.className = `relative h-48 bg-gradient-to-br from-orange-500 to-green-600 flex items-center justify-center`;
+                            parent.className = `relative h-48 bg-gradient-to-br from-[#fd8d1b] to-[#378c35] flex items-center justify-center`;
                             parent.innerHTML = `
                               <div class="text-center">
                                 <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl mx-auto mb-3 flex items-center justify-center">
@@ -234,14 +234,14 @@ const ProjectsSection = () => {
 
                       {/* Marketing Results */}
                       <div className="mb-4">
-                        <h5 className="text-orange-400 font-medium mb-2 flex items-center text-sm">
+                        <h5 className="text-[#fd8d1b] font-medium mb-2 flex items-center text-sm">
                           <Award className="w-4 h-4 mr-1" />
                           Key Results
                         </h5>
                         <div className="space-y-1">
                           {project.marketingResults.slice(0, 2).map((result, resultIndex) => (
                             <div key={resultIndex} className="text-white/80 flex items-center text-xs">
-                              <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2 flex-shrink-0" />
+                              <div className="w-1.5 h-1.5 bg-[#fd8d1b] rounded-full mr-2 flex-shrink-0" />
                               <span className="line-clamp-1">{result}</span>
                             </div>
                           ))}
@@ -250,7 +250,7 @@ const ProjectsSection = () => {
 
                       {/* Services */}
                       <div className="mb-4">
-                        <h5 className="text-green-400 font-medium mb-2 flex items-center text-sm">
+                        <h5 className="text-[#378c35] font-medium mb-2 flex items-center text-sm">
                           <Target className="w-4 h-4 mr-1" />
                           Services
                         </h5>
@@ -258,7 +258,7 @@ const ProjectsSection = () => {
                           {project.services.slice(0, 2).map((service, serviceIndex) => (
                             <span
                               key={serviceIndex}
-                              className="px-2 py-1 bg-green-400/20 text-green-300 rounded-full text-xs border border-green-400/30"
+                              className="px-2 py-1 bg-[#378c35]/20 text-[#378c35] rounded-full text-xs border border-[#378c35]/30"
                             >
                               {service}
                             </span>
@@ -281,7 +281,7 @@ const ProjectsSection = () => {
                       {/* View More Button */}
                       <Button 
                         size="sm"
-                        className="w-full bg-gradient-to-r from-orange-400 to-yellow-400 text-black hover:from-orange-500 hover:to-yellow-500 font-medium text-sm"
+                        className="w-full bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] text-[#010100] hover:from-[#fd8e1b] hover:to-[#fd8d1a] font-medium text-sm"
                       >
                         View Case Study
                       </Button>
@@ -297,10 +297,10 @@ const ProjectsSection = () => {
         <div className="text-center mt-16">
           <Link to="/projects">
             <Button 
-              className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg px-8 py-4 group shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] text-[#010100] hover:from-[#fd8e1b] hover:to-[#fd8d1a] font-bold text-lg px-8 py-4 group shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               View Detailed Case Studies
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform text-black" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform text-[#010100]" />
             </Button>
           </Link>
         </div>

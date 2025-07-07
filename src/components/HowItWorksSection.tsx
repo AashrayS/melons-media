@@ -27,7 +27,7 @@ const HowItWorksSection = () => {
   return (
     <section id="how-it-works" className="py-32 px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
       {/* Subtle background accent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/6 via-transparent to-orange-400/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/8 via-transparent to-[#fd8e1b]/6" />
       
       <div className="max-w-8xl mx-auto relative z-10">
         <div className="text-center mb-20 animate-on-scroll">
