@@ -44,7 +44,7 @@ const ProjectsSection = () => {
       technologies: ['Instagram Strategy', 'Content Planning', 'Analytics', 'Brand Partnerships'],
       marketingResults: [
         'Grew from 5K to 21K+ followers',
-        '400% increase in engagement rate',
+        '200% increase in engagement rate',
         'Secured 15+ brand partnerships'
       ],
       services: ['Instagram Growth Strategy', 'Content Creation', 'Brand Omnipresence']
@@ -54,12 +54,12 @@ const ProjectsSection = () => {
       title: "Rejul's Fashion - Rental Business",
       category: 'Retail Marketing + Content Creation',
       description: 'Complete digital transformation for clothing rental business in Bhopal with content creation and Instagram growth.',
-      image: '/lovable-uploads/melon.png',
+      image: '/lovable-upmelons-media-genesis-web/public/lovable-uploads/image (6).pngloads/melon.png',
       technologies: ['Instagram Marketing', 'Content Creation', 'Local SEO', 'Google Ads'],
       marketingResults: [
-        '300% increase in rental bookings',
-        'Built Instagram presence from 0 to 8K followers',
-        '85% of new customers from digital channels'
+        'Increase in rental bookings',
+        'Building Instagram presence',
+        'Increase in new customers from digital channels'
       ],
       services: ['Content Creation', 'Instagram Marketing', 'Local SEO']
     },
@@ -71,9 +71,9 @@ const ProjectsSection = () => {
       image: '/lovable-uploads/fitme-project.jpg.jpg',
       technologies: ['React Native', 'Firebase', 'App Store Optimization', 'In-App Marketing'],
       marketingResults: [
-        '150K+ app downloads in 6 months',
-        '65% user retention rate',
-        'Featured in App Store'
+        'MVP Development for A/B testing',
+        'Goal: increase user retention rate',
+        'Featured to 5000+ users to test'
       ],
       services: ['App Development', 'User Acquisition', 'Paid Advertising']
     }
