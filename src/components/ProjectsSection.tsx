@@ -91,50 +91,70 @@ const ProjectsSection = () => {
       const viewportHeight = window.innerHeight;
       const sectionHeight = rect.height;
       
-      // Calculate scroll progress within the section
+      // Calculate scroll progress within the section with smoother transitions
       if (rect.top <= 0 && rect.bottom >= viewportHeight) {
         // Section is filling the viewport
         const scrolledIntoSection = Math.abs(rect.top);
         const totalScrollableHeight = sectionHeight - viewportHeight;
         const scrollProgress = Math.min(1, scrolledIntoSection / totalScrollableHeight);
         
-        // Show one project at a time based on scroll progress
-        // Each project gets an equal portion of the scroll
-        const projectProgress = scrollProgress * allProjects.length;
-        const newIndex = Math.floor(projectProgress);
-        const clampedIndex = Math.max(0, Math.min(allProjects.length - 1, newIndex));
+        // Smoother project progression with easing
+        // Each project gets a larger portion for smoother transitions
+        const easedProgress = scrollProgress * scrollProgress * (3 - 2 * scrollProgress); // Smooth step function
+        const projectProgress = easedProgress * allProjects.length;
+        const smoothIndex = Math.floor(projectProgress);
+        const clampedIndex = Math.max(0, Math.min(allProjects.length - 1, smoothIndex));
         
-        setCurrentProjectIndex(clampedIndex);
+        // Only update if the index actually changed to reduce jitter
+        if (clampedIndex !== currentProjectIndex) {
+          setCurrentProjectIndex(clampedIndex);
+        }
         setScrollPosition(scrollProgress);
       } else if (rect.top > 0) {
         // Before the section
-        setCurrentProjectIndex(-1);
-        setScrollPosition(0);
+        if (currentProjectIndex !== -1) {
+          setCurrentProjectIndex(-1);
+          setScrollPosition(0);
+        }
       } else if (rect.bottom < viewportHeight) {
         // After the section - show all projects
-        setCurrentProjectIndex(allProjects.length - 1);
-        setScrollPosition(1);
+        if (currentProjectIndex !== allProjects.length - 1) {
+          setCurrentProjectIndex(allProjects.length - 1);
+          setScrollPosition(1);
+        }
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Use throttled scroll for better performance
+    let ticking = false;
+    const throttledHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', throttledHandleScroll, { passive: true });
     handleScroll(); // Initial call
     
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [allProjects.length]);
+    return () => window.removeEventListener('scroll', throttledHandleScroll);
+  }, [allProjects.length, currentProjectIndex]);
 
   return (
-    <section id="projects" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-[#378c35] via-[#010100] to-[#2c8433] text-white relative overflow-hidden min-h-[300vh]">
+    <section id="projects" className="py-16 md:py-32 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-[#378c35] via-[#010100] to-[#2c8433] text-white relative overflow-hidden min-h-[400vh]">
       {/* Subtle background accent */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#fd8d1b]/8 via-transparent to-[#fd8e1b]/6" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-8 sticky top-20 z-50 bg-gradient-to-b from-[#378c35]/90 to-transparent backdrop-blur-sm py-6">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">
+        <div className="text-center mb-4 sticky top-20 z-50 bg-gradient-to-b from-[#378c35]/90 to-transparent backdrop-blur-sm py-4">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-4 md:mb-6">
             Our <span className="text-[#fd8d1b]">Growth</span> Portfolio
           </h2>
-          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4 mb-6">
+          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto px-4 mb-4">
             Real results from our comprehensive tech media strategies that drive growth and brand presence
           </p>
           <p className="text-sm text-[#fd8d1b]/80 font-light">
@@ -145,22 +165,22 @@ const ProjectsSection = () => {
         {/* Folder Container */}
         <div 
           ref={folderRef}
-          className="relative min-h-[200vh] flex items-center justify-center px-4 sticky top-40"
+          className="relative min-h-[350vh] flex items-center justify-center px-4 sticky top-32"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Folder Base */}
           <div className="relative">
             {/* Folder Back Shadow */}
-            <div className="w-[28rem] md:w-[36rem] lg:w-[42rem] h-80 md:h-[450px] lg:h-[500px] bg-gradient-to-br from-[#fd8d1b]/15 to-[#fd8e1b]/8 rounded-2xl border-2 border-[#fd8d1b]/20 transform rotate-1 absolute -z-20 translate-x-2 translate-y-2" />
+            <div className="w-[32rem] md:w-[44rem] lg:w-[52rem] xl:w-[60rem] h-80 md:h-[450px] lg:h-[500px] bg-gradient-to-br from-[#fd8d1b]/15 to-[#fd8e1b]/8 rounded-2xl border-2 border-[#fd8d1b]/20 transform rotate-1 absolute -z-20 translate-x-2 translate-y-2" />
             
             {/* Folder Middle Shadow */}
-            <div className="w-[27rem] md:w-[35rem] lg:w-[41rem] h-78 md:h-[440px] lg:h-[490px] bg-gradient-to-br from-[#fd8d1b]/20 to-[#fd8e1b]/10 rounded-2xl border-2 border-[#fd8d1b]/25 transform rotate-0.5 absolute -z-10 translate-x-1 translate-y-1" />
+            <div className="w-[31rem] md:w-[43rem] lg:w-[51rem] xl:w-[59rem] h-78 md:h-[440px] lg:h-[490px] bg-gradient-to-br from-[#fd8d1b]/20 to-[#fd8e1b]/10 rounded-2xl border-2 border-[#fd8d1b]/25 transform rotate-0.5 absolute -z-10 translate-x-1 translate-y-1" />
             
             {/* Main Folder */}
-            <div className="w-[26rem] md:w-[34rem] lg:w-[40rem] h-76 md:h-[430px] lg:h-[480px] bg-gradient-to-br from-[#010100]/95 via-[#000000]/90 to-[#010000]/95 rounded-2xl border-3 border-[#fd8d1b]/60 relative overflow-hidden backdrop-blur-lg shadow-2xl">
+            <div className="w-[30rem] md:w-[42rem] lg:w-[50rem] xl:w-[58rem] h-76 md:h-[430px] lg:h-[480px] bg-gradient-to-br from-[#010100]/95 via-[#000000]/90 to-[#010000]/95 rounded-2xl border-3 border-[#fd8d1b]/60 relative overflow-hidden backdrop-blur-lg shadow-2xl">
               {/* Folder Tab */}
-              <div className="absolute -top-6 left-8 md:left-12 w-36 md:w-44 lg:w-48 h-8 md:h-10 bg-gradient-to-br from-[#fd8d1b] to-[#fd8e1b] rounded-t-2xl border-3 border-[#fd8d1b] border-b-0 flex items-center justify-center shadow-lg">
+              <div className="absolute -top-6 left-8 md:left-12 w-40 md:w-52 lg:w-56 xl:w-64 h-8 md:h-10 bg-gradient-to-br from-[#fd8d1b] to-[#fd8e1b] rounded-t-2xl border-3 border-[#fd8d1b] border-b-0 flex items-center justify-center shadow-lg">
                 <Folder className="w-4 md:w-5 h-4 md:h-5 text-[#010100] mr-2" />
                 <span className="text-xs md:text-sm font-bold text-[#010100]">Portfolio</span>
               </div>
@@ -212,27 +232,27 @@ const ProjectsSection = () => {
             {allProjects.map((project, index) => {
               const isCurrentCard = index === currentProjectIndex;
               const hasBeenShown = index <= currentProjectIndex;
-              const verticalOffset = isCurrentCard ? -180 : hasBeenShown ? -100 : 0; // Current card goes much higher
-              const horizontalOffset = isCurrentCard ? 0 : hasBeenShown ? (index % 2 === 0 ? -15 : 15) : 0;
-              const rotation = isCurrentCard ? 0 : hasBeenShown ? (index % 2 === 0 ? -3 : 3) : 0;
-              const scale = isCurrentCard ? 1.05 : hasBeenShown ? 0.9 : 0.8;
-              const opacity = isCurrentCard ? 1 : hasBeenShown ? 0.4 : 0;
+              const verticalOffset = isCurrentCard ? -200 : hasBeenShown ? -120 : 0; // Current card goes higher
+              const horizontalOffset = isCurrentCard ? 0 : hasBeenShown ? (index % 2 === 0 ? -20 : 20) : 0;
+              const rotation = isCurrentCard ? 0 : hasBeenShown ? (index % 2 === 0 ? -2 : 2) : 0;
+              const scale = isCurrentCard ? 1.02 : hasBeenShown ? 0.88 : 0.75;
+              const opacity = isCurrentCard ? 1 : hasBeenShown ? 0.35 : 0;
               
               return (
                 <div
                   key={project.id}
-                  className={`absolute top-0 left-1/2 transform -translate-x-1/2 transition-all duration-1200 ease-out z-40`}
+                  className={`absolute top-0 left-1/2 transform -translate-x-1/2 transition-all duration-[2000ms] ease-in-out z-40`}
                   style={{
                     transform: `translate(-50%, ${verticalOffset}px) translateX(${horizontalOffset}px) rotate(${rotation}deg) scale(${scale})`,
                     opacity: opacity,
                     zIndex: isCurrentCard ? 50 : 40 + index,
-                    transitionDelay: isCurrentCard ? '0ms' : `${index * 150}ms`
+                    transitionDelay: isCurrentCard ? '0ms' : `${index * 200}ms`
                   }}
                 >
                   {/* Project Card */}
-                  <div className="w-80 md:w-96 glassmorphic-card rounded-2xl overflow-hidden border-3 border-[#fd8d1b]/40 bg-gradient-to-br from-[#010100]/98 via-[#000000]/95 to-[#010000]/98 backdrop-blur-xl hover:scale-105 transition-transform duration-300 shadow-2xl">
+                  <div className="w-[22rem] md:w-[28rem] lg:w-[32rem] xl:w-[36rem] glassmorphic-card rounded-2xl overflow-hidden border-3 border-[#fd8d1b]/40 bg-gradient-to-br from-[#010100]/98 via-[#000000]/95 to-[#010000]/98 backdrop-blur-xl hover:scale-[1.02] transition-transform duration-500 shadow-2xl">
                     {/* Project Image */}
-                    <div className="relative h-40 md:h-48 overflow-hidden">
+                    <div className="relative h-44 md:h-52 lg:h-56 overflow-hidden">
                       <img 
                         src={project.image} 
                         alt={project.title}
@@ -272,19 +292,19 @@ const ProjectsSection = () => {
                     </div>
 
                     {/* ...existing project content... */}
-                    <div className="p-4 md:p-6">
-                      <h4 className="text-lg md:text-xl font-bold text-white mb-2 line-clamp-1">{project.title}</h4>
-                      <p className="text-white/80 text-xs md:text-sm mb-4 leading-relaxed line-clamp-2">{project.description}</p>
+                    <div className="p-4 md:p-6 lg:p-8">
+                      <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 line-clamp-1">{project.title}</h4>
+                      <p className="text-white/80 text-sm md:text-base lg:text-lg mb-4 leading-relaxed line-clamp-2">{project.description}</p>
 
                       {/* Marketing Results */}
                       <div className="mb-4">
-                        <h5 className="text-[#fd8d1b] font-bold mb-2 flex items-center text-sm">
-                          <Award className="w-4 h-4 mr-1" />
+                        <h5 className="text-[#fd8d1b] font-bold mb-2 flex items-center text-sm md:text-base">
+                          <Award className="w-4 h-4 md:w-5 md:h-5 mr-1" />
                           Key Results
                         </h5>
                         <div className="space-y-1">
                           {project.marketingResults.slice(0, 2).map((result, resultIndex) => (
-                            <div key={resultIndex} className="text-white/90 flex items-center text-xs">
+                            <div key={resultIndex} className="text-white/90 flex items-center text-xs md:text-sm">
                               <div className="w-2 h-2 bg-[#fd8d1b] rounded-full mr-2 flex-shrink-0" />
                               <span className="line-clamp-1 font-medium">{result}</span>
                             </div>
@@ -294,15 +314,15 @@ const ProjectsSection = () => {
 
                       {/* Services */}
                       <div className="mb-4">
-                        <h5 className="text-[#378c35] font-bold mb-2 flex items-center text-sm">
-                          <Target className="w-4 h-4 mr-1" />
+                        <h5 className="text-[#378c35] font-bold mb-2 flex items-center text-sm md:text-base">
+                          <Target className="w-4 h-4 md:w-5 md:h-5 mr-1" />
                           Our Services
                         </h5>
                         <div className="flex flex-wrap gap-1">
                           {project.services.slice(0, 2).map((service, serviceIndex) => (
                             <span
                               key={serviceIndex}
-                              className="px-2 py-1 bg-[#378c35]/30 text-[#378c35] rounded-full text-xs border border-[#378c35]/50 font-medium"
+                              className="px-2 py-1 bg-[#378c35]/30 text-[#378c35] rounded-full text-xs md:text-sm border border-[#378c35]/50 font-medium"
                             >
                               {service}
                             </span>
@@ -315,7 +335,7 @@ const ProjectsSection = () => {
                         {project.technologies.slice(0, 3).map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-2 py-1 bg-white/10 rounded-full text-white/80 text-xs"
+                            className="px-2 py-1 bg-white/10 rounded-full text-white/80 text-xs md:text-sm"
                           >
                             {tech}
                           </span>
@@ -325,7 +345,7 @@ const ProjectsSection = () => {
                       {/* View More Button */}
                       <Button 
                         size="sm"
-                        className="w-full bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] text-[#010100] hover:from-[#fd8e1b] hover:to-[#fd8d1a] font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300"
+                        className="w-full bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] text-[#010100] hover:from-[#fd8e1b] hover:to-[#fd8d1a] font-bold text-sm md:text-base shadow-lg hover:shadow-xl transition-all duration-500"
                       >
                         View Full Case Study →
                       </Button>
@@ -337,12 +357,12 @@ const ProjectsSection = () => {
           </div>
 
           {/* Scroll Progress Indicator */}
-          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center z-50">
-            <div className="bg-[#010100]/80 backdrop-blur-md rounded-2xl px-6 py-4 border border-[#fd8d1b]/30">
+          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-center z-50">
+            <div className="bg-[#010100]/80 backdrop-blur-md rounded-2xl px-6 py-3 border border-[#fd8d1b]/30">
               <div className="mb-2">
                 <div className="w-32 h-2 bg-[#fd8d1b]/20 rounded-full overflow-hidden">
                   <div 
-                    className="h-full bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] rounded-full transition-all duration-300"
+                    className="h-full bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] rounded-full transition-all duration-1000 ease-out"
                     style={{ width: `${((currentProjectIndex + 1) / allProjects.length) * 100}%` }}
                   />
                 </div>
@@ -355,7 +375,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* View All Projects CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-8">
           <Link to="/projects">
             <Button 
               className="bg-gradient-to-r from-[#fd8d1b] to-[#fd8e1b] text-[#010100] hover:from-[#fd8e1b] hover:to-[#fd8d1a] font-bold text-lg px-8 py-4 group shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
