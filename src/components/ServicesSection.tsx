@@ -37,10 +37,10 @@ const ServicesSection = () => {
       
       <div className="max-w-8xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-light tracking-tight mb-6">
-            Our <span className="text-[#fd8d1b]">Core Services</span>
+          <h2 className="text-4xl md:text-6xl font-light tracking-tight mb-6 font-poppins">
+            Our Core Services
           </h2>
-          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto font-poppins">
             From website optimization to brand omnipresence - we handle everything so you can focus on what you do best
           </p>
         </div>
@@ -55,8 +55,8 @@ const ServicesSection = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-[#fd8d1b] to-[#fd8e1b] rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                 <service.icon className="w-7 h-7 text-[#010100]" strokeWidth={2} />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-4 text-white">{service.title}</h3>
-              <p className="text-white/80 font-light leading-relaxed mb-6">{service.description}</p>
+              <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-4 text-white font-poppins">{service.title}</h3>
+              <p className="text-white/80 font-light leading-relaxed mb-6 font-poppins">{service.description}</p>
               
               {/* Service Features */}
               <div className="space-y-2">

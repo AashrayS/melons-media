@@ -31,8 +31,8 @@ const HowItWorksSection = () => {
       
       <div className="max-w-8xl mx-auto relative z-10">
         <div className="text-center mb-20 animate-on-scroll">
-          <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-8">How It Works</h2>
-          <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-8 font-poppins">How It Works</h2>
+          <p className="text-xl text-white/70 font-light max-w-3xl mx-auto font-poppins">
             Our streamlined process ensures exceptional results every time
           </p>
         </div>
@@ -54,8 +54,8 @@ const HowItWorksSection = () => {
                   <step.icon className="w-8 h-8 text-orange-400" strokeWidth={1.5} />
                 </div>
               </div>
-              <h3 className="text-2xl font-light tracking-tight mb-6">{step.title}</h3>
-              <p className="text-white/70 font-light leading-relaxed text-lg">{step.description}</p>
+              <h3 className="text-2xl font-light tracking-tight mb-6 font-poppins">{step.title}</h3>
+              <p className="text-white/70 font-light leading-relaxed text-lg font-poppins">{step.description}</p>
             </div>
           ))}
         </div>

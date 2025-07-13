@@ -18,8 +18,8 @@ const About = () => {
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-orange-500"></div>
               </span> you need
             </h1>
-            <p className="text-2xl text-orange-100/80 font-medium">
-              We make brands that don't suck (and actually make <span className="melon-text font-bold">money! 💰</span>)
+            <p className="text-2xl text-orange-100/80 font-medium font-poppins">
+              We make brands that don't suck (and actually make money! 💰)
             </p>
           </div>
           
@@ -176,10 +176,10 @@ const About = () => {
             </div>
           </div>          <div className="text-center glassmorphic-card p-12 rounded-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-400/5 via-white/5 to-orange-400/5" />
-            <div className="relative z-10">              <h2 className="text-4xl font-light tracking-tight mb-4">
-                Ready to go from <span className="text-gray-400 line-through">boring</span> to <span className="text-orange-400">legendary</span>?
+            <div className="relative z-10">              <h2 className="text-4xl font-light tracking-tight mb-4 font-poppins">
+                Ready to go from boring to legendary?
               </h2>
-              <p className="text-white/70 font-light mb-8 max-w-2xl mx-auto text-lg">
+              <p className="text-white/70 font-light mb-8 max-w-2xl mx-auto text-lg font-poppins">
                 Let's create something that makes your competitors wonder "How the hell did they do that?"
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">                <button 
