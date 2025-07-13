@@ -1,10 +1,11 @@
 
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react'        <p className="text-xl sm:text-2xl md:text-2xl text-slate-200 mb-8 md:mb-12 font-medium max-w-4xl mx-auto leading-relaxed px-2 font-poppins">
+          We design <span className="text-melon-300 font-semibold">powerful brands</span>, build <span className="text-melon-400 font-semibold">conversion-focused sites</span>, and launch digital experiences that don't just work — they <span className="melon-text font-bold text-melon-400 animate-pulse hover:animate-bounce hover:scale-110 transition-all duration-300">dominate! 🚀</span>
+        </p>import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center overflow-hidden pt-24 md:pt-28">
       {/* Professional background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-melon-500/15 via-transparent to-melon-400/10" />
       
