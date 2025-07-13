@@ -1,7 +1,6 @@
 
-import React from 'react'        <p className="text-xl sm:text-2xl md:text-2xl text-slate-200 mb-8 md:mb-12 font-medium max-w-4xl mx-auto leading-relaxed px-2 font-poppins">
-          We design <span className="text-melon-300 font-semibold">powerful brands</span>, build <span className="text-melon-400 font-semibold">conversion-focused sites</span>, and launch digital experiences that don't just work — they <span className="melon-text font-bold text-melon-400 animate-pulse hover:animate-bounce hover:scale-110 transition-all duration-300">dominate! 🚀</span>
-        </p>import { Button } from '@/components/ui/button';
+import React from 'react';
+import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
@@ -31,7 +30,7 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center px-4">
-          <Button 
+          <Button
             onClick={() => window.location.href = '/booking'}
             className="bg-melon-500 hover:bg-melon-400 text-slate-900 font-bold text-lg px-12 py-7 rounded-xl hover:scale-105 hover:shadow-2xl hover:shadow-melon-500/40 transition-all duration-300 border-2 border-melon-400 font-poppins"
           >
