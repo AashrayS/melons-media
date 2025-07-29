@@ -54,7 +54,7 @@ const LeadMagnet = () => {
                   Free Social Media Guide
                 </h3>
                 <p className="text-white/80 text-sm font-poppins">
-                  Get our "5 Ways to Boost Your Social Media Engagement" PDF and start growing your audience today!
+                  Get our "6 Ways to Boost Your Social Media Engagement" PDF and start growing your audience today!
                 </p>
               </div>
 

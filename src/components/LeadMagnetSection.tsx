@@ -49,7 +49,7 @@ const LeadMagnetSection = () => {
                 Free Social Media Guide
               </h2>
               <p className="text-xl text-orange-100/90 font-medium max-w-2xl mx-auto font-poppins">
-                Download our proven "5 Ways to Boost Your Social Media Engagement" and start growing your audience today
+                Download our proven "6 Ways to Boost Your Social Media Engagement" and start growing your audience today
               </p>
             </div>
 
@@ -115,7 +115,7 @@ const LeadMagnetSection = () => {
               Success! 🎉
             </h2>
             <p className="text-xl text-green-100/90 mb-6 font-poppins">
-              Your "5 Ways to Boost Social Media Engagement" guide is ready!
+              Your "6 Ways to Boost Social Media Engagement" guide is ready!
             </p>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto font-poppins">
               Check your email in the next few minutes for the download link and bonus growth tips. 
