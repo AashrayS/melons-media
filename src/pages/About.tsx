@@ -12,187 +12,191 @@ const About = () => {
       <div className="flex-1 pt-40 md:pt-36 pb-16 px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6">
-              We're the <span className="text-orange-400 relative">
-                Anti-Boring Agency
+            <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-6 font-poppins">
+              Hi, I'm <span className="text-orange-400 relative">
+                Aashray
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-orange-500"></div>
-              </span> you need
+              </span>
             </h1>
             <p className="text-2xl text-orange-100/80 font-medium font-poppins">
-              We make brands that don't suck (and actually make money! 💰)
+              I help small businesses and solo founders build content channels that actually drive business growth
             </p>
           </div>
           
           <div className="glassmorphic-card p-8 rounded-2xl mb-12 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-400/10 rounded-full blur-2xl" />            <div className="relative z-10">
-              <h2 className="text-3xl font-bold mb-8 text-center text-yellow-200">
-                Plot twist: We actually know what we're doing! 🎭
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-400/10 rounded-full blur-2xl" />
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold mb-8 text-center text-yellow-200 font-poppins">
+                My Journey: From Marketing Enthusiast to Growth Catalyst
               </h2>
               
-              <p className="text-xl text-orange-100/90 font-medium leading-relaxed mb-8">
-                While other agencies are busy making pretty things that don't work, we're out here creating 
-                <span className="melon-text font-bold"> digital experiences that actually make you money! 💰</span>
+              <p className="text-xl text-orange-100/90 font-medium leading-relaxed mb-8 font-poppins">
+                It started with a fascination for marketing, then evolved into an obsession with clean UI design. 
+                But the real magic happened when I fell in love with what comes after launch — the data, the hypothesis, 
+                <span className="text-melon-400 font-bold"> the real impact.</span>
               </p>
               
-              <p className="text-lg text-orange-100/80 font-medium leading-relaxed mb-8">
-                We've helped brands go from <span className="text-yellow-300 font-bold">"who are these guys?"</span> to 
-                <span className="text-yellow-300 font-bold">"shut up and take my money!"</span> And we can do the same for you. <span className="wiggle inline-block">✨</span>
+              <p className="text-lg text-orange-100/80 font-medium leading-relaxed mb-8 font-poppins">
+                Now I run Melons Media, where we help brands and founders go from <span className="text-yellow-300 font-bold">"We post sometimes"</span> to 
+                <span className="text-yellow-300 font-bold">"Whoa, this content is actually working and helping us grow."</span> 
+                We also optimize websites to align perfectly with your business goals.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <div className="glassmorphic-card p-8 rounded-xl hover:scale-105 transition-all duration-300">
-                  <h3 className="text-2xl font-bold tracking-tight mb-4 text-yellow-200">Our Mission 🎯</h3>
-                  <p className="text-orange-100/80 font-medium leading-relaxed">
-                    To establish digital foundations, optimize performance, and create brand omnipresence 
-                    that drives <span className="melon-text font-bold">sustainable growth</span> across all channels! 🚀
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                <div className="glassmorphic-card p-6 rounded-xl hover:scale-105 transition-all duration-300 text-center">
+                  <h3 className="text-4xl font-bold tracking-tight mb-2 text-melon-400">1.5K%</h3>
+                  <p className="text-orange-100/80 font-medium">Organic reach jump in 20 days</p>
                 </div>
-                <div className="glassmorphic-card p-8 rounded-xl hover:scale-105 transition-all duration-300">
-                  <h3 className="text-2xl font-bold tracking-tight mb-4 text-yellow-200">Our Approach 💪</h3>
-                  <p className="text-orange-100/80 font-medium leading-relaxed mb-4">
-                    Strategic, data-driven, and tech-forward. We combine cutting-edge technology with 
-                    proven media strategies to deliver <span className="melon-text font-bold">measurable results! 📊</span>
-                  </p>
-                  <p className="text-orange-100/80 font-medium leading-relaxed">
-                    Young, hungry, and obsessed with results. We don't do corporate BS—we do whatever it takes
-                    to make your brand the <span className="text-yellow-300 font-bold">talk of the internet! 🌟</span>
-                  </p>
+                <div className="glassmorphic-card p-6 rounded-xl hover:scale-105 transition-all duration-300 text-center">
+                  <h3 className="text-4xl font-bold tracking-tight mb-2 text-melon-400">4.5K%</h3>
+                  <p className="text-orange-100/80 font-medium">Boost in interactions</p>
+                </div>
+                <div className="glassmorphic-card p-6 rounded-xl hover:scale-105 transition-all duration-300 text-center">
+                  <h3 className="text-4xl font-bold tracking-tight mb-2 text-melon-400">1.5K%</h3>
+                  <p className="text-orange-100/80 font-medium">Increase in website visits</p>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* What We Actually Do Section */}
+          {/* What I Do Section */}
           <div className="glassmorphic-card p-8 rounded-2xl mb-12">
-            <h2 className="text-3xl font-light tracking-tight mb-8 text-center">
-              What We Actually Do <span className="text-orange-400">(The Simple Version)</span>
+            <h2 className="text-3xl font-light tracking-tight mb-8 text-center font-poppins">
+              What I Do <span className="text-orange-400">(The Simple Version)</span>
             </h2>
             <div className="space-y-6 text-white/80">
-              <p className="text-lg leading-relaxed">
-                <strong className="text-white">Websites:</strong> We build them fast, make them pretty, and ensure they actually get you customers.
+              <p className="text-lg leading-relaxed font-poppins">
+                <strong className="text-white">Content Strategy:</strong> Transform your sporadic posting into a strategic content machine that drives real business results.
               </p>
-              <p className="text-lg leading-relaxed">
-                <strong className="text-white">Branding:</strong> We make you look like the professional badass you are (even if you feel like you're winging it).
+              <p className="text-lg leading-relaxed font-poppins">
+                <strong className="text-white">Website Optimization:</strong> Align your web presence with your business goals to convert visitors into customers.
               </p>
-              <p className="text-lg leading-relaxed">
-                <strong className="text-white">Marketing:</strong> We put you in front of people who actually want to buy your stuff. Novel concept, right?
+              <p className="text-lg leading-relaxed font-poppins">
+                <strong className="text-white">Growth Consulting:</strong> Share insights and strategies that help small businesses and solo founders scale effectively.
               </p>
             </div>
           </div>
 
-          <div className="glassmorphic-card p-8 rounded-2xl mb-12">            <h2 className="text-3xl font-light tracking-tight mb-8 text-center">
-              What makes us <span className="text-orange-400">dangerously good</span>
-            </h2>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="glassmorphic-card p-8 rounded-2xl mb-12">
+            <h2 className="text-3xl font-light tracking-tight mb-8 text-center font-poppins">
+              My <span className="text-orange-400">approach</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center group hover:scale-105 transition-transform duration-300">
                 <div className="mb-4 flex justify-center">
                   <Zap className="w-8 h-8 text-orange-400 animate-pulse hover:animate-bounce transition-all duration-300" />
                 </div>
-                <h3 className="text-lg font-light mb-2 text-white">Lightning Fast</h3>
-                <p className="text-white/70 text-sm">Websites so fast, your users won't know what hit them</p>
+                <h3 className="text-lg font-light mb-2 text-white font-poppins">Data-Driven</h3>
+                <p className="text-white/70 text-sm font-poppins">Every strategy is backed by real data and performance metrics</p>
               </div>
               <div className="text-center group hover:scale-105 transition-transform duration-300">
                 <div className="mb-4 flex justify-center">
                   <Palette className="w-8 h-8 text-orange-400 hover:rotate-12 hover:scale-110 transition-all duration-300" />
                 </div>
-                <h3 className="text-lg font-light mb-2 text-white">Insanely Creative</h3>
-                <p className="text-white/70 text-sm">Designs that make your competitors weep with envy</p>
+                <h3 className="text-lg font-light mb-2 text-white font-poppins">Design Obsessed</h3>
+                <p className="text-white/70 text-sm font-poppins">Clean, purposeful design that serves your business goals</p>
               </div>
               <div className="text-center group hover:scale-105 transition-transform duration-300">
                 <div className="mb-4 flex justify-center">
                   <Target className="w-8 h-8 text-orange-400 hover:animate-ping transition-all duration-300" />
                 </div>
-                <h3 className="text-lg font-light mb-2 text-white">Conversion Obsessed</h3>
-                <p className="text-white/70 text-sm">Every pixel engineered to turn visitors into customers</p>
+                <h3 className="text-lg font-light mb-2 text-white font-poppins">Results Focused</h3>
+                <p className="text-white/70 text-sm font-poppins">I care about what happens after launch - real business impact</p>
               </div>
               <div className="text-center group hover:scale-105 transition-transform duration-300">
                 <div className="mb-4 flex justify-center">
                   <TrendingUp className="w-8 h-8 text-orange-400 hover:translate-y-1 hover:scale-110 transition-all duration-300" />
                 </div>
-                <h3 className="text-lg font-light mb-2 text-white">Results Driven</h3>
-                <p className="text-white/70 text-sm">We measure success in ROI, not just pretty pictures</p>
+                <h3 className="text-lg font-light mb-2 text-white font-poppins">Growth Mindset</h3>
+                <p className="text-white/70 text-sm font-poppins">Always learning, sharing insights, and optimizing for better results</p>
               </div>
             </div>
           </div>
 
           <div className="glassmorphic-card p-8 rounded-2xl mb-12 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-yellow-400/10 to-orange-400/10 rounded-full blur-3xl" />            <div className="relative z-10">              <h2 className="text-3xl font-light tracking-tight mb-8 text-center">
-                Why brands <span className="text-orange-400">choose us</span> over the "safe" option
+            <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-yellow-400/10 to-orange-400/10 rounded-full blur-3xl" />
+            <div className="relative z-10">
+              <h2 className="text-3xl font-light tracking-tight mb-8 text-center font-poppins">
+                Why founders <span className="text-orange-400">choose to work</span> with me
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="bg-white/5 p-6 rounded-xl border border-white/20 hover:border-white/40 transition-colors">
-                  <h3 className="text-xl font-light mb-4 text-white">Zero BS Policy</h3>
-                  <p className="text-white/70 font-light">No corporate fluff, no endless meetings, no excuses. Just pure, unfiltered results that speak louder than promises.</p>
+                  <h3 className="text-xl font-light mb-4 text-white font-poppins">Proven Results</h3>
+                  <p className="text-white/70 font-light font-poppins">Track record of delivering 1000%+ growth in reach, interactions, and website visits for real businesses.</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-xl border border-white/20 hover:border-white/40 transition-colors">
-                  <h3 className="text-xl font-light mb-4 text-white">Speed Demons</h3>
-                  <p className="text-white/70 font-light">While others take months, we deliver in weeks. We're fast, but we never compromise on quality—it's basically magic.</p>
+                  <h3 className="text-xl font-light mb-4 text-white font-poppins">Founder-to-Founder</h3>
+                  <p className="text-white/70 font-light font-poppins">I understand the hustle, the challenges, and what it takes to grow from zero as a solo entrepreneur.</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-xl border border-white/20 hover:border-white/40 transition-colors">
-                  <h3 className="text-xl font-light mb-4 text-white">ROI Obsessed</h3>
-                  <p className="text-white/70 font-light">Every design choice, every line of code, every pixel placement—it all serves one master: your bottom line.</p>
+                  <h3 className="text-xl font-light mb-4 text-white font-poppins">Always Learning</h3>
+                  <p className="text-white/70 font-light font-poppins">I love sharing insights, learning from others, and constantly optimizing strategies for better performance.</p>
                 </div>
               </div>
             </div>
-          </div>          <div className="glassmorphic-card p-8 rounded-2xl mb-12">            <h2 className="text-3xl font-light tracking-tight mb-8 text-center">
-              Our <span className="text-orange-400">secret sauce</span>
+          </div>          <div className="glassmorphic-card p-8 rounded-2xl mb-12">
+            <h2 className="text-3xl font-light tracking-tight mb-8 text-center font-poppins">
+              My <span className="text-orange-400">proven methodology</span>
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-light mb-6 text-white">The Melons Method™</h3>
+                <h3 className="text-2xl font-light mb-6 text-white font-poppins">The Content-Growth Framework</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center text-black font-bold text-sm mr-4 mt-1">1</div>
                     <div>
-                      <h4 className="text-white/90 font-light mb-1">Stalk Your Competition</h4>
-                      <p className="text-white/60 text-sm">We study what your competitors are doing, then do it 10x better (legally, of course).</p>
+                      <h4 className="text-white/90 font-light mb-1 font-poppins">Analyze & Strategize</h4>
+                      <p className="text-white/60 text-sm font-poppins">Deep dive into your current content performance and identify growth opportunities.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center text-black font-bold text-sm mr-4 mt-1">2</div>
                     <div>
-                      <h4 className="text-white/90 font-light mb-1">Obsess Over Details</h4>
-                      <p className="text-white/60 text-sm">Every button placement, color choice, and animation is tested until it converts like crazy.</p>
+                      <h4 className="text-white/90 font-light mb-1 font-poppins">Create & Optimize</h4>
+                      <p className="text-white/60 text-sm font-poppins">Build systematic content channels that align with your business goals and audience needs.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center text-black font-bold text-sm mr-4 mt-1">3</div>
                     <div>
-                      <h4 className="text-white/90 font-light mb-1">Launch & Dominate</h4>
-                      <p className="text-white/60 text-sm">We don't just launch—we optimize, monitor, and keep improving until you're #1.</p>
+                      <h4 className="text-white/90 font-light mb-1 font-poppins">Measure & Scale</h4>
+                      <p className="text-white/60 text-sm font-poppins">Track real impact through data and continuously optimize for exponential growth.</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="bg-gradient-to-br from-orange-400/10 to-white/5 p-8 rounded-2xl border border-white/20">
-                <h3 className="text-xl font-light mb-4 text-white">Fun Fact</h3>
-                <p className="text-white/70 font-light mb-4">
-                  Our websites convert so well, clients often think we're using some kind of dark magic. 
+                <h3 className="text-xl font-light mb-4 text-white font-poppins">What Sets Me Apart</h3>
+                <p className="text-white/70 font-light mb-4 font-poppins">
+                  I don't just create content — I build content systems that drive measurable business growth. 
                 </p>
-                <p className="text-white/60 text-sm italic">
-                  (Plot twist: It's just really, really good design and psychology combined with zero compromises on performance.)
+                <p className="text-white/60 text-sm italic font-poppins">
+                  My obsession with what happens after launch means every piece of content is designed for performance, not just aesthetics.
                 </p>
               </div>
             </div>
           </div>          <div className="text-center glassmorphic-card p-12 rounded-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-400/5 via-white/5 to-orange-400/5" />
-            <div className="relative z-10">              <h2 className="text-4xl font-light tracking-tight mb-4 font-poppins">
-                Ready to go from boring to legendary?
+            <div className="relative z-10">
+              <h2 className="text-4xl font-light tracking-tight mb-4 font-poppins">
+                Ready to transform your content strategy?
               </h2>
               <p className="text-white/70 font-light mb-8 max-w-2xl mx-auto text-lg font-poppins">
-                Let's create something that makes your competitors wonder "How the hell did they do that?"
+                I'm always happy to chat about what you're working on, share insights, and help you grow. 
+                Let's connect and see how we can take your business to the next level.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">                <button 
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button 
                   onClick={() => window.location.href = '/booking'}
-                  className="bg-orange-400 hover:bg-orange-300 text-black font-semibold px-8 py-4 rounded-lg hover:scale-105 hover:shadow-2xl hover:shadow-orange-400/30 transition-all duration-300"
+                  className="bg-melon-500 hover:bg-melon-400 text-slate-900 font-semibold px-8 py-4 rounded-lg hover:scale-105 hover:shadow-2xl hover:shadow-melon-500/30 transition-all duration-300 font-poppins"
                 >
-                  Let's Make Magic
+                  Let's Talk Strategy
                 </button>
                 <button 
                   onClick={() => window.location.href = '/contact'}
-                  className="glassmorphic-button px-8 py-4 text-lg border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 transition-all duration-300"
+                  className="glassmorphic-button px-8 py-4 text-lg border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 transition-all duration-300 font-poppins"
                 >
-                  Just Ask Questions First
+                  Just Say Hi First
                 </button>
               </div>
             </div>

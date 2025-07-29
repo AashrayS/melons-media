@@ -24,20 +24,11 @@ const Booking = () => {
       <div className="flex-1 pt-40 md:pt-36 pb-16 relative z-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            {/* Mascot */}
-            <div className="mb-8">
-              <img 
-                src="/lovable-uploads/meons-mascot.jpeg" 
-                alt="Melons Media Mascot" 
-                className="w-24 h-24 md:w-28 md:h-28 mx-auto mb-4 hover:rotate-12 hover:scale-110 transition-all duration-300 drop-shadow-2xl bounce-gentle"
-              />
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Let's <span className="melon-text wiggle inline-block">Talk Business</span> 🚀
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 font-poppins">
+              Let's Talk Business
             </h1>
-            <p className="text-xl text-orange-100/90 max-w-3xl mx-auto font-medium leading-relaxed">
-              Ready to turn your <span className="text-yellow-300 font-semibold">"someday"</span> into <span className="text-orange-300 font-semibold">"right now"</span>? Book a free call and let's figure out how to make your competitors <span className="melon-text font-bold">nervous! 😎</span>
+            <p className="text-xl text-orange-100/90 max-w-3xl mx-auto font-medium leading-relaxed font-poppins">
+              Ready to turn your vision into reality? Book a free consultation and let's discuss how we can help your business grow.
             </p>
           </div>
           
@@ -49,76 +40,73 @@ const Booking = () => {
             <Button 
               onClick={() => window.location.href = '/contact'}
               variant="outline"
-              className="glassmorphic-button px-8 py-3 text-lg border-orange-400/30 text-orange-400 hover:bg-orange-400/10 hover:border-orange-400/50"
+              className="glassmorphic-button px-8 py-3 text-lg border-orange-400/30 text-orange-400 hover:bg-orange-400/10 hover:border-orange-400/50 font-poppins"
             >
-              Prefer to Type? Contact Us
+              Prefer Email? Contact Us Instead
             </Button>
           </div>
           
           {/* Additional Info */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="glassmorphic-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-              <div className="text-4xl mb-4 wiggle">⚡</div>
-              <h3 className="text-xl font-bold mb-3 text-yellow-200">No BS, Just Results</h3>
-              <p className="text-orange-100/80 text-sm font-medium">Pick a time, show up, get insights. We don't do lengthy sales pitches — just pure <span className="melon-text font-bold">value! 💎</span></p>
+              <h3 className="text-xl font-bold mb-3 text-yellow-200 font-poppins">Results-Focused</h3>
+              <p className="text-orange-100/80 text-sm font-medium font-poppins">We focus on actionable insights and practical solutions tailored to your business goals.</p>
             </div>
             
             <div className="glassmorphic-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-              <div className="text-4xl mb-4 bounce-gentle">💬</div>
-              <h3 className="text-xl font-bold mb-3 text-yellow-200">Actually Free</h3>
-              <p className="text-orange-100/80 text-sm font-medium">No hidden costs, no surprise charges. Just good advice from people who know their <span className="melon-text font-bold">stuff! 🎯</span></p>
+              <h3 className="text-xl font-bold mb-3 text-yellow-200 font-poppins">Free Consultation</h3>
+              <p className="text-orange-100/80 text-sm font-medium font-poppins">No hidden costs or surprise charges. Just expert advice from experienced professionals.</p>
             </div>
             
             <div className="glassmorphic-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-              <div className="text-4xl mb-4 wiggle">🎯</div>
-              <h3 className="text-xl font-bold mb-3 text-yellow-200">Custom Solutions</h3>
-              <p className="text-orange-100/80 text-sm font-medium">We'll talk about <span className="text-yellow-300 font-bold">YOUR</span> project, not some cookie-cutter template. <span className="melon-text font-bold">Tailored = Better! ✨</span></p>
+              <h3 className="text-xl font-bold mb-3 text-yellow-200 font-poppins">Custom Solutions</h3>
+              <p className="text-orange-100/80 text-sm font-medium font-poppins">Every solution is tailored specifically for your project requirements and business needs.</p>
             </div>
           </div>
 
           {/* What We'll Discuss Section */}
           <div className="mt-16 glassmorphic-card p-8 rounded-2xl">
-            <h2 className="text-3xl font-bold tracking-tight mb-8 text-center text-yellow-200">What We'll Actually Talk About 🗣️</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-8 text-center text-yellow-200 font-poppins">What We'll Discuss</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-bold mb-4 melon-text">Your Big Picture 🎨</h3>
-                <ul className="space-y-3 text-orange-100/80 text-sm font-medium">
+                <h3 className="text-xl font-bold mb-4 melon-text font-poppins">Your Project Vision</h3>
+                <ul className="space-y-3 text-orange-100/80 text-sm font-medium font-poppins">
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mr-3 mt-2" />
-                    What you're trying to achieve (and <span className="text-yellow-300 font-bold">why</span> it matters)
+                    Business goals and objectives
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mr-3 mt-2" />
-                    Who you're trying to reach (your <span className="melon-text font-bold">dream customers</span>)
+                    Target audience and market
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mr-3 mt-2" />
-                    How we'll measure <span className="text-yellow-300 font-bold">success</span> together
+                    Success metrics and KPIs
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mr-3 mt-2" />
-                    Your timeline and budget <span className="melon-text font-bold">reality check</span>
+                    Timeline and budget requirements
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-4 melon-text">The Nerdy Stuff 🤓</h3>
-                <ul className="space-y-3 text-orange-100/80 text-sm font-medium">
+                <h3 className="text-xl font-bold mb-4 melon-text font-poppins">Technical Requirements</h3>
+                <ul className="space-y-3 text-orange-100/80 text-sm font-medium font-poppins">
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mr-3 mt-2" />
-                    What <span className="text-yellow-300 font-bold">tech</span> makes sense for your project
+                    Technology stack and platform preferences
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mr-3 mt-2" />
-                    What needs to connect to what (the <span className="melon-text font-bold">integration magic</span>)
+                    Integration with existing systems
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mr-3 mt-2" />
-                    How to handle <span className="text-yellow-300 font-bold">growth</span> (the good problem!)
+                    Scalability and growth planning
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mr-3 mt-2" />
-                    Speed and performance expectations (<span className="melon-text font-bold">lightning fast!</span>)
+                    Performance and security requirements
                   </li>
                 </ul>
               </div>
@@ -127,47 +115,47 @@ const Booking = () => {
 
           {/* Preparation Tips */}
           <div className="mt-16 glassmorphic-card p-8 rounded-2xl">
-            <h2 className="text-2xl font-light tracking-tight mb-6 text-center">Come Prepared (Or Don't, We're Flexible)</h2>
+            <h2 className="text-2xl font-light tracking-tight mb-6 text-center font-poppins">How to Prepare</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-light mb-4 text-orange-400">Bring These If You Have Them</h3>
+                <h3 className="text-lg font-light mb-4 text-orange-400 font-poppins">What to Bring</h3>
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
-                    <span className="text-white/70 text-sm">Sites/apps you love (or hate)</span>
+                    <span className="text-white/70 text-sm font-poppins">Reference websites or designs you like</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
-                    <span className="text-white/70 text-sm">Your brand stuff (logos, colors, etc.)</span>
+                    <span className="text-white/70 text-sm font-poppins">Brand assets (logos, colors, guidelines)</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
-                    <span className="text-white/70 text-sm">Content and photos you want to use</span>
+                    <span className="text-white/70 text-sm font-poppins">Content and media you want to include</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
-                    <span className="text-white/70 text-sm">Your "must-have" features list</span>
+                    <span className="text-white/70 text-sm font-poppins">List of required features and functionality</span>
                   </div>
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-light mb-4 text-orange-400">Think About This Stuff</h3>
+                <h3 className="text-lg font-light mb-4 text-orange-400 font-poppins">Things to Consider</h3>
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
-                    <span className="text-white/70 text-sm">When you need this done by</span>
+                    <span className="text-white/70 text-sm font-poppins">Project timeline and deadlines</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
-                    <span className="text-white/70 text-sm">What you can realistically spend</span>
+                    <span className="text-white/70 text-sm font-poppins">Budget range and constraints</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
-                    <span className="text-white/70 text-sm">Who else needs to approve stuff</span>
+                    <span className="text-white/70 text-sm font-poppins">Decision-making process and stakeholders</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
-                    <span className="text-white/70 text-sm">Any weird technical requirements</span>
+                    <span className="text-white/70 text-sm font-poppins">Technical requirements or limitations</span>
                   </div>
                 </div>
               </div>
