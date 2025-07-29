@@ -7,6 +7,8 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import MissionSection from '@/components/MissionSection';
+import LeadMagnetSection from '@/components/LeadMagnetSection';
+import LeadMagnet from '@/components/LeadMagnet';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -36,11 +38,13 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <ServicesSection />
+      <LeadMagnetSection />
       <HowItWorksSection />
       <ProjectsSection />
       <TestimonialsSection />
       <MissionSection />
       <Footer />
+      <LeadMagnet />
     </div>
   );
 };
